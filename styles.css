@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #912424;
+    color: #fff;
+}
+
+h1.logo {
+    font-family: 'Imperial Script';
+    font-size: 75px;
+    padding: 3px;
+}
+
+button.btn1 {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #912424;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    padding-right: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    color: #000;
+}
+.btn1:active{
+    position: relative;
+    bottom: 5px;
+}
+.form-group{
+    width: 50%;
+    font-size: 15px;
+    padding: 5px 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input{
+    border-radius: 5px;
+    width: 50%;
+}
+
+input:hover{
+    background-color: #999999;
+}
+
+input::placeholder{
+    font-weight: bold;
+}
