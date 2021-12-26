@@ -12,15 +12,18 @@
     <title>Tela de Cadastro</title>
 </head>
 <body>
-<section class="container">
     <header>
         <h1 class="logo">Bellitia</h1>
         <button class="btn btn1">Minha Conta</button>
     </header>
     <main>
         <form action="">
+
+    <section class="container">
+        <section class="dados-est">
+
             <div class="form-group">
-                <h1>Dados do estabelecimento</h1>
+                <h1 class="tittle-form">Dados do estabelecimento</h1>
                 
                 <label for="rSocial">Razão Social</label>
                 <input type="text" id="rSocial" placeholder="Escreva Aqui!" required>
@@ -35,11 +38,65 @@
                 <input type="email" id="email" placeholder="Escreva Aqui!" required>
 
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="teleone" placeholder="DDD + Número" required>
+                <input type="tel" id="telefone" placeholder="DDD + Número" required>
             </div>
+
+            <div class="form-group">
+                <h1 class="tittle-form">Endereço do estabelecimento</h1>
+                
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" minlength="8" maxlength="8" placeholder="Apenas o Número" required>
+
+                <label for="logradouro">Logradouro</label>
+                <input type="text" id="logradouro" placeholder="Escreva Aqui!" required>
+
+                <label for="numero">Número</label>
+                <input type="text" id="numero" placeholder="Escreva Aqui!" required>
+
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" placeholder="Escreva Aqui!" required>
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" placeholder="Escreva Aqui!" required>
+
+                <label for="estado">Estado</label>
+	            <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Selecione</option>
+		                <option value="AC">AC</option>
+		                <option value="AL">AL</option>
+		                <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+		                <option value="BA">BA</option>
+		                <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+		                <option value="ES">ES</option>
+		                <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+		                <option value="MT">MT</option>
+		                <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+		                <option value="PA">PA</option>
+		                <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+		                <option value="PE">PE</option>
+		                <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+		                <option value="RN">RN</option>
+		                <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+		                <option value="RR">RR</option>
+		                <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+		                <option value="SE">SE</option>
+		                <option value="TO">TO</option>
+                </select>
+            </div>
+
+        </section>
+        </section>
+
         </form>
     </main>
     <footer></footer>
-</section>   
 </body>
 </html>

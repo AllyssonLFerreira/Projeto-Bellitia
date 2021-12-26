@@ -49,13 +49,19 @@ button.btn1 {
     align-items: flex-start;
 }
 
+.tittle-form{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
 input{
+    font-weight: bold;
     border-radius: 5px;
     width: 50%;
 }
 
 input:hover{
-    background-color: #999999;
+    background-color: #bf4d4d;
 }
 
 input::placeholder{
