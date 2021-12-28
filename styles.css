@@ -2,7 +2,9 @@
 *{
     margin: 0;
     padding: 0;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
 header {
@@ -20,28 +22,40 @@ h1.logo {
     padding: 3px;
 }
 
-button.btn1 {
-    font-family: 'Montserrat', sans-serif;
+button.btn{
+    width: 15%;
     background-color: #912424;
-    border: none;
-    color: #fff;
     font-size: 25px;
-    padding-right: 5px;
     align-items: center;
     cursor: pointer;
+    color: #fff;
 }
 
-.btn1:hover{
-    color: #000;
-}
-.btn1:active{
+button.btn:active{
     position: relative;
     bottom: 5px;
 }
-.form-group{
-    width: 50%;
+
+
+button.btn1 {
+    border: none;
+    padding-right: 5px;
+}
+
+button.btn:hover{
+    color: #000;
+}
+
+section.container{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+
+div.form-group{
+    line-height: 25px;
     font-size: 15px;
-    padding: 5px 15px;
     font-weight: bold;
     box-sizing: border-box;
     display: flex;
@@ -49,9 +63,13 @@ button.btn1 {
     align-items: flex-start;
 }
 
-.tittle-form{
+h1.tittle-form{
     font-size: 25px;
     margin-bottom: 5px;
+}
+
+select{
+    width: 100px;
 }
 
 input{
@@ -60,10 +78,32 @@ input{
     width: 50%;
 }
 
-input:hover{
-    background-color: #bf4d4d;
+input:focus{
+    border-color: #912424;
 }
 
 input::placeholder{
     font-weight: bold;
+}
+
+div.button{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    background-color: #912424;
+    color: #fff;
+    
+}
+
+.Slogan{
+    font-family: 'Imperial Script';
+    font-size: 30px;
 }

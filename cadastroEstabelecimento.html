@@ -16,26 +16,25 @@
         <h1 class="logo">Bellitia</h1>
         <button class="btn btn1">Minha Conta</button>
     </header>
-    <main>
         <form action="">
 
     <section class="container">
-        <section class="dados-est">
-
+        
+        <section>
             <div class="form-group">
                 <h1 class="tittle-form">Dados do estabelecimento</h1>
                 
                 <label for="rSocial">Razão Social</label>
-                <input type="text" id="rSocial" placeholder="Escreva Aqui!" required>
+                <input type="text" id="rSocial" placeholder="Escreva Aqui" required>
 
                 <label for="nFantasia">Nome Fantasia</label>
-                <input type="text" id="nFantasia" placeholder="Escreva Aqui!" required>
+                <input type="text" id="nFantasia" placeholder="Escreva Aqui" required>
 
                 <label for="cnpj">CNPJ</label>
-                <input type="text" id="cnpj" minlength="14" maxlength="14" placeholder="Apenas Números!" required>
+                <input type="text" id="cnpj" minlength="14" maxlength="14" placeholder="Apenas Números" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Escreva Aqui!" required>
+                <input type="email" id="email" placeholder="Escreva Aqui" required>
 
                 <label for="telefone">Telefone</label>
                 <input type="tel" id="telefone" placeholder="DDD + Número" required>
@@ -43,21 +42,21 @@
 
             <div class="form-group">
                 <h1 class="tittle-form">Endereço do estabelecimento</h1>
-                
-                <label for="cep">CEP</label>
-                <input type="text" id="cep" minlength="8" maxlength="8" placeholder="Apenas o Número" required>
 
-                <label for="logradouro">Logradouro</label>
-                <input type="text" id="logradouro" placeholder="Escreva Aqui!" required>
+                <label for="logradouro">Logradouro/Rua</label>
+                <input type="text" id="logradouro" placeholder="Escreva Aqui" required>
 
                 <label for="numero">Número</label>
-                <input type="text" id="numero" placeholder="Escreva Aqui!" required>
+                <input type="text" id="numero" placeholder="Escreva Aqui" required>
 
                 <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" placeholder="Escreva Aqui!" required>
+                <input type="text" id="bairro" placeholder="Escreva Aqui" required>
+
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" minlength="8" maxlength="8" placeholder="Apenas Números" required>
 
                 <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" placeholder="Escreva Aqui!" required>
+                <input type="text" id="cidade" placeholder="Escreva Aqui" required>
 
                 <label for="estado">Estado</label>
 	            <select id="estado" name="estado" required>
@@ -91,12 +90,84 @@
 		                <option value="TO">TO</option>
                 </select>
             </div>
-
-        </section>
         </section>
 
-        </form>
-    </main>
-    <footer></footer>
+        <section>
+            <div class="form-group">
+                <h1 class="tittle-form">Dados do propritário</h1>
+                
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Escreva Aqui" required>
+
+                <label for="RG">Registro Geral(RG)</label>
+                <input type="text" id="RG" minlength="10" maxlength="10" placeholder="Apenas Números" required>
+
+                <label for="CPF">CPF</label>
+                <input type="text" id="CPF" minlength="11" maxlength="11" placeholder="Apenas Números" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Escreva Aqui" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="DDD + Número" required> 
+
+                <label for="logradouro">Logradouro/Rua</label>
+                <input type="text" id="logradouro" placeholder="Escreva Aqui" required>
+
+                <label for="numero">Número</label>
+                <input type="text" id="numero" placeholder="Escreva Aqui" required>
+
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" placeholder="Escreva Aqui" required>
+
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" minlength="8" maxlength="8" placeholder="Apenas Números" required>
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" placeholder="Escreva Aqui" required>
+
+                <label for="estado">Estado</label>
+	            <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Selecione</option>
+		                <option value="AC">AC</option>
+		                <option value="AL">AL</option>
+		                <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+		                <option value="BA">BA</option>
+		                <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+		                <option value="ES">ES</option>
+		                <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+		                <option value="MT">MT</option>
+		                <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+		                <option value="PA">PA</option>
+		                <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+		                <option value="PE">PE</option>
+		                <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+		                <option value="RN">RN</option>
+		                <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+		                <option value="RR">RR</option>
+		                <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+		                <option value="SE">SE</option>
+		                <option value="TO">TO</option>
+                </select>
+            </div>    
+        </section>
+    </section>
+
+        <div class="button">
+            <button class="btn btn2">Confirmar</button>
+        </div>
+
+    </form>
+    <footer>
+        <div class="Slogan">O site que conecta você à beleza de forma prática!</div>
+    </footer>
 </body>
 </html>
