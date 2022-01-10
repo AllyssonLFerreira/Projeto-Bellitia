@@ -8,7 +8,7 @@
 
 header {
     width: 100%;
-    height: 15%;
+    height: 13vh;
     display: flex;
     justify-content: space-between;
     background-color: #912424;
@@ -21,33 +21,18 @@ h1.logo {
     padding: 3px;
 }
 
-button.btn{
-    width: 15%;
+button{
     background-color: #912424;
-    font-size: 25px;
-    align-items: center;
     cursor: pointer;
     color: #fff;
     border: none;
 }
 
-button.btn:active{
-    position: relative;
-    bottom: 5px;
-}
-
-section.container{
-    display: flex;
-    justify-content: space-around;
-    padding-left: 5%;
-    padding-top: 10px;
-}
-
 section.status-est{
     display: flex;
-    justify-content: flex-end;
+    background-color: #912424;
     align-items: center;
-    font-weight: bold;
+    color: #fff;
     padding: 10px 10px;
 }
 
@@ -76,17 +61,30 @@ button.fechado{
 
 button.fechado:hover,
 button.fechado:focus {
-    background: #c91616;
+    background: #0b6ddd;
     transition: background 1s;
     border-radius: 10px;
 }
 
+nav.barraLateral{
+    padding-left: 15px;
+    width: 20%;
+    height: 100vh;
+    background-color: #912424;
+}
+
+a{
+    display: block;
+    padding: 25px 10px;
+    color: #fff;
+    
+}
+
 footer{
     position: absolute;
-    bottom: 0;
+    text-align: center;
     width: 100%;
     height: 10vh;
-    text-align: center;
     background-color: #912424;
     color: #fff; 
 }
