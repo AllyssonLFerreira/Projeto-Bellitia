@@ -16,9 +16,9 @@ header {
 }
 
 input{
-    border-radius: 10px;
     font-weight: bold;
-    background-color: #e4e3e3;
+    border-radius: 10px;
+    width: 400px;
 }
 
 button{
@@ -49,13 +49,6 @@ a{
     text-decoration: none;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 15px 0;
-}
-
 footer{
     position: absolute;
     text-align: end;
@@ -67,37 +60,14 @@ footer{
     box-sizing: border-box;
 }
 
-.agendaContainer{
-    padding: 0 10px;
+.formContainer {
 }
 
-#data, .agendaTittle{
-    width: 100%;
-    font-weight: bold;
-    font-size: 20px;
-    font-style: italic;
-    padding: 10% 0 0 15%;
-}
-
-.submitButtons{
-    padding: 5px 10px;
-    align-items: center;
-}
-
-.confirm:hover,
-.confirm:focus {
-    background: #1ed93d;
-    transition: background 1s;
-}
-.markdown:hover,
-.markdown:focus {
-    background: #0b6ddd;
-    transition: background 1s;
-}
-.absence:hover,
-.absence:focus {
-    background: #ac1a1a;
-    transition: background 1s;
+.form-group{
+    line-height: 25px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 a:focus, a:hover{
