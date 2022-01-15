@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0px;
+  background-color: #912424;
+}
+
+.logo p a{
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Imperial Script', sans-serif;
+  letter-spacing: 5px;
+  font-size:40px;
+  color: #fff;
+  background-color: #912424;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.menu{
+  padding-right: 20px;
+}
+
+.menu span a{
+  padding: 5px 20px;
+  margin: 0px 15px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #912424;
+  border-radius: 10px;
+}
+
+.menu span a:hover{
+  background-color: #fff;
+  color: rgb(39, 39, 39);
+}
+
+.login a{
+  color: #fff;
+  font-size: 20px;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+body{
+  height: 100%;
+}
+
+nav{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background-color:#912424;
+  height: 820px;
+  width: 300px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 15px;
+  margin-bottom: 0px;
+  float: left;
+}
+
+ul{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+section{
+font-family: 'Montserrat', sans-serif, bold;
+font-size: 20px;
+background-color: #ffffff;
+height: 50%;
+width: 1200px;
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+float: left;
+}
+
+.digit-box{
+    font-family: 'Montserrat', sans-serif, bold;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+textarea{
+    border-radius: 10px;
+}
+
+button.btn{
+    width: 15%;
+    background-color: #912424;
+    font-size: 25px;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    float: left;
+}
+
+.contatos{
+    font-family: 'Montserrat', sans-serif, bold;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer{
+    font-family: 'Imperial Script';
+    font-size: 40px;
+    color: #fff;
+    background-color:#912424;
+    height: 60px;
+    width: 100vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    float: left;
+}
