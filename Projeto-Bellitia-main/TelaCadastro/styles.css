@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #912424;
+    color: #fff;
+}
+
+h1.logo {
+    font-family: 'Imperial Script';
+    font-size: 75px;
+    padding: 3px;
+}
+
+button.btn{
+    width: 15%;
+    background-color: #912424;
+    font-size: 25px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+}
+
+button.btn:active{
+    position: relative;
+    bottom: 5px;
+}
+
+
+button.btn1 {
+    border: none;
+    padding-right: 5px;
+}
+
+button.btn:hover{
+    color: #000;
+}
+
+section.container{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+
+div.form-group{
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1.tittle-form{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+select{
+    width: 100px;
+}
+
+input{
+    font-weight: bold;
+    border-radius: 5px;
+    width: 50%;
+}
+
+input:focus{
+    border-color: #912424;
+}
+
+input::placeholder{
+    font-weight: bold;
+}
+
+div.button{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    background-color: #912424;
+    color: #fff;
+    
+}
+
+.Slogan{
+    font-family: 'Imperial Script';
+    font-size: 30px;
+}
