@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #912424;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    position: relative;
+    display: block;
+    padding: 25px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer{
+    position: absolute;
+    text-align: end;
+    padding: 0 10px;
+    width: 100%;
+    height: 10vh;
+    background-color: #912424;
+    color: #fff; 
+    box-sizing: border-box;
+}
+
+button{
+    background-color: #912424;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+
+a:focus, a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 0 5px #ac1a1a; 
+    border-radius: 10px;
+    transform: skew(-10deg);
+}
+
+.logo {
+    font-family: 'Imperial Script';
+    font-size: 75px;
+    padding: 3px;
+}
+.status-est{
+    display: flex;
+    background-color: #912424;
+    align-items: center;
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.aberto{
+    width: 75px;
+    height: 5vh;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.aberto:hover,
+.aberto:focus {
+    background: #1ed93d;
+    transition: background 1s;
+    border-radius: 10px;
+}
+
+.fechado{
+    width: 75px;
+    height: 5vh;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechado:hover,
+.fechado:focus {
+    background: #0b6ddd;
+    transition: background 1s;
+    border-radius: 10px;
+}
+
+.barraLateral{
+    padding-left: 15px;
+    width: 17%;
+    height: 100vh;
+    background-color: #912424;
+}
+
+.Slogan{
+    font-family: 'Imperial Script';
+    font-size: 30px;
+}
