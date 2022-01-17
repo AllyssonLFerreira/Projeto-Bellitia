@@ -2,17 +2,21 @@
 *{
     margin: 0;
     padding: 0;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
 
 header {
-    width: 100%;
     height: 13vh;
     display: flex;
     justify-content: space-between;
     background-color: #912424;
     color: #fff;
     box-sizing: border-box;
+}
+
+span {
+    text-align: center;
 }
 
 input{
@@ -49,33 +53,18 @@ a{
     text-decoration: none;
 }
 
+select{
+    width: 300px;
+}
+
 footer{
     position: absolute;
     text-align: end;
     padding: 0 10px;
-    width: 100%;
     height: 10vh;
     background-color: #912424;
     color: #fff; 
     box-sizing: border-box;
-}
-
-.formContainer {
-}
-
-.form-group{
-    line-height: 25px;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-a:focus, a:hover{
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 0 0 5px #ac1a1a; 
-    border-radius: 10px;
-    transform: skew(-10deg);
 }
 
 .logo {
@@ -83,14 +72,63 @@ a:focus, a:hover{
     padding: 3px;
     font-family: 'Imperial Script';
 }
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .barraLateral{
     display: flex;
     flex-direction: column;
     background-color: #912424;
     align-items: center;
     color: #fff;
-    width: 17%;
+    width: 23%;
     padding: 10px 10px;
+}
+
+.column-group{
+    display: flex;
+}
+
+.prop-btn{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.form-group{
+    font-size: 15px;
+    display: flex;    
+    flex-direction: column;
+    padding: 1% 0 0 3%;
+}
+
+.confirmBTN{
+    width: 200px;
+}
+
+.Slogan{
+    font-family: 'Imperial Script';
+    font-size: 30px;
+}
+
+a:focus, a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 0 5px #ac1a1a; 
+    border-radius: 10px;
+    transform: skew(-5deg);
+}
+
+button:active, button:hover{
+    position: relative;
+    bottom: 5px;
+}
+
+input#age{
+    width: 150px;
 }
 
 .open:hover,
@@ -105,7 +143,3 @@ a:focus, a:hover{
     transition: background 1s;
 }
 
-.Slogan{
-    font-family: 'Imperial Script';
-    font-size: 30px;
-}

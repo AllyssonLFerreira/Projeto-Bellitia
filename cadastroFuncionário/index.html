@@ -15,113 +15,125 @@
         <h1 class="logo">Bellitia</h1>
     </header>
     <main>
-        <section class="barraLateral">
-            <p>Estabelecimento: </p>
-            <button class="open">Aberto</button>
-            <button class="close">Fechado</button>
-            <!-- manter o button ativo após o click -->    
-            <nav>
-                <ul>
-                    <li><a href="">CONTROLE DE AGENDA</a></li>
-                    <li><a href="">CADASTRO DE FUNCIONÁRIO</a></li>
-                    <li><a href="">CADASTRO DE SERVIÇOS</a></li>
-                    <li><a href="">ALTERAÇÃO DE DADOS</a></li>
-                    <li><a href="">CONTROLE FINANCEIRO</a></li>
-                    <li><a href="">PRECISO DE AJUDA</a></li>
-                    <li><a href="">SAIR</a></li>
-                </ul>
-            </nav>
-        </section>
+        <section class="container">
 
-        <section class="formContainer">
+            <section class="barraLateral">
+                <span>Estabelecimento: </span>
+                <button class="open">Aberto</button>
+                <button class="close">Fechado</button>
+                <!-- manter o button ativo após o click -->    
+                <nav>
+                    <ul>
+                        <li><a href="">CONTROLE DE AGENDA</a></li>
+                        <li><a href="">CADASTRO DE FUNCIONÁRIO</a></li>
+                        <li><a href="">CADASTRO DE SERVIÇOS</a></li>
+                        <li><a href="">ALTERAÇÃO DE DADOS</a></li>
+                        <li><a href="">CONTROLE FINANCEIRO</a></li>
+                        <li><a href="">PRECISO DE AJUDA</a></li>
+                        <li><a href="">SAIR</a></li>
+                    </ul>
+                </nav>
+            </section>
 
-        <form action="">
-            <div class="form-group">
-                <h1 class="tittle-form">Dados do Funcionário</h1>
+            <form action="">
                 
-                <label for="rSocial">Razão Social</label>
-                <input type="text" id="rSocial" placeholder="Escreva Aqui" required>
+                <section class="column-group">
+                    <div class="form-group">
+                        <h1 class="tittle-form">Dados do Funcionário</h1>
+                        
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" placeholder="Escreva Aqui">
 
-                <label for="nFantasia">Nome Fantasia</label>
-                <input type="text" id="nFantasia" placeholder="Escreva Aqui" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Escreva Aqui">
 
-                <label for="cnpj">CNPJ</label>
-                <input type="text" id="cnpj" minlength="14" maxlength="14" placeholder="Apenas Números" required>
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="DDD + Número">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Escreva Aqui" required>
+                        <label for="age">Data de Nascimento</label>
+                        <input type="date" id="age">
 
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" placeholder="DDD + Número" required>
-            </div>
+                        <h1 class="tittle-form">Definições de Acesso</h1>
 
-            <div class="form-group">
-                <h1 class="tittle-form">Endereço do Funcionário</h1>
+                        <label for="user">Nome de Usuário</label>
+                        <input type="text" id="user" placeholder="Escreva Aqui" required>
 
-                <label for="logradouro">Logradouro/Rua</label>
-                <input type="text" id="logradouro" placeholder="Escreva Aqui" required>
+                        <label for="senha">Defina sua senha</label>
+                        <input type="password" id="senha" placeholder="Escreva Aqui" required>
 
-                <label for="numero">Número</label>
-                <input type="text" id="numero" placeholder="Escreva Aqui" required>
+                        <label for="cargo">Cargo/Area</label>
+                        <select id="cargo" name="cargo" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="recepção/adm">Recepcionista</option>
+                                <option value="operacional">Esteticista</option>
+                                <option value="operacional">Barbeiro(a)</option>
+                                <option value="operacional">Cabeleireiro(a)</option>
+                                <option value="gerencia/adm">Gerente</option>
+                                <option value="gerencia/adm">Financeiro</option>
+                                <option value="Executivo">Sócio(a)/Propriétário(a)</option>
+                        </select>   
+                    </div>
 
-                <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" placeholder="Escreva Aqui" required>
+                    <div class="form-group">
+                        <h1 class="tittle-form">Endereço do Funcionário</h1>
 
-                <label for="cep">CEP</label>
-                <input type="text" id="cep" minlength="8" maxlength="8" placeholder="Apenas Números" required>
+                        <label for="logradouro">Logradouro/Rua</label>
+                        <input type="text" id="logradouro" placeholder="Escreva Aqui" required>
 
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" placeholder="Escreva Aqui" required>
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" placeholder="Escreva Aqui" required>
 
-                <label for="estado">Estado</label>
-	            <select id="estado" name="estado" required>
-                        <option value="" disabled selected>Selecione</option>
-		                <option value="AC">ACRE</option>
-		                <option value="AL">ALAGOAS</option>
-		                <option value="AP">AMAPÁ</option>
-                        <option value="AM">AMAZONAS</option>
-		                <option value="BA">BAHIA</option>
-		                <option value="CE">CEARÁ</option>
-                        <option value="DF">DISTRITO FEDERAL</option>
-		                <option value="ES">ESPÍRITO SANTO</option>
-		                <option value="GO">GOÍAS</option>
-                        <option value="MA">MARANHÃO</option>
-		                <option value="MT">MATO GROSSO</option>
-		                <option value="MS">MATO GROSSO DO SUL</option>
-                        <option value="MG">MINAS GERAIS</option>
-		                <option value="PA">PARÁ</option>
-		                <option value="PB">PARAÍBA</option>
-                        <option value="PR">PARANÁ</option>
-		                <option value="PE">PERNAMBUCO</option>
-		                <option value="PI">PIAUÍ</option>
-                        <option value="RJ">RIO DE JANEIRO</option>
-		                <option value="RN">RIO GRANDE DO NORTE</option>
-		                <option value="RS">RIO GRANDE DO SUL</option>
-                        <option value="RO">RONDÔNIA</option>
-		                <option value="RR">RORAIMA</option>
-		                <option value="SC">SANTA CATARINA</option>
-                        <option value="SP">SÃO PAULO</option>
-		                <option value="SE">SERGIPE</option>
-		                <option value="TO">TOCANTINS</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h1 class="tittle-form">Definições de Acesso</h1>
+                        <label for="comp">Complemento</label>
+                        <input type="text" id="numero" placeholder="Escreva Aqui">
 
-                <label for="logradouro">Logradouro/Rua</label>
-                <input type="text" id="logradouro" placeholder="Escreva Aqui" required>
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" placeholder="Escreva Aqui" required>
 
-                <label for="numero">Número</label>
-                <input type="text" id="numero" placeholder="Escreva Aqui" required>
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" minlength="8" maxlength="8" placeholder="Apenas Números" required>
 
-                <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" placeholder="Escreva Aqui" required>
-            </div>
-            <div class="button">
-                <button type="submit">Confirmar</button>
-            </div>
-        </form>   
-        </section>
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" placeholder="Escreva Aqui" required>
+
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="AC">ACRE</option>
+                                <option value="AL">ALAGOAS</option>
+                                <option value="AP">AMAPÁ</option>
+                                <option value="AM">AMAZONAS</option>
+                                <option value="BA">BAHIA</option>
+                                <option value="CE">CEARÁ</option>
+                                <option value="DF">DISTRITO FEDERAL</option>
+                                <option value="ES">ESPÍRITO SANTO</option>
+                                <option value="GO">GOÍAS</option>
+                                <option value="MA">MARANHÃO</option>
+                                <option value="MT">MATO GROSSO</option>
+                                <option value="MS">MATO GROSSO DO SUL</option>
+                                <option value="MG">MINAS GERAIS</option>
+                                <option value="PA">PARÁ</option>
+                                <option value="PB">PARAÍBA</option>
+                                <option value="PR">PARANÁ</option>
+                                <option value="PE">PERNAMBUCO</option>
+                                <option value="PI">PIAUÍ</option>
+                                <option value="RJ">RIO DE JANEIRO</option>
+                                <option value="RN">RIO GRANDE DO NORTE</option>
+                                <option value="RS">RIO GRANDE DO SUL</option>
+                                <option value="RO">RONDÔNIA</option>
+                                <option value="RR">RORAIMA</option>
+                                <option value="SC">SANTA CATARINA</option>
+                                <option value="SP">SÃO PAULO</option>
+                                <option value="SE">SERGIPE</option>
+                                <option value="TO">TOCANTINS</option>
+                        </select>
+                    </div>
+                </section>
+
+                <div class="prop-btn">
+                    <button class="confirmBTN" type="submit">Confirmar</button>
+                </div>
+        </form> 
+        </section>    
     </main>
     <footer>
         <div class="Slogan">O site que conecta você à beleza de forma prática!</div>
