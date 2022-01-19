@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Novo Serviço</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Bellitia</h1>
+    </header>
+    <main>
+
+        <section class="barraLateral">
+
+            <p>Estabelecimento: </p>
+            <button class="open">Aberto</button>
+            <button class="close">Fechado</button>
+            <!-- manter o button ativo após o click -->    
+            <nav>
+                <ul>
+                    <li><a href="">CONTROLE DE AGENDA</a></li>
+                    <li><a href="../cadastroFuncionário/index.html">CADASTRO DE FUNCIONÁRIO</a></li>
+                    <li><a href="">CADASTRO DE SERVIÇOS</a></li>
+                    <li><a href="">ALTERAÇÃO DE DADOS</a></li>
+                    <li><a href="">CONTROLE FINANCEIRO</a></li>
+                    <li><a href="">PRECISO DE AJUDA</a></li>
+                    <li><a href="">SAIR</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="service-container">
+        <form action="">
+
+            <div class="column-form">
+            <div class="form-group">
+
+                <h1 class="serviceProp">Novo Serviço</h1>
+            
+                <label for="description">Descrição do Serviço</label>
+                <textarea name="description" id="description" cols="30" rows="15" placeholder="Especifique os serviços ofertados aqui"></textarea>
+
+                <label for="valor">Valor Cobrado (R$): </label>
+                <input type="text" id="valor" name="valor" placeholder="exemplo: 45.99"/>
+            <div id="tempo-servico">
+                <label for="tempo-servico"> Tempo aproximado de serviço?</label>
+                <input type="radio" id="30" name="tempo-servico" value="30"  checked><label for="30">30 min.</label>
+                <input type="radio" id="45" name="tempo-servico" value="45"><label for="45">45 min.</label>
+                <input type="radio" id="60" name="tempo-servico" value="60"><label for="60">1 hora</label>
+                <input type="radio" id="90" name="tempo-servico" value="90"><label for="90">1 hora e 30 min.</label>
+                <input type="radio" id="120" name="tempo-servico" value="120"><label for="120">2 horas</label>
+            </div>
+                <label for="listaProficionais">Escolha um Profissional:</label>
+                <select name="profissionais" id="profissionais">
+                    <option selected disabled>Selecione</option>
+                    <option value="terror">João do Santo Cristo</option>
+                    <option value="drama">Ronaldinho Gaucho</option>
+                    <option value="Comédia romantica">Inês Brasil</option>
+                    <option value="Opera Espacial">Zé do Caixão</option>
+                </select>
+            </div>
+            <div class="prop-btn">
+                <br>
+                <button class="confirmBTN" type="submit">Confirmar</button>
+            </div>
+            </div>      
+            </form>
+        
+        <div class="column-form">
+            <span> serviços ja cadastrados na formulário para edição </span> 
+        </div>
+        </section>  
+    </main>
+    <footer>
+        <div class="Slogan">O site que conecta você à beleza de forma prática!</div>
+    </footer>
+</body>

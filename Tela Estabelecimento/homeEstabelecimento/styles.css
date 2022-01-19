@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 header {
@@ -34,7 +35,7 @@ button{
  
 main{
     display: flex;
-    height: 77vh;
+    height: 100vh;
 }
 
 ul{

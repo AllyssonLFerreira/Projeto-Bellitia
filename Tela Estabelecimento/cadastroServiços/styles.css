@@ -2,12 +2,12 @@
 *{
     margin: 0;
     padding: 0;
-    width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
 header {
+    width: 100%;
     height: 13vh;
     display: flex;
     justify-content: space-between;
@@ -16,14 +16,10 @@ header {
     box-sizing: border-box;
 }
 
-span {
-    text-align: center;
-}
-
 input{
-    font-weight: bold;
     border-radius: 10px;
-    width: 400px;
+    font-weight: bold;
+    width: 125px;
 }
 
 button{
@@ -34,12 +30,12 @@ button{
     width: 75px;
     height: 5vh;
     border-radius: 10px;
-    font-weight: bold;
 }
  
 main{
     display: flex;
-    height: 77vh;
+    height: 100vh;
+    width: 100%;
 }
 
 ul{
@@ -58,14 +54,27 @@ select{
     width: 300px;
 }
 
+form{
+    border-radius: 10px;
+}
+
 footer{
     position: absolute;
     text-align: end;
     padding: 0 10px;
+    width: 100%;
     height: 10vh;
     background-color: #912424;
     color: #fff; 
     box-sizing: border-box;
+}
+
+a:focus, a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 0 5px #ac1a1a; 
+    border-radius: 10px;
+    transform: skew(-10deg);
 }
 
 .logo {
@@ -74,29 +83,25 @@ footer{
     font-family: 'Imperial Script';
 }
 
-.container{
-    display: flex;
-    justify-content: space-between;
-}
-
 .barraLateral{
     display: flex;
     flex-direction: column;
     background-color: #912424;
     align-items: center;
     color: #fff;
-    width: 23%;
+    width: 17%;
     padding: 10px 10px;
 }
 
-.column-group{
+.service-container{
     display: flex;
+    justify-content: space-between;
+    line-height: 30px;
 }
 
-.prop-btn{
+.column-form{
     display: flex;
-    padding-top: 20px;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .form-group{
@@ -106,30 +111,9 @@ footer{
     padding: 1% 0 0 3%;
 }
 
-.confirmBTN{
-    width: 200px;
-}
-
-.Slogan{
-    font-family: 'Imperial Script';
-    font-size: 30px;
-}
-
-a:focus, a:hover{
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 0 0 5px #ac1a1a; 
-    border-radius: 10px;
-    transform: skew(-5deg);
-}
-
-button:active, button:hover{
-    position: relative;
-    bottom: 5px;
-}
-
-input#age{
-    width: 150px;
+#tempo-servico{
+    display: flex;
+    width: 400px;
 }
 
 .open:hover,
@@ -144,3 +128,20 @@ input#age{
     transition: background 1s;
 }
 
+button:active, button:hover{
+    position: relative;
+    bottom: 5px;
+}
+
+.prop-btn{
+    padding-left: 10px;
+}
+
+.confirmBTN{
+    width: 200px;
+}
+
+.Slogan{
+    font-family: 'Imperial Script';
+    font-size: 30px;
+}
