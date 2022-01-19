@@ -8,7 +8,7 @@
 
 header{
   width: 100%;
-  height: 60px;
+  height: 25%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,7 @@ header{
   font-weight: bold;
   font-family: 'Imperial Script', sans-serif;
   letter-spacing: 5px;
-  font-size: 25px;
+  font-size:40px;
   color: #fff;
   background-color: #912424;
   padding: 5px;
@@ -52,27 +52,28 @@ header{
   color: #fff;
   font-size: 20px;
 }
+  
 a:link {
   color: white;
   background-color: transparent;
   text-decoration: none;
   font-weight: bold;
 }
-  
+
 a:visited {
   color: white;
   background-color: transparent;
   text-decoration: none;
   font-weight: bold;
 }
-  
+
 a:hover {
   color: black;
   background-color: white;
   border-radius: 10px;
   font-weight: bold;
 }
-  
+
 a:active {
   color: black;
   background-color: transparent;
@@ -80,12 +81,18 @@ a:active {
   font-weight: bold;
 }
 
+body{
+  height: 100%;
+}
+
 nav{
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   color: #fff;
   background-color:#912424;
-  height: 820px;
+  height: 1100px;
   width: 300px;
+  padding-top: 100px;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 15px;
@@ -103,28 +110,16 @@ ul{
 }
 
 section{
-  font-family: 'Montserrat', sans-serif, bold;
-  font-size: 20px;
-  background-color: #ffffff;
-  height: 50%;
-  width: 1200px;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  float: left;
-}
-
-.titulo{
-  font-size: 20px;
-}
-
-.subtitulo{
-  font-size: 15px;
-}
-
-.historico{
-  font-weight: bold;
+font-family: 'Montserrat', sans-serif, bold;
+font-size: 20px;
+background-color: #ffffff;
+height: 50%;
+width: 1200px;
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+float: left;
 }
 
 button.btn{
@@ -135,7 +130,7 @@ button.btn{
   cursor: pointer;
   color: #fff;
   border-radius: 10px;
-  float: left;
+  float: right;
 }
 
 footer{
@@ -144,10 +139,7 @@ footer{
   color: #fff;
   background-color:#912424;
   height: 60px;
-  width: 100%;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  width: 100vw;
   margin-bottom: 0px;
   text-align: center;
   float: left;
