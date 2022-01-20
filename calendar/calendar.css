@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+*{
+    
+   /*  margin: 0px;
+    padding: 50px 50px;
+    width: 100%;*/
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+
+ul {list-style-type: none;}
+body {font-family: Montserrat, sans-serif}
+
+.agenda {
+    display:flex;
+    justify-content: space-around;
+}
+
+.calendario {
+    border: solid 1px black;
+    width: 250px;
+    height: 250px;
+}
+
+.mes {
+    border: 1px solid black;
+    padding: 10px 50px;
+    width: 250px;
+    height: 70px;
+    background: #912424;
+    text-align: center;
+}
+
+.mes ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mes ul li {
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-top: 10px;
+}
+
+.anterior {
+    float: left;
+    /*padding-top: 10px;*/
+}
+
+.mes .proximo {
+    float: right;
+    /*padding-top: 10px;*/
+}
+
+.semana li {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+
+.semana{
+    background: #b3bbc7;
+}
+.dia {
+    padding: 10px 0px;
+    margin: 0;
+}
+
+.dias {
+    width: 250px;
+    height: 300px;
+}
+
+.dia li {
+    list-style-type: none;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.active {
+    background: #912424;
+    color: white !important;
+    padding: 3px;
+}
+
+.tabela {
+    width: 75vw;
+    height: 60vh;
+    text-align: center;
+}
+
+.table {
+    margin-bottom: 10px;
+}
+
+th {
+    height: 5em;
+    border: 1px solid black;
+}
+
+td {
+    height: 2.5em;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
