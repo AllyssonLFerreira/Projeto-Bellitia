@@ -6,14 +6,14 @@
   box-sizing: border-box;
 }
 
-header{
+header {
   width: 100%;
-  height: 25%;
+  height: 9vh;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
   background-color: #912424;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .logo p a{
@@ -21,13 +21,12 @@ header{
   font-weight: bold;
   font-family: 'Imperial Script', sans-serif;
   letter-spacing: 5px;
-  font-size:40px;
+  font-size:60px;
   color: #fff;
   background-color: #912424;
   padding: 5px;
   border-radius: 20px;
 }
-
 .menu{
   padding-right: 20px;
 }
@@ -52,7 +51,7 @@ header{
   color: #fff;
   font-size: 20px;
 }
-  
+
 a:link {
   color: white;
   background-color: transparent;
@@ -85,12 +84,17 @@ body{
   height: 100%;
 }
 
+main{
+  display: flex;
+  height: 100vh;
+}
+
 nav{
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #fff;
   background-color:#912424;
-  height: 1100px;
+  height: 120vh;
   width: 300px;
   padding-top: 100px;
   margin-top: 0px;
@@ -101,28 +105,41 @@ nav{
 }
 
 ul{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  color: #ffffff;
-  height: 80px;
-  margin-top: 10px;
-  margin-left: 10px;
+  list-style: none;
+}
+
+a{
+  position: relative;
+  display: block;
+  padding: 25px 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
 section{
-font-family: 'Montserrat', sans-serif, bold;
-font-size: 20px;
-background-color: #ffffff;
-height: 50%;
-width: 1200px;
-margin-top: 0px;
-margin-left: 0px;
-margin-right: 0px;
-margin-bottom: 0px;
-float: left;
+  font-family: 'Montserrat', sans-serif, bold;
+  font-size: 20px;
+  background-color: #ffffff;
+  height: 120vh;
+  width: 1200px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  float: left;
+  }
+
+.digit-box{
+  font-family: 'Montserrat', sans-serif, bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-button.btn{
+textarea{
+  border-radius: 10px;
+}
+
+#btn{
   width: 15%;
   background-color: #912424;
   font-size: 25px;
@@ -130,17 +147,25 @@ button.btn{
   cursor: pointer;
   color: #fff;
   border-radius: 10px;
-  float: right;
+  border-style: none;
+  float: left;
+}
+
+.contatos{
+  font-family: 'Montserrat', sans-serif, bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 footer{
-  font-family: 'Imperial Script';
-  font-size: 40px;
-  color: #fff;
-  background-color:#912424;
-  height: 60px;
-  width: 100vw;
-  margin-bottom: 0px;
-  text-align: center;
-  float: left;
+  font-family: 'Imperial Script', sans-serif;
+  font-size: 4vh;
+  position: absolute;
+  text-align: end;
+  padding: 0 10px;
+  width: 100%;
+  height: 10vh;
+  background-color: #912424;
+  color: #fff; 
+  box-sizing: border-box;
 }
