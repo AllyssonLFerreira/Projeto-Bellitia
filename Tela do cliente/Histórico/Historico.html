@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
     <link rel="stylesheet" href="historico.css">
     <link rel="shortcut icon" href="favicon.ico">
     <title>BELLITIA</title>
@@ -17,25 +16,22 @@
         <p><a href="#"> Bellitia</a></p>
       </div>
 
-      <div class="menu">
-        <span><a href="">Home</a></span>
-        <span><a href="">Serviços</a></span>
-        <span><a href="">Contato</a></span>
-        <span><a href="">Sobre</a></span>
-      </div>
-
       <div class="login">
         <a href="#"> <i class="fas fa-user"></i></a>
       </div>
 
     </header>
 
-    <nav>
-      <ul><a href="Agendamentos.html">Agendamentos</a></ul><br /><br />
-      <ul><a href="TelaPosLogin.html">Minha Busca</a></ul><br /><br />
-      <ul><a href="Historico.html">Histórico</a></ul><br /><br />
-      <ul><a href="MeusDados.html">Meus Dados</a></ul><br /><br />
-      <ul><a href="Ajuda.html">Preciso de Ajuda</a></ul><br /><br />
+    <main>
+      <nav>
+        <ul>
+            <li><a href="TelaPosLogin.html">MINHA BUSCA</a></li>
+            <li><a href="MeusDados.html">MEUS DADOS</a></li>
+            <li><a href="Agendamentos.html">MEUS AGENDAMENTOS</a></li>
+            <li><a href="Historico.html">HISTÓRICO</a></li>
+            <li><a href="Ajuda.html">PRECISO DE AJUDA</a></li>
+            <li><a href="../homeEstabelecimento/index.html">SAIR</a></li>
+        </ul>
     </nav>
 
     <section>
@@ -58,7 +54,7 @@
         <input type="text" name="serviços" id="serviços">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <label for="preço">Preço:</label>&nbsp;&nbsp;&nbsp;
         <input type="text" name="preço" id="preço"><br><br>
-        <button class="btn btn2">Reagendar</button><br><br><br><br>
+        <button id="btn">Reagendar</button><br><br><br><br>
         <label for="estabelecimento">Estabelecimento:</label>
         <input type="text" size="30" placeholder="Nome do estabelecimento"><br><br>
         <label for="data">Data:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -69,14 +65,17 @@
         <input type="text" name="serviços" id="serviços">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <label for="preço">Preço:</label>&nbsp;&nbsp;&nbsp;
         <input type="text" name="preço" id="preço"><br><br>
-        <button class="btn btn2">Reagendar</button><br><br><br><br>
+        <button id="btn">Reagendar</button><br><br><br><br>
   
       </div>
 
     </section>
+    </main>
 
     <footer>O site que conecta você a beleza de forma prática!!</footer>
 
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
+    <script type="text/javascript" src="historico.js"></script>
   </body>
 
 </html>
