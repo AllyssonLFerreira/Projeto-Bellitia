@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   /*  font-family: 'Montserrat', sans-serif; */
+}
+
+header.card-header:first-child {
+    border-radius: 0;
+}
+
+header.card-header {
+    background-color: #912424;
+    border: none;
+}
+
+header #logo { 
+    font-size: 75px;
+    font-family: 'Imperial Script';
+    color: #fff;
+}
+
+div.row{
+    height: 100vh;
+}
+
+div #barra-lateral{
+    background-color: #912424;
+    line-height: 3.5;
+}
+
+ul{
+    list-style: none;
+}
+
+a.badge{
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0;
+    white-space: normal;
+    font-weight: lighter;
+    text-align: start;
+    line-height: 2.5;
+    
+}
+
+a.badge a:focus, a:hover{
+    background-color: #ffffff;
+    box-shadow: 0 0 0 5px #ac1a1a; 
+    border-radius: 10px;
+    transform: skew(-10deg);
+    line-height: 4;
+}
+
+div .btn-lg{
+    border-radius: 10px;
+}
+
+div #open-close:hover, #open-close:focus{
+    color: #ffffff;
+    background-color: #2bb81e;
+    border: none;
+}
+
+div #logout:hover, #logout:focus{
+    color: #000000;
+    background-color: #f1ee09;
+    border: none;
+}
+
+footer.card-footer{
+    background-color: #912424;
+    text-align: end;
+    border: none;
+}
+
+footer #slogan{
+    color: #ffffff;
+    font-size: 40px;
+    padding-right: 10px;
+    font-family: 'Imperial Script';
+}

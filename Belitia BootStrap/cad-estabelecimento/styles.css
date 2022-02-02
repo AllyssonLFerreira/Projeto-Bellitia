@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+header.card-header:first-child {
+    border-radius: 0;
+}
+header.card-header {
+    background-color: #912424;
+    border: none;
+}
+header #logo { 
+    font-size: 75px;
+    font-family: 'Imperial Script';
+    color: #fff;
+}
+
+div.container-fluid{
+    padding-left: 5%;
+}
+
+div.row{
+    margin-right: 0;
+}
+
+div#btn-config{
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+
+button.btn{
+    background-color: #912424;
+    border: none;
+}
+
+footer.card-footer{
+    background-color: #912424;
+    text-align: end;
+    border: none;
+}
+
+footer #slogan{
+    color: #ffffff;
+    font-size: 40px;
+    padding-right: 10px;
+    font-family: 'Imperial Script';
+}
