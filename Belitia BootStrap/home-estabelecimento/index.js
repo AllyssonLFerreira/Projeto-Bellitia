@@ -17,12 +17,6 @@ btnOpenClose.addEventListener(`click`, openEst())
 
 
 
-function closeEst(){
-    
-}
-
-
-
 
 
 
@@ -44,3 +38,12 @@ function closeEst(){
  }
 
 btnOpenClose.addEventListener(`click`, openEst) */
+buttonOpenClose.addEventListener('click', ()=>{
+    if(verificationBtn = true){
+        buttonOpenClose.innerText=`Estabelecimento Aberto` 
+        buttonOpenClose.style.backgroundColor = `#2bb81e`
+        buttonOpenClose.style.border = `none`
+    } 
+})
+
+buttonOpenClose.addEventListener(`blclick`)
