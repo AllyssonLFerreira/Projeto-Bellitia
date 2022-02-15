@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Hotel California",
+        "rating": 5,
+        "price": 200,
+        "city": "São Francisco"
+    },
+    {
+        "name": "Hotel Porto Alegre",
+        "rating": 3.5,
+        "price": 160,
+        "city": "Porto Alegre"
+    },
+    {
+        "name": "Hotel Leblon ",
+        "rating": 4,
+        "price": 500,
+        "city": "Rio de Janeiro"
+    },
+    {
+        "name": "Hotel Maquiné",
+        "rating": 3,
+        "price": 100,
+        "city": "Maquiné"
+    },
+    {
+        "name": "Hotel de Minas",
+        "rating": 4,
+        "price": 200,
+        "city": "Minas Gerais"
+    },
+    {
+        "name": "Hotel dos Potter",
+        "rating": 5,
+        "price": 1000,
+        "city": "Godric's Hollow"
+    },
+    {
+        "name":"Hotel da Costa",
+        "rating":3.8,
+        "price":485.00,
+        "city":"São Paulo"
+    },
+    {
+        "name":"Hotel Resort Caldeiras",
+        "rating":5,
+        "price":1200.00,
+        "city":"Caldeiras"
+    },
+    {
+            "name": "Hotel beira mar",
+            "rating": 3.8,
+            "price": 130.20,
+            "city": "Rio de Janeiro"
+    },
+    {
+            "name": "Hotel da Ribeira",
+            "rating": 3.8,
+            "price": 230.00,
+            "city": "Rio de Janeiro"
+}
+]

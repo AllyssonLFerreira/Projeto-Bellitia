@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.start, .middle, .end {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.carousel {
+    width: 90%;
+    height: 400px;
+    background-color: #777;
+    border: 3px solid black;
+}
+
+.card {
+    width: 250px;
+    height: 230px;
+    background-color: #aaa;
+    border: 3px solid black;
+}
+
+.banner {
+    width: 450px;
+    height: 450px;
+    background-color: #ddd;
+    border: 3px solid black;
+}
+
+@media (max-width: 769px) {
+    .middle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 450px;
+        height: 430px;
+    }
+
+    .end {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner {
+        margin-top: 30px;
+        width: 450px;
+        height: 450px;
+    }
+}

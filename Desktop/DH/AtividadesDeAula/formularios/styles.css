@@ -1,0 +1,32 @@
+input:hover {
+    border-color: aquamarine;
+
+}
+
+.Titulo-agendamento{
+    display: flex;
+    justify-content: flex;
+    background: #777777;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.form-container{
+    background: #dbc1c1
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-family: sans-serif;
+    font-size: 15px;
+    padding: 5px 5px;
+}
+
+.form-group::placeholder {
+    color: #777777;
+}
