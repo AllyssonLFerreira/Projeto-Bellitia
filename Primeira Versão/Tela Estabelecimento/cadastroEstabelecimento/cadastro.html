@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Tela de Cadastro</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Bellitia</h1>
+    </header>
+
+
+    <section class="container">
+        <form action="">    
+            <h3 class="tittle-form">Dados do estabelecimento</h3>
+
+            <div class="form-group"> 
+                  <div class="form-prop">
+                      <label for="rSocial">Razão Social</label>
+                      <input type="text" id="rSocial" placeholder="Escreva Aqui" required>
+                  </div>
+                  <div class="form-prop">
+                      <label for="nFantasia">Nome Fantasia</label>
+                      <input type="text" id="nFantasia" placeholder="Escreva Aqui" required>
+                  </div>
+                  <div class="form-prop">
+                      <label for="cnpj">CNPJ</label>
+                      <input type="text" id="cnpj" minlength="14" maxlength="14" placeholder="Apenas Números" required>
+                  </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-prop">
+                    <label for="end-rua">Endereço/Rua</label>
+                    <input type="text" id="end-rua" placeholder="Escreva Aqui" required>
+                </div>
+                <div class="form-prop">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" placeholder="Escreva Aqui" required>
+                </div>
+                <div class="form-prop">
+                    <label for="comp">complemento</label>
+                    <input type="text" id="comp" placeholder="Escreva Aqui" required>
+                </div>
+            </div> 
+            
+            <div class="form-group">
+                <div class="form-prop">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" placeholder="Escreva Aqui" required>
+                </div>
+                <div class="form-prop">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" minlength="8" maxlength="8" placeholder="Apenas Números" required>
+                </div>
+                <div class="form-prop">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" placeholder="Escreva Aqui" required>
+                </div>
+                <div class="form-prop">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+            </div>
+
+            <h3 class="tittle-form">Dados do proprietário</h3>
+
+            <div class="form-group">
+                <div class="form-prop">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Escreva Aqui" required>
+                </div>
+                <div class="form-prop">
+                    <label for="nasc">Data de Nascimento</label>
+                    <input type="date" id="nasc" required> 
+                </div>
+                <div class="form-prop">
+                    <label for="RG">Registro Geral(RG)</label>
+                    <input type="text" id="RG" minlength="10" maxlength="10" placeholder="Apenas Números" required>
+                </div>
+                <div class="form-prop">
+                    <label for="CPF">CPF</label>
+                    <input type="text" id="CPF" minlength="11" maxlength="11" placeholder="Apenas Números" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-prop">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Escreva Aqui" required>
+                </div>
+                <div class="form-prop">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="DDD + Número" required> 
+                </div>
+            </div>
+
+            <h3 class="tittle-form">Dados de Acesso</h3>
+
+            <div class="form-group">
+                <div class="form-prop">
+                    <label for="email">Email do Estabalecimento</label>
+                    <input type="email" id="email" placeholder="Escreva Aqui" required>
+                </div> 
+                <div class="form-prop">
+                    <label for="telefone">Telefone do Estabelecimento</label>
+                    <input type="tel" id="telefone" placeholder="DDD + Número" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-prop">
+                    <label for="password">Defina uma Senha de Acesso</label>
+                    <input type="password" id="password" minlength="6" maxlength="10" placeholder="Entre 6 e 10 digitos" required>
+                </div>
+                <div class="form-prop">
+                    <label for="rpt-pasw">Repita sua Senha</label>
+                    <input type="password" id="rpt-pasw" placeholder="" required>
+                </div>
+            </div>
+
+        <div class="button">
+            <button type="submit">Confirmar</button>
+        </div>
+        </form>
+    </section>
+    <footer>
+        <div class="Slogan">O site que conecta você à beleza de forma prática!</div>
+    </footer>
+</body>
+</html>
