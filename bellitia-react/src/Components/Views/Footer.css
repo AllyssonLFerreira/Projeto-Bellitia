@@ -1,0 +1,13 @@
+
+.footer__slogan{
+    width: 100%;
+    height: 10vh;   
+    position: absolute;
+    text-align: end;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: #912424;
+    font-family: 'Imperial Script';
+    font-size: 30px;
+    color: #fff; 
+}

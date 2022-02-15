@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
+        <link rel="stylesheet" href="MeusDados.css">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Bellitia</title>
+    </head>
+
+    <body>
+        <header>
+
+          <div class="logo">
+               <p><a href="#"> Bellitia</a></p>
+          </div>
+
+          <div class="login">
+              <a href="#"> <i class="fas fa-user"></i></a>
+          </div>
+
+        </header>
+
+        <main>
+            <nav>
+              <ul>
+                  <li><a href="TelaPosLogin.html">MINHA BUSCA</a></li>
+                  <li><a href="MeusDados.html">MEUS DADOS</a></li>
+                  <li><a href="Agendamentos.html">MEUS AGENDAMENTOS</a></li>
+                  <li><a href="Historico.html">HISTÓRICO</a></li>
+                  <li><a href="Ajuda.html">PRECISO DE AJUDA</a></li>
+                  <li><a href="../homeEstabelecimento/index.html">SAIR</a></li>
+              </ul>
+          </nav>
+
+        <section class="form">
+
+            <form>
+                <h1>Meus Dados</h1><br><br>
+                <label for="nome"><strong>Nome</strong></label><br>
+                <input type="text" size="70" placeholder="Nome Completo"><br><br>
+
+                <label for="rg"><strong>Registro Geral (RG):</strong></label><br>
+                <input type="text" placeholder="00.000.000-0"><br><br>
+
+                <label for="cpf"><strong>CPF:</strong></label><br>
+                <input type="text" placeholder="000.000.000-00"><br><br>
+
+                <label for="data"><strong>Data de nascimento:</strong></label><br>
+                <input type="date" name="data" id="data"><br><br>
+
+                <label for="gênero"><strong>Gênero:</strong></label>
+                <label for="mas"><strong>Masculino</strong></label>
+                <input type="radio" name="opcao" id="op1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="fem"><strong>Feminino</strong></label>
+                <input type="radio" name="opcao" id="op1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="outro"><strong>Outros</strong></label>
+                <input type="radio" name="opcao" id="op1"><br><br>
+
+                <label for="tel/cel"><strong>Tel/cel 1:</strong></label><br>
+                <input type="tel" size="11" placeholder="DDD + Número"><br><br>
+
+                <label for="tel/cel"><strong>Tel/cel 2:</strong></label><br>
+                <input type="tel" size="11" placeholder="DDD + Número"><br><br>
+
+                <label for="email"><strong>Email:</strong></label><br>
+                <input type="email" size="40" placeholder="email válido"><br><br>
+
+                <label for="estado"><strong>Estado:</strong></label><br>
+                <input type="text" size="40" placeholder="Digite seu estado"><br><br>
+
+                <label for="cidade"><strong>Cidade:</strong></label><br>
+                <input type="text" size="40" placeholder="Digite sua cidade"><br><br>
+
+                <label for="rua/avenida"><strong>Rua/Avenida:</strong></label><br>
+                <input type="text" size="40" placeholder="Digite sua avenida"><br><br>
+
+                <label for="numero"><strong>Número:</strong></label><br>
+                <input type="text" size="5" placeholder="Digite seu numero"><br><br>
+
+                <label for="cep"><strong>CEP:</strong></label><br>
+                <input type="text" size="8" placeholder="00000-000"><br><br>
+        
+            </form>
+
+            <button id="btn">Confirmar</button><br><br>
+
+        </section>
+        </main>
+
+        <br><br><br><br><br><br>
+        
+        <footer>
+            <span>O site que conecta você a beleza de forma prática!!</span>
+        </footer>
+
+        <script type="text/javascript" src="MeusDados.js"></script>
+    </body>
+
+</html>
