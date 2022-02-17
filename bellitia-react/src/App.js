@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Components/Views/Header";
-import Footer from "./Components/Views/Footer";
-import BarraLateral from "./Components/Views/Barra-Lateral";
+import Header from "./Components/Views/Cards/Header";
+import Footer from "./Components/Views/Cards/Footer";
+import BarraLateral from "./Components/Views/Cards/Barra-Lateral";
 
 
 
@@ -9,9 +9,9 @@ const App = () => {
   
   return (
     <div className="App">   
-      <Header></Header>
-      <BarraLateral></BarraLateral>
-      <Footer></Footer>
+      <Header />
+      <BarraLateral />
+      <Footer />
     </div>
   );
 }

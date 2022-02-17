@@ -1,0 +1,16 @@
+button{
+    background-color: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+}
+
+.Open_Close:hover , .Open_Close:focus{
+    color: #ffffff;
+    background-color: #2bb81e;
+    border: none;
+}

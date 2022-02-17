@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 
 .barra-lateral{
     display: flex;
@@ -10,11 +7,6 @@
     color: #fff;
     width: 17%;
     height: 77vh;
-}
-
-.buttons__prop{
-    padding-left: 15px;
-    padding-top: 25px;
 }
 
 .barra-lateral__links li{ 
@@ -38,27 +30,3 @@
     transform: skew(-10deg);
 }
 
-.barra-lateral__btn{
-    margin: auto;
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 7px;
-    margin-bottom: 15px;
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.btn__OpenClose:hover , .btn__OpenClose:focus{
-    color: #ffffff;
-    background-color: #2bb81e;
-    border: none;
-    
-}
-
-.btn__Logout:hover , .btn__Logout:focus{
-    color: #000000;
-    background-color: #f1ee09;
-    border: none;
-}
