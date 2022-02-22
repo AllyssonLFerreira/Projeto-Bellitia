@@ -1,9 +1,6 @@
-button{
-    cursor: pointer;
+.logout{
     background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #efefef;
-    border-radius: 7px;
+    margin-top: 20px;
     width: 200px;
     height: 50px;
 }
