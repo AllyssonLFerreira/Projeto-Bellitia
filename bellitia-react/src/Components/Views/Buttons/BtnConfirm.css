@@ -1,0 +1,14 @@
+.btn_confirm{
+    background-color: transparent;
+    border: 2.5px solid #912424;
+    box-shadow: 2px 2px 2px #666666;
+    color: #181818;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.btn_confirm:hover , .btn_confirm:focus{
+    color: #ffffff;
+    background-color: #912424;
+}
