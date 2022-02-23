@@ -1,19 +1,15 @@
 import React from "react";
-import Header from "./Components/Views/Cards/Header";
-import Footer from "./Components/Views/Cards/Footer";
-import BarraLateral from "./Components/Views/Cards/Barra-Lateral";
-import CadastroEstabelecimento from "./Components/Views/Forms/CadastroEstabelecimento";
-
-
+import ViewHome from "./Components/Views/Estabelecimento/Home/Home";
+import NewServiceCard from "./Components/Views/Estabelecimento/CadastroServicos/NewService";
+import NewEstCard from "./Components/Views/Estabelecimento/CadastroEstabalecimento/NewEstablishment";
 
 const App = () => {
   
   return (
     <div className="App">   
-      <Header />
-      {/* <CadastroEstabelecimento /> */}
-      <BarraLateral />
-      <Footer />
+      {/* <ViewHome /> */}
+      {/* <NewServiceCard /> */}
+      {/* <NewEstCard /> */}
     </div>
   );
 }

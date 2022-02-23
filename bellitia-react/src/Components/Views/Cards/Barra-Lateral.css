@@ -6,7 +6,8 @@
     align-items: center;
     color: #fff;
     width: 17%;
-    height: 77vh;
+    height: auto;
+    max-height: 100vh;
 }
 
 .barra-lateral__links li{ 
