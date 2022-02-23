@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    
+}
+
+
+h1{
+    margin-bottom: 8px;
+   
+}
+
+
+input{
+    font-weight: bold;
+    border-radius: 4px;
+    width: 400px;
+    margin: 4px;
+    
+ }
+
+.form-group ::placeholder{
+    font-size: 12px;
+}
+
+select{
+    border-radius: 4px;
+    width: 300px;
+    margin: 4px;
+}
+
+.column-group{
+    display: flex;
+}
+
+
+.form-group{
+    font-size: 15px;
+    display: flex;    
+    flex-direction: column;
+    padding: 1% 0 0 3%;
+}
+
+
+input#age{
+    width: 150px;
+}
+
+
+
