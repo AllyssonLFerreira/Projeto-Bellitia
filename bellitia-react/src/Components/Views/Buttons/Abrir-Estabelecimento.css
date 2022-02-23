@@ -1,9 +1,5 @@
-button{
+.Open_Close{
     background-color: transparent;
-    cursor: pointer;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 7px;
     margin-top: 20px;
     width: 200px;
     height: 50px;
