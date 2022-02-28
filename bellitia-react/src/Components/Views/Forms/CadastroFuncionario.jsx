@@ -3,18 +3,18 @@ import './CadastroFuncionario.css'
 
 const CadastroFuncionario = () =>{
     return (
-     
+     <div>
        <main>
      <title>Cadastro de Novo Funcionário</title>
     
      
-        <section class="container">
+        <section className="container1">
                    
             <form action="">
                 
-                <section class="column-group">
-                    <div class="form-group">
-                        <h1 class="tittle-form">Dados do Funcionário</h1>
+                <section className="column-group">
+                    <div className="form-group">
+                        <h1 className="tittle-form">Dados do Funcionário</h1>
                         
                         <label for="name">Nome Completo</label>
                         <input type="text" id="name" placeholder="Escreva Aqui"/>
@@ -28,7 +28,7 @@ const CadastroFuncionario = () =>{
                         <label for="age">Data de Nascimento</label>
                         <input type="date" id="age"/>
 
-                        <h1 class="tittle-form">Definições de Acesso</h1>
+                        <h1 className="tittle-form">Definições de Acesso</h1>
 
                         <label for="user">Nome de Usuário</label>
                         <input type="text" id="user" placeholder="Escreva Aqui" required/>
@@ -48,8 +48,8 @@ const CadastroFuncionario = () =>{
                                 <option value="Executivo">Sócio(a)/Propriétário(a)</option>
                         </select>   
                     </div>
-                    <div class="form-group">
-                        <h1 class="tittle-form">Endereço do Funcionário</h1>
+                    <div className="form-group">
+                        <h1 className="tittle-form">Endereço do Funcionário</h1>
 
                         <label for="logradouro">Logradouro/Rua</label>
                         <input type="text" id="logradouro" placeholder="Escreva Aqui" required/>
@@ -105,7 +105,7 @@ const CadastroFuncionario = () =>{
                  </form>
                  </section>
                 </main>
-                
+                </div>
                  )
                 }
 

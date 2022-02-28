@@ -1,19 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight:bold;
-    
+
+.container1 {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 100%;
+max-height: 100vh;
+line-height: 4vh;
+margin-left: 2.5em;
+margin-bottom: auto;
+
 }
-
-
-h1{
-    margin-bottom: 8px;
-   
-}
-
 
 input{
     font-weight: bold;
