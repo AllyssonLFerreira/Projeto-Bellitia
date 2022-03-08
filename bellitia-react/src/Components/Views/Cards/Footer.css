@@ -1,9 +1,11 @@
-
-.footer__slogan{
+.footer{
     width: 100%;
     height: 10vh;   
     position: relative;
+<<<<<<< HEAD:bellitia-react/src/Components/Views/Footer.css
     bottom: 0;
+=======
+>>>>>>> 520ccf820f95077f4938e732f30c3f449274a42e:bellitia-react/src/Components/Views/Cards/Footer.css
     text-align: end;
     padding-right: 15px;
     padding-top: 10px;

@@ -1,0 +1,12 @@
+.logout{
+    background-color: transparent;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+}
+
+.logout:hover , .logout:focus{
+    color: #000000;
+    background-color: #f1ee09;
+    border: none;
+}
