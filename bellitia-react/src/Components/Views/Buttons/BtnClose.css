@@ -1,12 +1,12 @@
-.Open_Close{
+.btn_close{
     background-color: transparent;
     margin-top: 20px;
     width: 200px;
     height: 50px;
 }
 
-.Open_Close:hover , .Open_Close:focus{
+.btn_close:hover , .btn_close:focus{
     color: #ffffff;
-    background-color: #2bb81e;
+    background-color: #2483db;
     border: none;
 }
