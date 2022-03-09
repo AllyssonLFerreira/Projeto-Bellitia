@@ -1,11 +1,20 @@
-import react from "react";
+import react, { useState } from "react";
 import './NovoServico.css';
 import BtnConfirm from '../Buttons/BtnConfirm';
 
 const NovoServico = () => {
+const [form, setForm] = useState();
+/* const [userForm, setUserForm] = useState(); */
+function sendForm (e) {
+    e.preventDefault()
+    console.log(form)
+    
+}
+
+
     return (
         <div className="container">
-            <form>
+            <form onChange={(e) => setForm(e.target.value)} >
                 <h2>Novo Serviço</h2>
                 <div className="row_block">
                     <label for='description'>Descrição do Serviço:</label>
@@ -51,6 +60,7 @@ const NovoServico = () => {
                 <div className='row_block'>
                     <BtnConfirm />
                 </div>
+                {setForm}
             </form>
         </div>
     );

@@ -23,6 +23,10 @@
     color: #fff;
 }
 
+.btn_prop {
+    padding: 1rem 1.5rem;
+}
+
 .barra-lateral__links a:focus, .barra-lateral__links a:hover{
     background-color: #ffffff;
     color: #000000;
