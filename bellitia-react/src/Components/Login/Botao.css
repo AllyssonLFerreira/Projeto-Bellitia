@@ -1,4 +1,4 @@
- button {
+ button.entrar {
   border-radius: 5px;
   min-width: 165px;
   width: auto;
@@ -16,7 +16,7 @@
   border-style: none;
 }
 
- button:hover{
+ button.entrar:hover{
   background-color: #fff;
   color: rgb(39, 39, 39);
   border: 1px solid #f29696;
