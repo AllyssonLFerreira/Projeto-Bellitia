@@ -4,6 +4,9 @@ import NewServiceCard from "./Components/Views/Estabelecimento/CadastroServicos/
 import NewEstCard from "./Components/Views/Estabelecimento/CadastroEstabalecimento/NewEstablishment";
 import CadastroFuncionario from "./Components/Views/Forms/CadastroFuncionario";
 import NewEnployee from "./Components/Views/Estabelecimento/CadastroFuncionario/NewEmployee";
+import BarraLateralCliente from "./Components/Views/Cards/Barra-Lateral-Cliente";
+import BarraLateral from "./Components/Views/Cards/Barra-Lateral";
+import MeusAgendamentos from "./Components/Views/Cliente/Agendamentos/MeusAgendamentos";
 
 const App = () => {
   
@@ -12,7 +15,8 @@ const App = () => {
       {/* <ViewHome /> */}
       {/* <NewServiceCard />*/ }
       { /*<NewEstCard />*/ }
-      <NewEnployee/>
+      {/*<NewEnployee/>*/}
+      <MeusAgendamentos/>
     </div>
   );
 }
