@@ -1,6 +1,6 @@
 import React from 'react';
-import BtnOpen from '../Buttons/BtnOpen';
 import BtnClose from '../Buttons/BtnClose';
+import BtnOpen from '../Buttons/BtnOpen';
 import LogoutBtn from '../Buttons/Logout';
 import './Barra-Lateral.css';
 

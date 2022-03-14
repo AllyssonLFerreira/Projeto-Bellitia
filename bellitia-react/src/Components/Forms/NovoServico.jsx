@@ -1,6 +1,6 @@
 import react, { useState } from "react";
 import './NovoServico.css';
-import BtnConfirm from '../Buttons/BtnConfirm';
+import BtnConfirm from "../Buttons/BtnConfirm";
 
 const NovoServico = () => {
 const [form, setForm] = useState();

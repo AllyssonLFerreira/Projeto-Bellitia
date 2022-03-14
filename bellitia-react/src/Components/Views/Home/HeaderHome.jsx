@@ -6,7 +6,7 @@ const HeaderHome = () => (
         <div className='HeaderHome'>
             <h1>Bellitia</h1>
             
-                <button>
+                <button className='btn_FaUserAlt'>
                     <a><i><FaUserAlt/></i></a>
                 </button>
         </div>
