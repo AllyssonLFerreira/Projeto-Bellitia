@@ -1,0 +1,29 @@
+ button.entrar {
+  border-radius: 5px;
+  min-width: 165px;
+  width: auto;
+  height: 40px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: #912424;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  border-style: none;
+}
+
+ button.entrar:hover{
+  background-color: #fff;
+  color: rgb(39, 39, 39);
+  border: 1px solid #f29696;
+  box-shadow: -4px 4px 10px red; 
+}
+
+.entrar {
+  margin-top: 1rem;
+}
+

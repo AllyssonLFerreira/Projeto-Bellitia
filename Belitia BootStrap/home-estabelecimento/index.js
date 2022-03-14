@@ -18,6 +18,18 @@ btnOpenClose.addEventListener(`click`, openEst())
 
 
 
+const Opening = OpenAction;
+
+const ActiveOpen = (props) => {
+    
+    if(Opening === true) {
+        alert('Estamos Abrindo.')
+        props.Innertext='Estabelecimento Aberto'
+    } else {
+        alert('Ok! Abriremos mais tarde.')
+    }
+};
+
 
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import AbrirEstabelecimento from '../Buttons/Abrir-Estabelecimento';
+import BtnOpen from '../Buttons/BtnOpen';
+import BtnClose from '../Buttons/BtnClose';
 import LogoutBtn from '../Buttons/Logout';
 import './Barra-Lateral.css';
 
@@ -16,8 +17,11 @@ const BarraLateral = () =>{
                     <li><a href="">PRECISO DE AJUDA</a></li>
                 </ul>
             </nav>
-                <AbrirEstabelecimento />
+            <div className='btn_prop'>
+                <BtnOpen />
+                <BtnClose />
                 <LogoutBtn />
+            </div>
     </div>
 )
     }

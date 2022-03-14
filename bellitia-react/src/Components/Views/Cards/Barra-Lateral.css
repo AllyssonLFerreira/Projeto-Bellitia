@@ -7,7 +7,7 @@
     color: #fff;
     width: 17%;
     height: auto;
-    max-height: 100vh;
+    max-height: 200vh;
 }
 
 .barra-lateral__links li{ 
@@ -21,6 +21,10 @@
     line-height: 2;
     padding: 15px 10px;
     color: #fff;
+}
+
+.btn_prop {
+    padding: 1rem 1.5rem;
 }
 
 .barra-lateral__links a:focus, .barra-lateral__links a:hover{

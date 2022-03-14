@@ -1,4 +1,4 @@
-.logout{
+.btn_close{
     background-color: transparent;
     border-style: none;
     margin-top: 20px;
@@ -6,8 +6,8 @@
     height: 50px;
 }
 
-.logout:hover , .logout:focus{
-    color: #000000;
-    background-color: #f1ee09;
+.btn_close:hover , .btn_close:focus{
+    color: #ffffff;
+    background-color: #2483db;
     border: none;
 }

@@ -3,6 +3,7 @@
     height: 10vh;   
     position: relative;
     text-align: end;
+    bottom: 0;
     padding-right: 15px;
     padding-top: 10px;
     background-color: #912424;

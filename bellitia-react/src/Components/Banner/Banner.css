@@ -1,0 +1,43 @@
+.Banner{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.info-banner:hover .image-banner {
+  opacity: 0.8;
+}
+
+.info-banner:hover .info-prop {
+  opacity: 1;
+}
+
+.info-prop{
+        transition: .5s ease;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+
+}
+
+.link-prop{
+        position: absolute;
+        bottom: 10px;
+        right: -50px;
+        text-decoration: none;
+        background-color: #e6c11e;
+        color: #0a0a07;
+        padding: 8px 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+img {
+  width: 100%
+
+}
+
+
