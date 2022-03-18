@@ -1,0 +1,80 @@
+.bodyagendaclient{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif, bold;
+    font-size: 20px;
+    background-color: #ffffff;
+    font-weight: bolder;
+    margin-bottom: 40px;
+   
+}
+
+.subtituloAgendamento{
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.agendar{
+    height: 20%;
+    
+}
+
+
+#horario{
+    width: 100px;
+    margin-bottom: 20px;
+   
+    
+}
+
+#estabelecimento{
+    width: 400px;
+    height: 25px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#data{
+    width: 150px;
+    margin-right: 90px;
+}
+
+#serviços {
+    width: 150px;
+    height: 25px;
+    margin-right: 60px;
+}
+
+#preço {
+    width: 150px;
+    height: 25px;
+}
+.radio input{
+    width: 20px;
+    margin-top: 30px;
+}
+
+.radio{
+    display: flex;
+}
+
+.dataHorario{
+    display: flex;
+    
+    
+}
+
+.servicosPrecos{
+    display: flex;
+}
+.agendados{
+    margin-top: 60px;
+   
+}
+
+.spanagendados{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
