@@ -6,7 +6,7 @@ import LoginUsuario from './Components/Views/LoginUsuario/LoginUsuario';
 import NewServiceCard from "./Components/Views/EstablishmentPages/NewService/NewService";
 import NewEstCard from "./Components/Views/EstablishmentPages/NewEstablishment/NewEstablishment";
 import NewEnployee from "./Components/Views/EstablishmentPages/NewEmployee/NewEmployee";
-
+import MeusAgendamentos from "./Components/Views/Cliente/Agendamentos/MeusAgendamentos";
 const Router = () => {
     return (
         <BrowserRouter>
@@ -18,6 +18,7 @@ const Router = () => {
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
                 <Route path='/novofuncionario' exact element={<NewEnployee /> } />
+                <Route path='/agendamentos' exact element={<MeusAgendamentos /> } />
             </Routes>
         </BrowserRouter>
     )
