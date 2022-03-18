@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './FormularioUsuario.css';
 import '../Login/Botao.css';
-import img from '../Login/Imagens/login-user.png'
+import img from '..//Login/Imagens/login-user.png'
 
 
 const FormularioLogin = () => {

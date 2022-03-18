@@ -28,6 +28,10 @@ input::placeholder{
     display: block;
 }
 
+.row_block input[type="radio"] {
+    width: 50px;
+}
+
 .row_block textarea {
     width: 300px;
     height: 30vh;
