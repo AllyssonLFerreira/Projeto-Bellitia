@@ -12,8 +12,8 @@ const Router = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home /> } />
-                <Route path='/login' element={<Login /> } />
-                <Route path='/userlogin' element={<LoginUsuario /> } />
+                <Route path='/login' exatct element={<Login /> } />
+                <Route path='/userlogin' exact element={<LoginUsuario /> } />
                 <Route path='/estabelecimento' exact element={<HomeEstablishment /> } />
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
