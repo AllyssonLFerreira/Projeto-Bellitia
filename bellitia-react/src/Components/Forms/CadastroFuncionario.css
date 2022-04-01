@@ -23,7 +23,7 @@ input{
     font-size: 12px;
 }
 
-select{
+select #cargo {
     border-radius: 4px;
     width: 300px;
     margin: 4px;

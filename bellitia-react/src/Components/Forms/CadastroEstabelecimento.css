@@ -3,7 +3,7 @@ input{
     
 }
 select{
-    width: 105px;
+    width: 100px;
     border-radius: 3px;
     background: transparent;
 }
@@ -74,7 +74,8 @@ input::placeholder{
 }
 
 .field_prop input[name="cnpj"],
-.field_prop input[name="tel"],
+.field_prop input[name="telefone"],
+.field_prop input[name="hostTelefone"],
 .field_prop input[name="rg"],
 .field_prop input[name="cpf"],
 .field_prop input[name="nascimento"],
@@ -85,7 +86,7 @@ input::placeholder{
     width: 250px;
 }
 
-.field_prop input[name="number"],
+.field_prop input[name="adressNumber"],
 .field_prop input[name="comp"],
 .field_prop input[name="cep"],
 .field_prop input[name="city"]
