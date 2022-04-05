@@ -39,6 +39,7 @@ input::placeholder{
 
 .radio_prop {
     display: flex;
+    align-items: center;
 }
 
 .radio_prop input + label::before {

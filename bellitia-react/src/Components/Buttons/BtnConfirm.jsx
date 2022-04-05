@@ -1,13 +1,11 @@
-import './BtnConfirm.css';
+import styles from './BtnLayout.module.css'
 
 const BtnConfirm = () => {
-
-
     return (
         <div>
             <button 
             type='submit' 
-            className='btn_confirm'
+            className={styles.btn_confirm}
             >Confirmar</button>
         </div>
     );
