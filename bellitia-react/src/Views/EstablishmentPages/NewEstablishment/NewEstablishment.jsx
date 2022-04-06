@@ -1,8 +1,7 @@
-import react from "react";
 import "./NewEstablishment.css";
-import Header from "../../../Cards/Header";
-import Footer from "../../../Cards/Footer";
-import CadastroEstabelecimento from "../../../Forms/CadastroEstabelecimento";
+import Header from "../../../Components/Cards/Header";
+import Footer from "../../../Components/Cards/Footer";
+import CadastroEstabelecimento from "../../../Components/Forms/CadastroEstabelecimento";
 
 const NewEstCard = () => {
     return (

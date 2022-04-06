@@ -12,7 +12,7 @@ const BarraLateral = () =>{
             <Link to='/novofuncionario'>CADASTRO DE FUNCIONÁRIO</Link>
             <Link to='/novoservico'>CADASTRO DE SERVIÇOS</Link>
             <Link to='/novoestabelecimento'>ALTERAÇÃO DE DADOS</Link>
-            <Link to='#'>PRECISO DE AJUDA</Link>
+            <Link to='/help'>PRECISO DE AJUDA</Link>
             <Link to='#'>SAIR</Link>
             <SwitchButton />
             

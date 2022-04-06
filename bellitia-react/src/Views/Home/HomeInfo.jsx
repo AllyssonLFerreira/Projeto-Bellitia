@@ -1,8 +1,8 @@
 import React from 'react';
 import './HomeInfo.css';
-import barbeiroImage from '../../Images/barbeiroImage.jpeg';
-import cabeleireiroImage from '../../Images/cabeleireiroImage.jpeg';
-import esteticistaImage from '../../Images/esteticistaImage.jpg';
+import barbeiroImage from '../../Components/Images/barbeiroImage.jpeg';
+import cabeleireiroImage from '../../Components/Images/cabeleireiroImage.jpeg';
+import esteticistaImage from '../../Components/Images/esteticistaImage.jpg';
 
 const HomeInfo = () => (
   <div className='HomeInfo'>

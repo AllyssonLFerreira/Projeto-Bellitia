@@ -1,0 +1,15 @@
+.view_container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.grid_flex {
+    display: flex;
+}

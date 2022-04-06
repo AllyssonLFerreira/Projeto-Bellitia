@@ -1,0 +1,24 @@
+.container {
+    padding-left: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.row textarea {
+    width: 400px;
+    height: 200px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact span {
+    font-weight: bolder;
+    font-style: italic;
+}

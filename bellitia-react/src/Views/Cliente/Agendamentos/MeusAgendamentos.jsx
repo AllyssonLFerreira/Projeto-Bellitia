@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../../../Cards/Footer";
-import Header from "../../../Cards/Header";
-import BarraLateralCliente from "../../../Cards/Barra-Lateral-Cliente";
-import Formagenda from "../../../Forms/AgendamentosCliente";
+import Footer from "../../../Components/Cards/Footer";
+import Header from "../../../Components/Cards/Header";
+import BarraLateralCliente from "../../../Components/Cards/Barra-Lateral-Cliente";
+import Formagenda from "../../../Components/Forms/AgendamentosCliente";
 import './MeusAgendamentos.css'
 
 const MeusAgendamentos = () =>{

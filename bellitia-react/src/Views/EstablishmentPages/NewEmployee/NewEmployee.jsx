@@ -1,9 +1,8 @@
-import react from "react";
-import Header from "../../../Cards/Header";
-import Footer from "../../../Cards/Footer";
-import BarraLateral from "../../../Cards/Barra-Lateral";
-import CadastroFuncionario from "../../../Forms/CadastroFuncionario";
-import BtnConfirm from "../../../Buttons/BtnConfirm";
+import Header from "../../../Components/Cards/Header";
+import Footer from "../../../Components/Cards/Footer";
+import BarraLateral from "../../../Components/Cards/Barra-Lateral";
+import CadastroFuncionario from "../../../Components/Forms/CadastroFuncionario";
+import BtnConfirm from "../../../Components/Buttons/BtnConfirm";
 import './NewEmployee.css'
 
 
