@@ -11,10 +11,10 @@ module.exports = (app) => {
         }
     }
     const postEstablishment = async (req, res) => {
-        const { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email } = req.body
+        const { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email, cpf_proprietario, email_proprietario, telefone_proprietario, senha } = req.body
             try {
-                if(!razao_social || !nome_fantasia || !cnpj || !nome_proprietario || !telefone || !email ) throw new Error('Preencha todos os campos!!')
-                await Establishment.create({razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email})
+                if(!razao_social || !nome_fantasia || !cnpj || !nome_proprietario || !telefone || !email || !cpf_proprietario || !email_proprietario || !telefone_proprietario || !senha) throw new Error('Preencha todos os campos!!')
+                await Establishment.create({razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email, cpf_proprietario, email_proprietario, telefone_proprietario, senha})
                 res.status(201).json({msg: 'Estabelecimento Cadastrado com Sucesso!'})
             }
             catch(err) {
@@ -23,10 +23,10 @@ module.exports = (app) => {
         }
     const putEstablishment = async (req, res) => {
         const establishmentId= req.params.id
-        const { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email } = req.body
+        const { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email, cpf_proprietario, email_proprietario, telefone_proprietario, senha } = req.body
         try {
             await Establishment.update(
-                { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email },
+                { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email, cpf_proprietario, email_proprietario, telefone_proprietario, senha },
                 {where: {id_establishment: establishmentId}}
             )
             res.status(200).json({msg: 'Estabelecimento alterado com sucesso!'})

@@ -1,23 +1,21 @@
-import './NewService.css';
 import Header from "../../../Components/Cards/Header";
 import Footer from "../../../Components/Cards/Footer";
 import BarraLateral from "../../../Components/Cards/Barra-Lateral";
-import NovoServico from "../../../Components/Forms/NovoServico";
-import TaskList from "../../../Components/Cards/TaskList";
+import { NovoServico } from "./Form";
+import TaskList from "./TaskList";
+import styles from './Styles.module.css'
 
 const NewServiceCard = () => {
     return (
-    <div>
+    <div className={styles.container}>
         <Header />
-    <div className="main_card">
+    <div className={styles.main}>
         <BarraLateral />
         <NovoServico />
         <TaskList />
     </div>
         <Footer />
-
     </div>
-
     );
 }
 

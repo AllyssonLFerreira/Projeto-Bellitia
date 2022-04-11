@@ -13,26 +13,25 @@ export const HelpForm = () => {
     return (
         <div className={styles.container}>
             <form onSubmit={handleSubmit(onSubmit)} >
+                <div className={styles.props}>
                 <h2>Precisa de Ajuda ?</h2>
-                
-                <div className={styles.row}>
-                    <label htmlFor='name'>Digite seu Nome:</label>
+                    <label htmlFor='name'>
+                        Digite seu Nome:
                     <input 
-                    {...register('name')} 
-                    type='text'
-                    placeholder='Nome Completo' />
-                </div>
-                
-                <div className={styles.row}>
-                    <label htmlFor="Problem_Description">Relate aqui seu dúvida: </label>
+                        {...register('name')} 
+                        type='text'
+                        placeholder='Nome Completo' 
+                    />
+                    </label>
+                    <label htmlFor="Problem_Description">
+                        Relate aqui sua dúvida: 
+                    </label>
                     <textarea 
-                    {...register('Problem_Description')}  
-                    type='text' 
-                    placeholder='Descreva seu problema detalhadamente...'
-                    required />
-                </div>
-                
-                <div className={styles.row}>
+                        {...register('Problem_Description')}  
+                        type='text' 
+                        placeholder='Descreva seu problema detalhadamente...'
+                        required 
+                    />
                     <BtnConfirm />
                 </div>
             </form>

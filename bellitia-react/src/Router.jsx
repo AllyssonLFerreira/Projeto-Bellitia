@@ -8,6 +8,7 @@ import NewEstCard from "./Views/EstablishmentPages/NewEstablishment/NewEstablish
 import NewEnployee from "./Views/EstablishmentPages/NewEmployee/NewEmployee";
 import MeusAgendamentos from "./Views/Cliente/Agendamentos/MeusAgendamentos";
 import { Help } from "./Views/EstablishmentPages/Help/Help";
+import { TesteForm } from "./Test";
 const Router = () => {
     return (
         <BrowserRouter>
@@ -21,6 +22,7 @@ const Router = () => {
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
                 <Route path='/novofuncionario' exact element={<NewEnployee /> } />
                 <Route path='/help' exact element={<Help /> } />
+                <Route path='/teste' exact element={<TesteForm /> } />
             </Routes>
         </BrowserRouter>
     )

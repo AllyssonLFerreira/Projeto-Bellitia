@@ -23,46 +23,45 @@ button {
   font-size: 20px;
 }
 
-input::placeholder{
-  color: #4e4c4c
+select{
+  display: block;
+  background: transparent;
+  width: 100px;
+  padding: 0.2em;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  box-shadow: 2px 2px 2px 2px #252525c4;
+  
 }
 
 input{
-  border-radius: 3px;    
+  padding: 0.2em;
+  border: 1px solid #CCC;
+  box-shadow: 2px 2px 2px 2px #252525c4;
+  display: block;
+  border-radius: 5px;    
+}
+  
+textarea {
+  padding: 0.2em;
+  border: 1px solid #CCC;
+  box-shadow: 2px 2px 2px 2px #252525c4;
+  display: block;
+}
+
+input:focus, input:hover 
+select:focus, select:hover
+textarea:focus, textarea:hover {
+  background: #fff;
 }
 
 label {
   margin-bottom: 0.2em;
-  color: #666;
-  display: block;
+    color: #0f0e0e;
+    display: block;
 }
 
-.field_prop {
-  margin-left: 2em;
-  float:  left;
-  margin-right: 1em;
-}
-
-.field_prop input[type="text"],
-.field_prop input[type="email"],
-.field_prop input[type="number"],
-.field_prop input[type="tel"],
-.field_prop input[type="password"],
-.field_prop input[type="date"],
-.field_prop select,
-.field_prop textarea {
-  padding: 0.2em;
-  border: 1px solid #CCC;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-  display: block;
-}
-
-.field_prop select option {
+select option {
   padding-right: 1em;
 }
 
-.field_prop input:focus, 
-.field_prop select:focus, 
-.field_prop textarea:focus {
-  background: #efefef;
-}

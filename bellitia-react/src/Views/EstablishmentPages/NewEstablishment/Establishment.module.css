@@ -1,22 +1,23 @@
 .container {
-    display: flex;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    align-items: center;
     background-color:#fff;
-    margin-left: 3rem;
 }
-
-.main {
+.container form {
+    height: auto;
     display: flex;
-    padding-right: 10rem;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .props {
-    padding: 0 2rem;
     border-radius: 2rem;
-    width: auto;
-    padding: 1rem 1rem;
+    width: 50%;
     box-shadow: 2px 2px 2px 2px #252525;
     margin-top: 2rem;
-    margin-bottom: 2rem;
     background-color: #efefefef;
 }
 
@@ -24,7 +25,7 @@
     text-align: center;
     margin: 0 auto;
     display: block;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .props h2 {
@@ -42,24 +43,6 @@
     width: 25rem;
     height: 2rem;
     margin-bottom: 1rem;
-}
-
-.props textarea {
-    width: 400px;
-    height: 25vh;
-    border-radius: 5px;
-}
-
-.contact{
-    display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
-    margin-top: 5rem;
-}
-
-.contact span {
-    font-weight: bolder;
-    font-style: italic;
 }
 
 input::placeholder {

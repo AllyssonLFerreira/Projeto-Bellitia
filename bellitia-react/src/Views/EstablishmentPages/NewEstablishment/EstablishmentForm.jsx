@@ -1,11 +1,11 @@
-import styles from './test.module.css'
-import Header from './Components/Cards/Header';
-import Footer from './Components/Cards/Footer'
-import BtnConfirm from './Components/Buttons/BtnConfirm';
-import {useForm} from 'react-hook-form';
+/* import './CadastroEstabelecimento.css' */
+import BtnConfirm from "../../../Components/Buttons/BtnConfirm"
 import {useNavigate} from 'react-router-dom'
+import { useForm } from 'react-hook-form';
+import styles from './Establishment.module.css'
+/* import axios from 'axios'; */
 
-export const TesteForm = () => {
+export const CadastroEstabelecimento = () => {
     const navigate = useNavigate();
 
     const {register, handleSubmit} = useForm();
@@ -15,7 +15,6 @@ export const TesteForm = () => {
 
     return (
         <div className={styles.container}>
-            <Header />
             <form onSubmit={handleSubmit(Send)}>
                 <div className= {styles.props}> 
                     <h2>Dados do Estabelecimento</h2>
@@ -193,6 +192,5 @@ export const TesteForm = () => {
                     <BtnConfirm />
                 </div>  
             </form>
-            <Footer />
             </div> 
     )}

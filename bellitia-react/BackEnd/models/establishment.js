@@ -8,9 +8,13 @@ module.exports = (sequelize, DataType) => {
         razao_social: DataType.STRING,
         nome_fantasia: DataType.STRING,
         cnpj: DataType.STRING,
-        nome_proprietario: DataType.STRING,
         telefone: DataType.STRING,
-        email: DataType.STRING
+        email: DataType.STRING,
+        nome_proprietario: DataType.STRING,
+        cpf_proprietario: DataType.STRING,
+        email_proprietario: DataType.STRING,
+        telefone_proprietario: DataType.STRING,
+        senha: DataType.STRING
     },{
         timestamps: false,
         tableName: 'establishments'

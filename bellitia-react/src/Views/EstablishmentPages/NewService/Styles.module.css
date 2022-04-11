@@ -1,11 +1,13 @@
+
 .container {
     display: flex;
+    flex-direction: column;
     background-color:#fff;
-    margin-left: 3rem;
 }
 
 .main {
     display: flex;
+    justify-content: space-between;
     padding-right: 10rem;
 }
 
@@ -13,7 +15,6 @@
     padding: 0 2rem;
     border-radius: 2rem;
     width: auto;
-    padding: 1rem 1rem;
     box-shadow: 2px 2px 2px 2px #252525;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -24,7 +25,7 @@
     text-align: center;
     margin: 0 auto;
     display: block;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .props h2 {
@@ -50,16 +51,8 @@
     border-radius: 5px;
 }
 
-.contact{
+.radioProps {
     display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
-    margin-top: 5rem;
-}
-
-.contact span {
-    font-weight: bolder;
-    font-style: italic;
 }
 
 input::placeholder {

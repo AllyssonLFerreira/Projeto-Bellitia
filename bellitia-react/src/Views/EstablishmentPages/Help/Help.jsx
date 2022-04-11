@@ -7,7 +7,7 @@ import { HelpForm } from './HelpForm';
 
 export const Help = () => {
     return (
-        <div className={styles.view_container}>
+        <div className={styles.main}>
             <Header />
         <div className={styles.grid_flex}>
             <BarraLateral />

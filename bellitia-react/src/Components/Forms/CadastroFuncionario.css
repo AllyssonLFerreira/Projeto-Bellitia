@@ -11,14 +11,6 @@ margin-bottom: auto;
 
 }
 
-input{
-    font-weight: bold;
-    border-radius: 4px;
-    width: 400px;
-    margin: 4px;
-    
- }
-
 .form-group ::placeholder{
     font-size: 12px;
 }

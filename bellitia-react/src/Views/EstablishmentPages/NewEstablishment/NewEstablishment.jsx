@@ -1,11 +1,11 @@
-import "./NewEstablishment.css";
 import Header from "../../../Components/Cards/Header";
 import Footer from "../../../Components/Cards/Footer";
-import CadastroEstabelecimento from "../../../Components/Forms/CadastroEstabelecimento";
+import { CadastroEstabelecimento } from "./EstablishmentForm";
+import styles from '../../viewProp.module.css';
 
 const NewEstCard = () => {
     return (
-        <div className="View">
+        <div className={styles.main}>
             <Header />
             <CadastroEstabelecimento />
             <Footer />
