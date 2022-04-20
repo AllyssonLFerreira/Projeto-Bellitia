@@ -1,8 +1,8 @@
 module.exports = (app) => {
-    app.get( '/endereco', app.api.adress.getAdress );
-    app.post( '/endereco', app.api.adress.postAdress );
-    app.put( '/endereco/:id', app.api.adress.putAdress );
-    app.delete( '/endereco/:id', app.api.adress.deleteAdress );
+    app.get( '/endereco', app.api.address.getAddress );
+    app.post( '/endereco', app.api.address.postAddress );
+    app.put( '/endereco/:id', app.api.address.putAddress );
+    app.delete( '/endereco/:id', app.api.address.deleteAddress );
 
     app.get( '/estabelecimento', app.api.establishments.getEstablishment );
     app.post( '/estabelecimento', app.api.establishments.postEstablishment );

@@ -6,14 +6,26 @@ module.exports = (sequelize, DataType) => {
             autoIncrement: true
         },
         Nome: DataType.STRING,
-        D_Nascimento: DataType.DATE,
         Telefone: DataType.STRING,
         Email: DataType.STRING,
-        Especialidade: DataType.STRING
+        Especialidade: DataType.STRING,
+        fk_establishment: DataType.INTEGER
     },{
         timestamps: false,
         tableName: 'est_professionals'
     })
+
+    Professional.associate = (modelsList) => {
+        Professional.belongsTo(modelsList.Establishment,{
+            foreignKey: 'fk_establishment'
+        })
+        
+        Professional.belongsToMany(modelsList.Service,{
+            through: modelsList.Schedule,
+            foreignKey: 'profissional',
+            timestamps: false
+        })
+    }
 
     return Professional
 };

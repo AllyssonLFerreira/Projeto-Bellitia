@@ -1,4 +1,4 @@
-const {Professional} = require ('../models')
+const {Professional, Service} = require ('../models')
 
 module.exports = (app) => {
     const getProfessional = async (req, res) => {
@@ -11,10 +11,10 @@ module.exports = (app) => {
         }
     }
     const postProfessional = async (req, res) => {
-        const { Nome, D_Nascimento, Telefone, Email, Especialidade } = req.body
+        const { Nome, Telefone, Email, Especialidade, fk_establishment } = req.body
         try {
-            if(!Nome || !D_Nascimento || !Telefone || !Email || !Especialidade ) throw new Error('Preencha todos os campos!!')
-            await Professional.create({Nome, D_Nascimento, Telefone, Email, Especialidade})
+            if(!Nome || !Telefone || !Email || !Especialidade ) throw new Error('Preencha todos os campos!!')
+            await Professional.create({Nome, Telefone, Email, Especialidade, fk_establishment})
             res.status(201).json({msg: 'Profissional Cadastrado com Sucesso!'})
         }
         catch(err) {
@@ -23,10 +23,10 @@ module.exports = (app) => {
     }
     const putProfessional = async (req, res) => {
         const professionalId= req.params.id
-        const { Nome, D_Nascimento, Telefone, Email, Especialidade } = req.body
+        const { Nome, Telefone, Email, Especialidade, fk_establishment } = req.body
         try {
             await Professional.update(
-                {Nome, D_Nascimento, Telefone, Email, Especialidade },
+                {Nome, Telefone, Email, Especialidade, fk_establishment },
                 {where: {id_professional: professionalId}}
             )
             res.status(200).json({msg: 'Profissional alterado com sucesso!'})

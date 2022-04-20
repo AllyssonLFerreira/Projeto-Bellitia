@@ -1,33 +1,37 @@
-const { Adress } = require('../models');
+const { Address, Establishment } = require('../models');
 
 module.exports = (app) => {
-    const getAdress = async (req, res) =>  {
+    const getAddress = async (req, res) =>  {
         try {
-            const adress = await Adress.findAll()
-            res.status(200).json(adress)
+            const address = await Address.findAll({
+                include:{
+                    model: Establishment
+                }
+            })
+            res.status(200).json(address)
         }
         catch(err) {
             res.status(500).json({error: true, ...err})
         }
     };
-    const postAdress = async (req, res) => {
+    const postAddress = async (req, res) => {
         const { cidade, uf, bairro, logradouro, numero, complemento, cep } = req.body
         try {
             if(!cidade || !uf || !bairro || !logradouro || !numero || !complemento || !cep ) throw new Error('Preencha todos os campos!!')
-            await Adress.create({cidade, uf, bairro, logradouro, numero, complemento, cep})
+            await Address.create({cidade, uf, bairro, logradouro, numero, complemento, cep})
             res.status(201).json({msg: 'Endereço Cadastrado com Sucesso!'})
         }
         catch(err) {
             res.status(400).json({error: true, err})
         }
     }
-    const putAdress = async (req, res) => {
-        const adressId= req.params.id
+    const putAddress = async (req, res) => {
+        const addressId= req.params.id
         const { cidade, uf, bairro, logradouro, numero, complemento, cep } = req.body
         try {
-            await Adress.update(
+            await Address.update(
                 {cidade, uf, bairro, logradouro, numero, complemento, cep},
-                {where: {id_endereco: adressId}}
+                {where: {id_endereco: addressId}}
             )
             res.status(200).json({msg: 'Endereço alterado com sucesso!'})
         }
@@ -35,11 +39,11 @@ module.exports = (app) => {
             res.status(400).json({msg: 'Endereço não pode ser alterado!', Error:true})
         }
     }
-    const deleteAdress = async (req, res) => {
-        const adressId= req.params.id
+    const deleteAddress = async (req, res) => {
+        const addressId= req.params.id
         try {
-            await Adress.destroy(
-                {where: {id_endereco: adressId}}
+            await Address.destroy(
+                {where: {id_endereco: addressId}}
             )
             res.status(204).json()
         }
@@ -48,5 +52,5 @@ module.exports = (app) => {
         }
     }
 
-    return {getAdress, postAdress, putAdress, deleteAdress}
+    return {getAddress, postAddress, putAddress, deleteAddress}
 };

@@ -1,4 +1,4 @@
-const {Schedule} = require ('../models')
+const {Schedule, User, Service} = require ('../models');
 
 module.exports = (app) => {
     const getSchedule = async (req, res) => {
@@ -11,10 +11,10 @@ module.exports = (app) => {
         }
     }
     const postSchedule = async (req, res) => {
-        const { data, horario } = req.body
+        const { data, horario, profissional, estabelecimento, nome, servico } = req.body
         try {
-            if(!data || !horario ) throw new Error('Preencha todos os campos!!')
-            await Schedule.create({data, horario})
+            if(!data || !horario || !profissional || !estabelecimento || !nome || !servico) throw new Error('Preencha todos os campos!!')
+            await Schedule.create({data, horario, profissional, estabelecimento, nome, servico})
             res.status(201).json({msg: 'Agendamento Concluido com Sucesso!'})
         }
         catch(err) {
@@ -23,10 +23,10 @@ module.exports = (app) => {
     }
     const putSchedule = async (req, res) => {
         const scheduleId= req.params.id
-        const { data, horario } = req.body
+        const { data, horario, profissional, estabelecimento, nome, servico } = req.body
         try {
             await Schedule.update(
-                { data, horario },
+                { data, horario, profissional, estabelecimento, nome, servico },
                 {where: {id_schedules: scheduleId}}
             )
             res.status(200).json({msg: 'Agendamento alterado com sucesso!'})

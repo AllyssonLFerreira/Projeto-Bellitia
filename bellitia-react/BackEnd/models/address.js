@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-    const Adress = sequelize.define('Adress', {
+    const Address = sequelize.define('Address', {
         id_endereco:{
             type: DataType.INTEGER,
             primaryKey: true,
@@ -11,11 +11,16 @@ module.exports = (sequelize, DataType) => {
         logradouro: DataType.STRING,
         numero: DataType.STRING,
         complemento: DataType.STRING,
-        cep: DataType.STRING
+        cep: DataType.STRING,
+        fk_est_address: DataType.INTEGER
     },{
         timestamps: false,
-        tableName: 'adress'
+        tableName: 'address'
     })
-
-    return Adress
+    Address.associate = (modelsList) => {
+        Address.belongsTo(modelsList.Establishment, {
+            foreignKey: "fk_est_address"
+        })
+    }
+    return Address
 };

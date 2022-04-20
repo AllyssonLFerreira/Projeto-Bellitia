@@ -6,7 +6,12 @@ module.exports = (sequelize, DataType) => {
             autoIncrement: true
         },
         data: DataType.DATE,
-        horario: DataType.TIME
+        servico: DataType.INTEGER,
+        profissional: DataType.INTEGER,
+        estabelecimento: DataType.INTEGER,
+        nome: DataType.INTEGER,
+        horario: DataType.TIME,
+        fk_user: DataType.INTEGER
     },{
         timestamps: false,
         tableName: 'schedules'
