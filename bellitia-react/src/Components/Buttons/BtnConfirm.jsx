@@ -1,19 +1,11 @@
-import react from "react";
-import './BtnConfirm.css';
+import styles from './BtnLayout.module.css'
 
 const BtnConfirm = () => {
-    function Send(e) {
-        e.preventDefault()
-        console.log('testando')
-    }
-
-
     return (
         <div>
             <button 
             type='submit' 
-            className='btn_confirm'
-            onClick={Send}
+            className={styles.btn_confirm}
             >Confirmar</button>
         </div>
     );

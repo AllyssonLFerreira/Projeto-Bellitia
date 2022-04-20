@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Components/Views/Home/Home";
-import HomeEstablishment from "./Components/Views/EstablishmentPages/EstablishmentHome/HomeEstablishment";
-import Login from './Components/Views/Login';
-import LoginUsuario from './Components/Views/LoginUsuario/LoginUsuario';
-import NewServiceCard from "./Components/Views/EstablishmentPages/NewService/NewService";
-import NewEstCard from "./Components/Views/EstablishmentPages/NewEstablishment/NewEstablishment";
-import NewEnployee from "./Components/Views/EstablishmentPages/NewEmployee/NewEmployee";
-import MeusAgendamentos from "./Components/Views/Cliente/Agendamentos/MeusAgendamentos";
+import Home from "./Views/Home/Home"
+import HomeEstablishment from "./Views/EstablishmentPages/EstablishmentHome/HomeEstablishment";
+import Login from './Views/Login';
+import LoginUsuario from './Views/LoginUsuario/LoginUsuario';
+import NewServiceCard from "./Views/EstablishmentPages/NewService/NewService";
+import NewEstCard from "./Views/EstablishmentPages/NewEstablishment/NewEstablishment";
+import NewEnployee from "./Views/EstablishmentPages/NewEmployee/NewEmployee";
+import MeusAgendamentos from "./Views/Cliente/Agendamentos/MeusAgendamentos";
+import { Help } from "./Views/EstablishmentPages/Help/Help";
+import { TesteForm } from "./Test";
 const Router = () => {
     return (
         <BrowserRouter>
@@ -14,11 +16,13 @@ const Router = () => {
                 <Route path='/' element={<Home /> } />
                 <Route path='/login' exatct element={<Login /> } />
                 <Route path='/userlogin' exact element={<LoginUsuario /> } />
+                <Route path='/agendamentos' exact element={<MeusAgendamentos /> } />
                 <Route path='/estabelecimento' exact element={<HomeEstablishment /> } />
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
                 <Route path='/novofuncionario' exact element={<NewEnployee /> } />
-                <Route path='/agendamentos' exact element={<MeusAgendamentos /> } />
+                <Route path='/help' exact element={<Help /> } />
+                <Route path='/teste' exact element={<TesteForm /> } />
             </Routes>
         </BrowserRouter>
     )

@@ -1,12 +1,10 @@
 import React from "react";
-import './Header.css';
+import styles from "./cardProps.module.css"
 
     const Header = () =>{
         return (
-            <h1 className="header__logo">Bellitia</h1>
-    );
-        }
-
-
+            <h1 className={styles.header_logo}>Bellitia</h1>
+        );
+    }
 
 export default Header;

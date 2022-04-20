@@ -1,9 +1,14 @@
-const {Service} = require ('../models')
+const {Service, Professional} = require ('../models');
+
 
 module.exports = (app) => {
     const getService = async (req, res) => {
         try {
-            const service = await Service.findAll()
+            const service = await Service.findAll({
+                include: {
+                    model: Professional
+                }
+            })
             res.status(200).json(service)
         }
         catch {
@@ -11,10 +16,10 @@ module.exports = (app) => {
         }
     }
     const postService = async (req, res) => {
-        const { especificacao, duracao, valor } = req.body
+        const { especificacao, duracao, valor, fk_est_service } = req.body
         try {
-            if(!especificacao || !duracao || !valor  ) throw new Error('Preencha todos os campos!!')
-            await Service.create({especificacao, duracao, valor})
+            if(!especificacao || !duracao || !valor) throw new Error('Preencha todos os campos!!')
+            await Service.create({especificacao, duracao, valor,  fk_est_service})
             res.status(201).json({msg: 'Serviço Cadastrado com Sucesso!'})
         }
         catch(err) {

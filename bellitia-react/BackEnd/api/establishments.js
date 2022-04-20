@@ -1,9 +1,14 @@
-const {Establishment} = require ('../models')
+const {Establishment, Address, Service, Professional} = require ('../models')
+const bcrypt = require ('bcrypt');
 
 module.exports = (app) => {
     const getEstablishment = async (req, res) => {
         try {
-            const establishment = await Establishment.findAll()
+            const establishment = await Establishment.findAll({
+                include:{
+                    model: Professional 
+                }
+            })
             res.status(200).json(establishment)
         }
         catch {
@@ -11,22 +16,36 @@ module.exports = (app) => {
         }
     }
     const postEstablishment = async (req, res) => {
-        const { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email } = req.body
+        const { 
+            razao_social, nome_fantasia, cnpj, 
+            nome_proprietario, telefone, email, 
+            cpf_proprietario, email_proprietario,
+            telefone_proprietario, senha } = req.body
+
+        const cnpjValidate = await Establishment.findOne({where: {cnpj} } )
+
+        if(!cnpjValidate) {
             try {
-                if(!razao_social || !nome_fantasia || !cnpj || !nome_proprietario || !telefone || !email ) throw new Error('Preencha todos os campos!!')
-                await Establishment.create({razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email})
-                res.status(201).json({msg: 'Estabelecimento Cadastrado com Sucesso!'})
-            }
-            catch(err) {
-                res.status(400).json({error: true, ...err})
-            }
+                await Establishment.create({
+                    razao_social, nome_fantasia, cnpj, 
+                    nome_proprietario, telefone, email, 
+                    cpf_proprietario, email_proprietario, telefone_proprietario, 
+                    senha: bcrypt.hashSync (senha, 10)})
+                    res.status(201).json({msg: 'Level Up!'})
+                }
+                catch(err) {
+                    res.status(400).json({error: true, ...err})
+                } } else {
+                    res.status(400).json('CNPJ já está cadastrado')
+                }
         }
+        
     const putEstablishment = async (req, res) => {
         const establishmentId= req.params.id
-        const { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email } = req.body
+        const { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email, cpf_proprietario, email_proprietario, telefone_proprietario, senha } = req.body
         try {
             await Establishment.update(
-                { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email },
+                { razao_social, nome_fantasia, cnpj, nome_proprietario, telefone, email, cpf_proprietario, email_proprietario, telefone_proprietario, senha },
                 {where: {id_establishment: establishmentId}}
             )
             res.status(200).json({msg: 'Estabelecimento alterado com sucesso!'})

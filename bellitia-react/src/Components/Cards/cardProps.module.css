@@ -1,0 +1,55 @@
+.header_logo {
+    width: 100%;
+    height: 13vh;
+    background-color: #912424;
+    color: #fff;
+    position: relative;
+    margin-top: auto;
+    font-size: 75px;
+    padding-left: 10px;
+    font-weight: lighter;
+    font-family: 'Imperial Script'
+}
+
+.footer{
+    width: 100%;
+    height: 10vh; 
+    position: relative;
+    text-align: end;
+    bottom: 0;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: #912424;
+    font-family: 'Imperial Script';
+    font-size: 30px;
+    color: #fff;
+}
+
+.container_B_Lateral{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    line-height: 2rem;
+    width: 17%;
+    height: auto;
+    min-height: 77vh;
+    color: #fff;
+    background-color: #912424;
+}
+
+.container_B_Lateral a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    line-height: 2;
+    padding: 15px 10px;
+    color: #fff;
+}
+
+.container_B_Lateral a:focus, .container_B_Lateral a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 0 5px #ac1a1a; 
+    border-radius: 10px;
+    transform: skew(-10deg);
+}

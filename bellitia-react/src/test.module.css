@@ -1,0 +1,51 @@
+.container {
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    align-items: center;
+    background-color:#912424;
+}
+.container form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.props {
+    border-radius: 2rem;
+    width: 50%;
+    box-shadow: 2px 2px 2px 2px #252525;
+    margin-top: 2rem;
+    background-color: #fff;
+}
+
+.props button {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.props h2 {
+    text-align: center;
+}
+.props label {
+    text-align: center;
+    line-height: 2rem;
+}
+
+.props input, .props select {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 25rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+input::placeholder {
+    font-style: italic;
+    color: #242525;
+  }

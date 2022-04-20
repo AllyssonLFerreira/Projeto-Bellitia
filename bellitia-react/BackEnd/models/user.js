@@ -15,6 +15,13 @@ module.exports = (sequelize, DataType) => {
         timestamps: false,
         tableName: 'users'
     })
-
+    
+    User.associate = (modelsList) => {
+        User.belongsToMany(modelsList.Service,{
+            through: modelsList.Schedule,
+            foreignKey: 'nome',
+            timestamps: false
+        })
+    }
     return User
 };

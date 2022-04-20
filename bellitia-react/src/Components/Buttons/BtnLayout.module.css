@@ -1,0 +1,55 @@
+ .switch_p {
+    font-size: 1.25rem;
+} 
+
+.switch_container {
+    background-color: #ffffff;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    position: relative; 
+}
+
+.switch_input {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.switch_span {
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    box-shadow: 2px 2px 4px #0a0a07;
+    transition: 0.30s;
+    background-color: #912424;
+}
+
+.switch_input:checked + .switch_span {
+    left: 50%;
+    background-color:#2bb81e;
+}
+
+.btn_confirm{
+    background-color: transparent;
+    border: 2.5px solid #912424;
+    box-shadow: 2px 2px 2px #666666;
+    transition: 0.30s;
+    color: #181818;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.btn_confirm:hover , .btn_confirm:focus{
+    color: #ffffff;
+    background-color: #912424;
+}
