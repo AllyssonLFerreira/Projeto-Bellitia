@@ -12,7 +12,6 @@ export const CadastroEstabelecimento = () => {
     const Send = (values) => {
         console.log(values)
     }
-
     return (
         <div className={styles.container}>
             <form onSubmit={handleSubmit(Send)}>

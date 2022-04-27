@@ -9,13 +9,17 @@ import NewEnployee from "./Views/EstablishmentPages/NewEmployee/NewEmployee";
 import MeusAgendamentos from "./Views/Cliente/Agendamentos/MeusAgendamentos";
 import { Help } from "./Views/EstablishmentPages/Help/Help";
 import { TesteForm } from "./Test";
+import { ClientHome } from "./Views/Cliente/ClientHome/home";
 const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home /> } />
+
                 <Route path='/login' exatct element={<Login /> } />
                 <Route path='/userlogin' exact element={<LoginUsuario /> } />
+
+                <Route path='/areacliente' exact element={<ClientHome />} />
                 <Route path='/agendamentos' exact element={<MeusAgendamentos /> } />
                 <Route path='/estabelecimento' exact element={<HomeEstablishment /> } />
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
