@@ -1,7 +1,7 @@
 import Header from "../../../Components/Cards/Header";
 import Footer from "../../../Components/Cards/Footer";
 import { CadastroEstabelecimento } from "./EstablishmentForm";
-import styles from '../../viewProp.module.css';
+import styles from '../../Views.module.css';
 
 const NewEstCard = () => {
     return (

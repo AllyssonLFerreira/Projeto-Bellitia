@@ -1,38 +1,31 @@
-import BtnConfirm from "../../../Components/Buttons/BtnConfirm"
-import { useForm } from "react-hook-form";
+import { useState } from "react";
+import axios from "axios";
 import styles from "./Help.module.css"
 
 export const HelpForm = () => {
-
-    const {register, handleSubmit} = useForm();
-
+    const [] = useState('');
+    const [] = useState('');
+    
     const onSubmit = (e) => {
-        console.log(e);
+        const values = {};
+        e.preventDefault();
+        console.log(values);
     }
 
     return (
         <div className={styles.container}>
-            <form onSubmit={handleSubmit(onSubmit)} >
+            <form>
                 <div className={styles.props}>
                 <h2>Precisa de Ajuda ?</h2>
                     <label htmlFor='name'>
                         Digite seu Nome:
-                    <input 
-                        {...register('name')} 
-                        type='text'
-                        placeholder='Nome Completo' 
-                    />
+                        <input id="name" name="name" type='text' placeholder='Nome Completo' />
                     </label>
-                    <label htmlFor="Problem_Description">
+                    <label htmlFor="Description">
                         Relate aqui sua dúvida: 
                     </label>
-                    <textarea 
-                        {...register('Problem_Description')}  
-                        type='text' 
-                        placeholder='Descreva seu problema detalhadamente...'
-                        required 
-                    />
-                    <BtnConfirm />
+                    <textarea id="Description" name="Description" placeholder='Descreva seu problema detalhadamente...' required />
+                    <button onClick={onSubmit}> Enviar </button>
                 </div>
             </form>
             <div className={styles.contact}>

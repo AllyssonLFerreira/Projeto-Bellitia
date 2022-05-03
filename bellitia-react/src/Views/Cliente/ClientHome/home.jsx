@@ -2,7 +2,7 @@ import Footer from "../../../Components/Cards/Footer";
 import Header from "../../../Components/Cards/Header";
 import BarraLateralCliente from "../../../Components/Cards/Barra-Lateral-Cliente";
 
-import styles from "../../viewProp.module.css"
+import styles from "../../Views.module.css"
 
 export const ClientHome = () => {
     return (
