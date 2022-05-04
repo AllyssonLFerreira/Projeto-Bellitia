@@ -6,11 +6,12 @@ import LoginUsuario from './Views/LoginUsuario/LoginUsuario';
 
 import HomeEstablishment from "./Views/EstablishmentPages/EstablishmentHome/HomeEstablishment";
 import NewServiceCard from "./Views/EstablishmentPages/NewService/NewService";
-import NewEstCard from "./Views/EstablishmentPages/NewEstablishment/NewEstablishment";
+import NewEstCard from "./Views/EstablishmentPages/NewEstablishment/Index";
 import NewEnployee from "./Views/EstablishmentPages/NewEmployee/NewEmployee";
 
 import { NewUser } from "./Views/Cliente/NewUser/Index";
 import { ClientHome } from "./Views/Cliente/ClientHome/home";
+import { UserHelp } from "./Views/Cliente/Help/index";
 import MeusAgendamentos from "./Views/Cliente/Agendamentos/MeusAgendamentos";
 
 import { Help } from "./Views/EstablishmentPages/Help/Help";
@@ -27,13 +28,14 @@ const Router = () => {
                 <Route path='/newuser' exatct element={ <NewUser /> } />
                 <Route path='/areacliente' exact element={<ClientHome />} />
                 <Route path='/agendamentos' exact element={<MeusAgendamentos /> } />
+                <Route path='/user/help' exact element={<UserHelp /> } />
 
                 <Route path='/estabelecimento' exact element={<HomeEstablishment /> } />
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
                 <Route path='/novofuncionario' exact element={<NewEnployee /> } />
+                <Route path='estabelecimento/help' exact element={<Help /> } />
                 
-                <Route path='/help' exact element={<Help /> } />
             </Routes>
         </BrowserRouter>
     )

@@ -8,12 +8,12 @@ import { HelpForm } from './HelpForm';
 export const Help = () => {
     return (
         <div className={styles.main}>
-            <Header />
-        <div className={styles.grid_flex}>
+          <Header />
+          <div className={styles.grid_flex}>
             <BarraLateral />
             <HelpForm />
-        </div>
-            <Footer />
+          </div>
+          <Footer />
         </div>
     )
 };
