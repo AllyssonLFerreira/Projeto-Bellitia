@@ -30,7 +30,7 @@
   color: #181818;
   width: 200px;
   height: 50px;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .props button:hover , .props button:focus{
@@ -46,7 +46,7 @@
   line-height: 2rem;
 }
 
-.props input, .props select {
+.props input {
   text-align: center;
   margin: 0 auto;
   display: block;
@@ -55,25 +55,4 @@
   margin-bottom: 1rem;
 }
 
-.props textarea {
-  width: 400px;
-  height: 25vh;
-  border-radius: 5px;
-}
 
-.contact{
-  display: flex;
-  flex-direction: column;
-  margin-left: 3rem;
-  margin-top: 5rem;
-}
-
-.contact span {
-  font-weight: bolder;
-  font-style: italic;
-}
-
-input::placeholder {
-  font-style: italic;
-  color: #242525;
-}
