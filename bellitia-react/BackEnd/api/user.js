@@ -19,12 +19,17 @@ module.exports = (app) => {
     const postUser = async (req, res) => {
         const { Nome, CPF, RG, D_Nascimento, Telefone, Email, senha } = req.body
         try {
+
             if(!Nome || !CPF || !RG || !D_Nascimento || !Telefone || !Email || !senha) throw new Error('Preencha todos os campos!!')
             await User.create({
                 Nome, CPF, RG, D_Nascimento,
                 Telefone, Email, 
                 senha: bcrypt.hashSync (senha, 10)})
             
+
+            if(!Nome || !CPF || !RG || !D_Nascimento || !Telefone || !Email || !senha ) throw new Error('Preencha todos os campos!!')
+            await User.create({Nome, CPF, RG, D_Nascimento, Telefone, Email, senha})
+
             res.status(201).json({msg: 'Usuario Cadastrado com Sucesso!'})
         }
         catch(err) {
