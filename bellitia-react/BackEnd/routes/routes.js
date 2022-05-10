@@ -8,6 +8,8 @@ module.exports = (app) => {
     app.post( '/estabelecimento', app.api.establishments.postEstablishment );
     app.put( '/estabelecimento/:id', app.api.establishments.putEstablishment );
     app.delete( '/estabelecimento/:id', app.api.establishments.deleteEstablishment );
+    app.post( '/estabelecimento/login', app.api.establishments.establishmentLogin);
+    app.get('/estabelecimento/login', app.api.establishments.establishmentLogin);
 
     app.get( '/professional', app.api.professional.getProfessional );
     app.post( '/professional', app.api.professional.postProfessional );
@@ -28,4 +30,5 @@ module.exports = (app) => {
     app.post( '/usuarios', app.api.user.postUser );
     app.put( '/usuarios/:id', app.api.user.putUser );
     app.delete( '/usuarios/:id', app.api.user.deleteUser );
+    app.post( '/usuarios/login', app.api.user.loginUser );
 };

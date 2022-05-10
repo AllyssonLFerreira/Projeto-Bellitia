@@ -1,5 +1,6 @@
 import React from 'react';
 import FormularioLogin from './FormularioLogin'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
@@ -7,7 +8,7 @@ const Login = () => {
             <FormularioLogin />
             <div className='botaoCadastro'>
                 <span><p>Não possui cadastro?</p></span>
-                <button>Inscreva-se</button>
+                <Link to="/novoestabelecimento">Inscreva-se</Link>
             </div>
         </div>
     )
