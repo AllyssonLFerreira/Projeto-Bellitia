@@ -1,92 +1,62 @@
-import BtnConfirm from '../../../Components/Buttons/BtnConfirm';
-import {useForm} from 'react-hook-form';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import styles from './Styles.module.css'
 
 export const NovoServico = () => {
+  const [descricao, setDescricao] = useState('');
+  const [valor, setValor] = useState('');
+  const [tempo, setTempo] = useState('');
+  const [profissional, setProfissional] = useState('');
 
-    const {register, handleSubmit} = useForm();
+  const onSubmit = (e) => {
+      const Values = { especificacao:descricao, duracao:tempo, valor:valor, profissional:profissional }
+      e.preventDefault();
+      console.log(Values)
+  }
 
-    const onSubmit = (e) => {
-        console.log(e);
-    }
+  return (
+    <div >
+      <form >
+        <div className={styles.props}>
+          <h2>Novo Serviço</h2>
+          
+          <label htmlFor='descricao'>
+            Descrição do Serviço:
+            <input 
+              type='text' 
+              placeholder='Especifique o serviço ofertado aqui ...' required 
+              id='descricao' name='descricao'
+              value={descricao} onChange={ (e)=>setDescricao(e.target.value) } 
+            />
+            </label>
 
-    return (
-        <div >
-            <form onSubmit={handleSubmit(onSubmit)} >
-                <div className={styles.props}>
-                    <h2>Novo Serviço</h2>
-                    <label htmlFor='description'>
-                        Descrição do Serviço:
-                    <textarea 
-                        type='text' 
-                        {...register('description')} 
-                        placeholder='Especifique o serviço ofertado aqui ...'
-                        required 
-                    />
-                    </label>
-                    <label htmlFor='value'>
-                        Valor Cobrado (R$)
-                    <input 
-                        type='text' 
-                        {...register('value')} 
-                        placeholder='99,99...' 
-                    />
-                    </label>
-                    <div className={styles.radioProps}>
+          <label htmlFor='valor'>
+              Valor Cobrado (R$)
+              <input type='number' id='valor' name='valor' value={valor} onChange={ (e)=>setValor(e.target.value) }/>
+          </label>
 
-                        <label htmlFor='service_time'> 
-                            Tempo aprox. de serviço? 
-                    
-                        <input 
-                            type='radio' 
-                            {...register('service-time')} 
-                            value='30' 
-                            />
-                            <label> 30 min. </label>
-                    
-                        <input 
-                            type='radio' 
-                            {...register('service-time')} 
-                            value='45' 
-                            />
-                            <label> 45 min. </label>
-                        
-                        <input 
-                            type='radio' 
-                            {...register('service-time')} 
-                            value='60' 
-                            />
-                            <label> 1 hora. </label>
-                        
-                        <input 
-                            type='radio' 
-                            {...register('service-time')} 
-                            value='90' 
-                            />
-                            <label> 1 hora e 30 min. </label>
-                        
-                        <input 
-                            type='radio' 
-                            {...register('service-time')} 
-                            value='120' 
-                            />
-                            <label> 2 horas </label>
-                        </label>
-                    </div>
-                    
-                    <label htmlFor='profissional'>
-                        Escolha um Profissional
-                    <select {...register('professional')} id="profissionais">
-                        <option selected disabled>Selecione</option>
-                        <option value="F1">João</option>
-                        <option value="F2">Maria</option>
-                        <option value="F3"></option>
-                        <option value="F4"></option>
-                    </select>
-                    </label>
-                    <BtnConfirm />
-                </div>
-            </form>
+          <div className={styles.radioProps}>
+              <label htmlFor='tempo'> 
+                  Tempo aprox. de serviço? 
+                  <input type='text' placeholder='ex: 60 minutos' id='tempo' name='tempo' value={tempo} onChange={ (e)=>setTempo(e.target.value) }/>
+              </label>
+          </div>
+          
+          <label htmlFor='profissional'>
+              Escolha um Profissional
+              <select id='profissional' name='profissional' value={profissional} onChange={ (e)=>setProfissional(e.target.value) }>
+                  <option selected disabled>Selecione</option>
+                  <option value="F1">João</option>
+                  <option value="F2">Maria</option>
+                  <option value="F3"></option>
+                  <option value="F4"></option>
+              </select>
+          </label>
+          <button 
+          className={styles.btn_confirm} 
+          onClick={onSubmit}> Confirmar </button>
         </div>
-    );
+      </form>
+    </div>
+  );
 }

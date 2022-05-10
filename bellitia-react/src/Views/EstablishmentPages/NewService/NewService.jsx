@@ -2,7 +2,6 @@ import Header from "../../../Components/Cards/Header";
 import Footer from "../../../Components/Cards/Footer";
 import BarraLateral from "../../../Components/Cards/Barra-Lateral";
 import { NovoServico } from "./Form";
-import TaskList from "./TaskList";
 import styles from './Styles.module.css'
 
 const NewServiceCard = () => {
@@ -10,9 +9,10 @@ const NewServiceCard = () => {
     <div className={styles.container}>
         <Header />
     <div className={styles.main}>
-        <BarraLateral />
-        <NovoServico />
-        <TaskList />
+            <BarraLateral />
+        <div className={styles.newService}>
+            <NovoServico />
+        </div>
     </div>
         <Footer />
     </div>

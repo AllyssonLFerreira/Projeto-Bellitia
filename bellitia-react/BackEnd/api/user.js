@@ -15,10 +15,10 @@ module.exports = (app) => {
         }
     }
     const postUser = async (req, res) => {
-        const { Nome, CPF, RG, D_Nascimento, Telefone, Email } = req.body
+        const { Nome, CPF, RG, D_Nascimento, Telefone, Email, senha } = req.body
         try {
-            if(!Nome || !CPF || !RG || !D_Nascimento || !Telefone || !Email ) throw new Error('Preencha todos os campos!!')
-            await User.create({Nome, CPF, RG, D_Nascimento, Telefone, Email})
+            if(!Nome || !CPF || !RG || !D_Nascimento || !Telefone || !Email || !senha ) throw new Error('Preencha todos os campos!!')
+            await User.create({Nome, CPF, RG, D_Nascimento, Telefone, Email, senha})
             res.status(201).json({msg: 'Usuario Cadastrado com Sucesso!'})
         }
         catch(err) {
@@ -27,10 +27,10 @@ module.exports = (app) => {
     }
     const putUser = async (req, res) => {
         const userId= req.params.id
-        const {  Nome, CPF, RG, D_Nascimento, Telefone, Email } = req.body
+        const {  Nome, CPF, RG, D_Nascimento, Telefone, Email, senha } = req.body
         try {
             await User.update(
-                { Nome, CPF, RG, D_Nascimento, Telefone, Email },
+                { Nome, CPF, RG, D_Nascimento, Telefone, Email, senha },
                 {where: {id_user: userId}}
             )
             res.status(200).json({msg: 'Usuario alterado com sucesso!'})

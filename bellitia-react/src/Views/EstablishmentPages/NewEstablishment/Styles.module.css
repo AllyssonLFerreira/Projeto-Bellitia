@@ -1,26 +1,23 @@
-
 .container {
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    align-items: center;
     background-color:#fff;
 }
-
-.main {
+.container form {
+    height: auto;
     display: flex;
-    padding-right: 10rem;
-}
-
-.newService {
-    margin-left: 10rem;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .props {
-    padding: 0 2rem;
     border-radius: 2rem;
-    width: auto;
+    width: 50%;
     box-shadow: 2px 2px 2px 2px #252525;
     margin-top: 2rem;
-    margin-bottom: 2rem;
     background-color: #efefefef;
 }
 
@@ -48,33 +45,23 @@
     margin-bottom: 1rem;
 }
 
-.props textarea {
-    width: 400px;
-    height: 25vh;
-    border-radius: 5px;
-}
-
-.radioProps {
-    display: flex;
-}
-
 input::placeholder {
     font-style: italic;
     color: #242525;
-  }
-
-.btn_confirm{
-    background-color: transparent;
-    border: 2.5px solid #912424;
-    box-shadow: 2px 2px 2px #666666;
-    transition: 0.30s;
-    color: #181818;
-    width: 200px;
-    height: 50px;
-    margin-bottom: 20px;
 }
 
-.btn_confirm:hover , .btn_confirm:focus{
-    color: #ffffff;
-    background-color: #912424;
+.btnCfg{
+  background-color: transparent;
+  border: 2.5px solid #912424;
+  box-shadow: 2px 2px 2px #666666;
+  transition: 0.30s;
+  color: #181818;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.btnCfg:hover , .btnCfg:focus{
+  color: #ffffff;
+  background-color: #912424;
 }
