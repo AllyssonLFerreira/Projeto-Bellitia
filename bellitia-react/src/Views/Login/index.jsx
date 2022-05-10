@@ -3,16 +3,19 @@ import styles from './styles.module.css';
 import Header from '../../Components/Cards/Header';
 import Footer from '../../Components/Cards/Footer';
 import FormularioLogin from './FormularioLogin'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
-      <div className='login'>
-        <Header />
-        <FormularioLogin />
-        <div className='botaoCadastro'>
-            <span><p>Não possui cadastro?</p></span>
-            <button className={styles.inscreva}>Inscreva-se</button>
-        </div>
+
+        <div className='login'>
+            <FormularioLogin />
+            <div className='botaoCadastro'>
+                <span><p>Não possui cadastro?</p></span>
+                <Link to="/novoestabelecimento">Inscreva-se</Link>
+            </div>
+      
+
         <Footer />
       </div>
     )
