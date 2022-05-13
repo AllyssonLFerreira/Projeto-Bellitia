@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../../Components/Cards/Footer";
 import Header from "../../../Components/Cards/Header";
-import BarraLateralCliente from "../../../Components/Cards/Barra-Lateral-Cliente";
+import BarraLateralCliente from "../../../Components/Cards/NavBarClient";
 import Formagenda from "../../../Components/Forms/AgendamentosCliente";
 import './MeusAgendamentos.css'
 

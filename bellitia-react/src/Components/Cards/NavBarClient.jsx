@@ -1,17 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Barra-Lateral-Cliente.css'
+import styles from "./cardProps.module.css";
 
 const BarraLateralCliente = () =>{
   return (
-    <div className='barra-lateral-cliente__links'>
-
+    <div className={styles.NavBar}>
       <Link to='/areacliente'>MEUS AGENDAMENTOS</Link>
       <Link to='/novousuario'>ALTERAÇÃO DE DADOS</Link>
       <Link to='/usuario/help'>PRECISO DE AJUDA</Link>
       <Link to='/'>SAIR</Link>
-      
-      </div>
+    </div>
   )
 }
 
