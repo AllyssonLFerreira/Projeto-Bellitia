@@ -1,43 +1,55 @@
 .menuDropDown {
     position: relative;
-    
     justify-content: center;
     align-items: center;
-    
-    
+    margin-top: 10px; 
 }
-
-
+.menuDropDown a {
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #FFF;
+}
+.menuDropDown i{
+  font-size: 30px;
+}
+.menuDropDown button{
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  position: relative;
+  border-radius: 13px;
+  padding: 10px 5px;;
+}
+.menuDropDown button:hover{
+  box-shadow: 0 0 0 1px #cec8c8cc;
+  transition: 0,6s;
+}
 .menuDrop.active {
-    opacity: 0.9;
+    opacity: 0.8;
     visibility: visible;
-    background-color:gray;
+    background-color:#912424;
     border-radius: 10px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-   
-
-    
-  
 }
-
 .menuDrop {
     opacity: 0;
-    font-size: medium;
-    font-family: 'Segoe UI';
     margin-right: 1em;
     height: 200px;
-    width: 200px;
-   
-    
-
+    width: 220px;
 }
-
-.li1 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-decoration: black;
-    
+.access {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
+.access a:hover{
+  background-color: #666666cc;
+  border: 2.5px solid #666666;
+  box-shadow: 2px 2px 2px #666666;
+  transition: 0.30s;
+  border-radius: 5px; 
+  transform: skew(-5deg);
+}

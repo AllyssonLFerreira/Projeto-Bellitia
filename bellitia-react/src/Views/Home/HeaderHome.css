@@ -7,32 +7,12 @@
   justify-content: space-between; 
   background-color: #912424;
   color: #fff;
-  position: relative;
-  margin-top: auto;
-  font-size: 75px;
   padding-left: 10px;
   font-weight: lighter;
-  font-family: 'Imperial Script'
 }
-
 .HeaderHome h1 {
+  font-family: 'Imperial Script';
   font-size: 75px;
+  font-weight: lighter;
 }
 
-.HeaderHome button:hover{
-  background-color: #964545;
-}
-
-button.btn_FaUserAlt {
-  align-items: center;
-  background-color: #912424;
-  border-radius: 50%;
-  border: none;
-  margin-right: 3em;
-  margin-top: 10px;
-  font-size: 25px;
-  height: 2em;
-  width: 2em;
-  color: white;
-  padding: 0;
-}
