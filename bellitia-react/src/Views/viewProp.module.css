@@ -4,6 +4,9 @@
     height: 100vh;
 }
 
+.agenda {
+    display: flex;
+}
 .main {
     display: flex;
     flex-direction: column;

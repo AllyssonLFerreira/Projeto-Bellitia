@@ -1,0 +1,13 @@
+.agenda {
+    display: flex;
+}
+
+.barra {
+    display: flex;
+    width: 50%;
+}
+
+.calendario {
+    display: flex;
+    width: 50%;
+}
