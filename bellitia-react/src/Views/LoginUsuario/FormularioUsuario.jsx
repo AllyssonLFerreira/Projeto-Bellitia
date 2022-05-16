@@ -49,7 +49,7 @@ const FormularioLogin =  () => {
 
 			alert('Login efetuado!')
 
-			navigate('/usuarios')
+			navigate('/areacliente')
 
 		} catch (error){
 			
