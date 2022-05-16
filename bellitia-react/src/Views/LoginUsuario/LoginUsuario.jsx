@@ -12,9 +12,7 @@ const LoginUsuario = () => {
 			<FormularioUsuario />
 			<div className='botaoCadastro'>
 				<span><p>Não possui cadastro?</p></span>
-				<Link to='/novousuario'>
-					<button className={styles.inscreva}>Inscreva-se</button>
-					</Link>
+				<Link to='/novousuario'> Inscreva-se  </Link>
 			</div>
       <Footer />
 		</div>

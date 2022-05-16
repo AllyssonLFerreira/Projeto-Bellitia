@@ -1,10 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import SwitchButton from '../Buttons/SwitchButton';
 import styles from "./cardProps.module.css"
 
 
 const BarraLateral = () =>{
+
+  const navigate = useNavigate()
+  const handleLogout = () => {
+  
+      document.cookie = `dadosLogin=; expires=${new Date(0)}`
+      navigate('/')
+  }
+
     return (
         <div className={styles.NavBar}>
             
