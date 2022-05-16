@@ -19,8 +19,6 @@ img {
   margin-top: 10px;
 }
 
-
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -53,5 +51,29 @@ span {
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+}
+
+.botaoCadastro a {
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #a6a2a2;
+  width: 7em;
+
+}
+
+.botaoCadastro a:hover {
+background-color: #fff;
+color: rgb(39, 39, 39);
+border: 1px solid #a6a2a2;
+box-shadow: -4px 4px 10px grey;
+}
+
+.Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
