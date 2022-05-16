@@ -12,3 +12,11 @@
 .grid_flex {
     display: flex;
 }
+
+.agenda {
+    display: flex;   
+}
+
+.calendario {
+    height: 50vh;
+}

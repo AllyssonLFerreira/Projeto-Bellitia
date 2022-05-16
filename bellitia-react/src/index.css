@@ -15,7 +15,7 @@ body {
  
 }
 
-button {
+.button_menu {
   cursor: pointer;
   color: #ffffff;
   border: 1.5px solid #ffffff;
