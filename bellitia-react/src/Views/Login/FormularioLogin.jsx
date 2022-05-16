@@ -1,71 +1,73 @@
 import React, { useState } from 'react';
 import './FormularioLogin.css';
 import './Botao.css';
-import img from './Imagens/login-user.png'
-
+import img from './Imagens/login-user.png';
+import {  useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const FormularioLogin = () => {
-	const [estabelecimentoInput, setEstabelecimentoInput] = useState('');
-	const [loginInput, setLoginInput] = useState('');
-	const [senhaInput, setSenhaInput] = useState('');
+	const [email, setEmail] = useState('');
+	const [pwd, setPwd] = useState('');
 	// const [ userInput, setUserInput ] = useState({
 	// 	estabelecimentoInput: '',
 	// 	loginInput: '',
 	// 	senhaInput: ''
 	// });
 
-	const estabelecimentoChangeHandler = (event) => {
-		setEstabelecimentoInput(event.target.value);
-		// setUserInput((prevState) => {
-		// 	return{...prevState, estabelecimentoInput: event.target.value };
-		// })
-	};
+	const navigate = useNavigate()
 
-	const loginChangeHandler = (event) => {
-		setLoginInput(event.target.value);
-		// setUserInput((prevState) => {
-		// 	return{...prevState, loginInput: event.target.value};
-		// })
-	};
+	const handleLogin = async (event) => {
+			event.preventDefault()
+		
+			const dadosLogin = {
+			email: email,
+			senha: pwd,
+		}
 
-	const senhaChangeHandler = (event) => {
-		setSenhaInput(event.target.value);
-		// setUserInput((prevState) => {
-		// 	return{...prevState, senhaInput: event.target.value};
-		// })
-	};
+		try {
+			const response = await axios.post('http://localhost:5000/estabelecimento/login', dadosLogin)
+			
 
-	const submitHandler = (event) => {
-		event.preventDefault();
-		const dadosLogin = {
-			estabelecimento: estabelecimentoInput,
-			login: loginInput,
-			senha: senhaInput
-		};
+			document.cookie = `dadosLogin=${response.data.token};expires=${new Date(2100, 0, 1)}`
 
-		console.log(dadosLogin);
-		setEstabelecimentoInput('');
-		setLoginInput('');
-		setSenhaInput('');
+			alert('Login efetuado!')
+
+			navigate('/estabelecimento')
+
+		} catch (error){
+			
+			alert(error.response.data)
+			
+		}
 	}
 
+       
+
 	return(
-		<form className='formulario' onSubmit={submitHandler}>
+		<form className='formulario' >
 			<div className='loginEmpresa'>
 				<p><img src={img} /></p>
-				<div className='form-group'>
-					<input type="text" placeholder='Estabelecimento' value={estabelecimentoInput} onChange={estabelecimentoChangeHandler}/>
-				</div>
+			
 				<div className='form-group'>
 					<label>Login</label>
-					<input type="email" name='login' placeholder='Login' value={loginInput} onChange={loginChangeHandler} />
+					<input 
+					 id='email'
+					 type="text"
+					 placeholder='E-mail' 
+					 value={email}
+					 onChange={e => setEmail(e.target.value)} />
 				</div>
 				<div className='form-group'>
 					<label>Senha</label>
-					<input type="password" name='senha' placeholder='Digite sua senha' value={senhaInput} onChange={senhaChangeHandler}/>
+					<input 
+					type="password" 
+					id='pwd' 
+					placeholder='Digite sua senha' 
+					value={pwd} 
+					onChange={e => setPwd(e.target.value)}/>
 				</div>
 			</div>
-			<button className='entrar'>Entrar</button>
+			<button className='entrar' onClick={e => handleLogin(e)}>Entrar</button>
 		</form>
 	);
 }

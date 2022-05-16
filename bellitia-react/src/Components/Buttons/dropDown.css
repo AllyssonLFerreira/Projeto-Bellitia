@@ -1,0 +1,43 @@
+.menuDropDown {
+    position: relative;
+    
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+.menuDrop.active {
+    opacity: 0.9;
+    visibility: visible;
+    background-color:gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+
+    
+  
+}
+
+.menuDrop {
+    opacity: 0;
+    font-size: medium;
+    font-family: 'Segoe UI';
+    margin-right: 1em;
+    height: 200px;
+    width: 200px;
+   
+    
+
+}
+
+.li1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: black;
+    
+}
+
