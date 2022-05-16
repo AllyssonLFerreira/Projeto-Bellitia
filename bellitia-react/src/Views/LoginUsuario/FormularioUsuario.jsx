@@ -2,26 +2,18 @@ import React, { useState } from 'react';
 import './FormularioUsuario.css';
 import '../Login/Botao.css';
 import img from '..//Login/Imagens/login-user.png'
-import {  useNavigate } from 'react-router-dom';
-import axios from 'axios';
 
 
-
-
-const FormularioLogin =  () => {
-	const [Email, setEmailInput] = useState('');
+const FormularioLogin = () => {
+	const [loginInput, setLoginInput] = useState('');
 	const [senhaInput, setSenhaInput] = useState('');
 	// const [ userInput, setUserInput ] = useState({
 	// 	loginInput: '',
 	// 	senhaInput: ''
 	// });
 
-
-	
-	const navigate = useNavigate()
-
 	const loginChangeHandler = (event) => {
-	 setEmailInput(event.target.value);
+		setLoginInput(event.target.value);
 		// setUserInput((prevState) => {
 		// 	return{...prevState, loginInput: event.target.value};
 		// })
@@ -34,29 +26,16 @@ const FormularioLogin =  () => {
 		// })
 	};
 
-	const submitHandler = async (event) => {
+	const submitHandler = (event) => {
 		event.preventDefault();
-		const dadosLoginUser = {
-			Email: Email,
+		const dadosFormulario = {
+			login: loginInput,
 			senha: senhaInput
 		};
 
-		try {
-			const response = await axios.post('http://localhost:5000/usuarios/login', dadosLoginUser)
-			
-
-			document.cookie = `dadosLoginUser=${response.data.token};expires=${new Date(2100, 0, 1)}`
-
-			alert('Login efetuado!')
-
-			navigate('/usuarios')
-
-		} catch (error){
-			
-			alert(error.response.data)
-			
-		}
-
+		console.log(dadosFormulario);
+		setLoginInput('');
+		setSenhaInput('');
 	};
 
 	return(
@@ -65,24 +44,14 @@ const FormularioLogin =  () => {
 				<p><img src={img} /></p>
 				<div className='form-group'>
 					<label>Login</label>
-					<input 
-					type="email" 
-					id='login'
-				    placeholder='Login' 
-					value={Email} 
-					onChange={loginChangeHandler} />
+					<input type="email" name='login' placeholder='Login' value={loginInput} onChange={loginChangeHandler} />
 				</div>
 				<div className='form-group'>
 					<label>Senha</label>
-					<input 
-					type="password" 
-					id='senha' 
-					placeholder='Digite sua senha' 
-					value={senhaInput} 
-					onChange={senhaChangeHandler}/>
+					<input type="password" name='senha' placeholder='Digite sua senha' value={senhaInput} onChange={senhaChangeHandler}/>
 				</div>
 			</div>
-			<button className='entrar' onClick={event =>submitHandler(event)}>Entrar</button>
+			<button className='entrar' type='submit'>Entrar</button>
 		</form>
 	);
 }

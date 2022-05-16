@@ -1,0 +1,42 @@
+
+.container1 {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 100%;
+max-height: 100vh;
+line-height: 4vh;
+margin-left: 2.5em;
+margin-bottom: auto;
+
+}
+
+.form-group ::placeholder{
+    font-size: 12px;
+}
+
+select #cargo {
+    border-radius: 4px;
+    width: 300px;
+    margin: 4px;
+}
+
+.column-group{
+    display: flex;
+}
+
+
+.form-group{
+    font-size: 15px;
+    display: flex;    
+    flex-direction: column;
+    padding: 1% 0 0 3%;
+}
+
+
+input#age{
+    width: 150px;
+}
+
+
+

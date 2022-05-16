@@ -1,12 +1,14 @@
 import React from 'react';
-import MenuDropDown from '../../Components/Buttons/dropDown';
+import { FaUserAlt } from 'react-icons/fa'
 import './HeaderHome.css';
 
 const HeaderHome = () => (
         <div className='HeaderHome'>
             <h1>Bellitia</h1>
             
-                <MenuDropDown/>
+                <button className='btn_FaUserAlt'>
+                    <a><i><FaUserAlt/></i></a>
+                </button>
         </div>
 )
 

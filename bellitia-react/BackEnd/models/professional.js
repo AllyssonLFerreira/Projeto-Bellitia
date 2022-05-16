@@ -16,7 +16,6 @@ module.exports = (sequelize, DataType) => {
     })
 
     Professional.associate = (modelsList) => {
-        
         Professional.belongsTo(modelsList.Establishment,{
             foreignKey: 'fk_establishment'
         })

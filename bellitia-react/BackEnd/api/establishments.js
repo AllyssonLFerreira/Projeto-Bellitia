@@ -1,6 +1,5 @@
 const {Establishment, Address, Service, Professional} = require ('../models')
 const bcrypt = require ('bcrypt');
-const jwt = require ('jsonwebtoken')
 
 module.exports = (app) => {
     const getEstablishment = async (req, res) => {
@@ -65,24 +64,8 @@ module.exports = (app) => {
         }
         catch(err) {
             res.status(400).json({msg: 'Estabelecimento não pode ser deletado!', Error:true})
-        
-            
         }
     }
 
-    const establishmentLogin = async (req,res) => {
-        const logEstab = await Establishment.findOne({ where: {email: req.body.email}})
-    
-    if (logEstab && bcrypt.compareSync(req.body.senha, logEstab.senha)){
-           const token = jwt.sign({id: logEstab.id_establishment, email: logEstab.email }, 'senha')
-          
-           res.status(200).json({token})  
-           
-    }else res.status(400).json('Usuário ou senha incorretos!')
-
-    }
-    
-
-
-    return {getEstablishment, postEstablishment, putEstablishment, deleteEstablishment, establishmentLogin}
+    return {getEstablishment, postEstablishment, putEstablishment, deleteEstablishment}
 };

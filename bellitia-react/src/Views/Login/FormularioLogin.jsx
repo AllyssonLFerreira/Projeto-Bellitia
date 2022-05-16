@@ -1,73 +1,71 @@
 import React, { useState } from 'react';
 import './FormularioLogin.css';
 import './Botao.css';
-import img from './Imagens/login-user.png';
-import {  useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import img from './Imagens/login-user.png'
+
 
 const FormularioLogin = () => {
-	const [email, setEmail] = useState('');
-	const [pwd, setPwd] = useState('');
+	const [estabelecimentoInput, setEstabelecimentoInput] = useState('');
+	const [loginInput, setLoginInput] = useState('');
+	const [senhaInput, setSenhaInput] = useState('');
 	// const [ userInput, setUserInput ] = useState({
 	// 	estabelecimentoInput: '',
 	// 	loginInput: '',
 	// 	senhaInput: ''
 	// });
 
-	const navigate = useNavigate()
+	const estabelecimentoChangeHandler = (event) => {
+		setEstabelecimentoInput(event.target.value);
+		// setUserInput((prevState) => {
+		// 	return{...prevState, estabelecimentoInput: event.target.value };
+		// })
+	};
 
-	const handleLogin = async (event) => {
-			event.preventDefault()
-		
-			const dadosLogin = {
-			email: email,
-			senha: pwd,
-		}
+	const loginChangeHandler = (event) => {
+		setLoginInput(event.target.value);
+		// setUserInput((prevState) => {
+		// 	return{...prevState, loginInput: event.target.value};
+		// })
+	};
 
-		try {
-			const response = await axios.post('http://localhost:5000/estabelecimento/login', dadosLogin)
-			
+	const senhaChangeHandler = (event) => {
+		setSenhaInput(event.target.value);
+		// setUserInput((prevState) => {
+		// 	return{...prevState, senhaInput: event.target.value};
+		// })
+	};
 
-			document.cookie = `dadosLogin=${response.data.token};expires=${new Date(2100, 0, 1)}`
+	const submitHandler = (event) => {
+		event.preventDefault();
+		const dadosLogin = {
+			estabelecimento: estabelecimentoInput,
+			login: loginInput,
+			senha: senhaInput
+		};
 
-			alert('Login efetuado!')
-
-			navigate('/estabelecimento')
-
-		} catch (error){
-			
-			alert(error.response.data)
-			
-		}
+		console.log(dadosLogin);
+		setEstabelecimentoInput('');
+		setLoginInput('');
+		setSenhaInput('');
 	}
 
-       
-
 	return(
-		<form className='formulario' >
+		<form className='formulario' onSubmit={submitHandler}>
 			<div className='loginEmpresa'>
 				<p><img src={img} /></p>
-			
+				<div className='form-group'>
+					<input type="text" placeholder='Estabelecimento' value={estabelecimentoInput} onChange={estabelecimentoChangeHandler}/>
+				</div>
 				<div className='form-group'>
 					<label>Login</label>
-					<input 
-					 id='email'
-					 type="text"
-					 placeholder='E-mail' 
-					 value={email}
-					 onChange={e => setEmail(e.target.value)} />
+					<input type="email" name='login' placeholder='Login' value={loginInput} onChange={loginChangeHandler} />
 				</div>
 				<div className='form-group'>
 					<label>Senha</label>
-					<input 
-					type="password" 
-					id='pwd' 
-					placeholder='Digite sua senha' 
-					value={pwd} 
-					onChange={e => setPwd(e.target.value)}/>
+					<input type="password" name='senha' placeholder='Digite sua senha' value={senhaInput} onChange={senhaChangeHandler}/>
 				</div>
 			</div>
-			<button className='entrar' onClick={e => handleLogin(e)}>Entrar</button>
+			<button className='entrar'>Entrar</button>
 		</form>
 	);
 }
