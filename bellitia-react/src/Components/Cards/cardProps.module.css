@@ -52,3 +52,21 @@
     border-radius: 10px;
     transform: skew(-10deg);
 }
+
+.tabela {
+    width: 55vw;
+    height: 60vh;
+    text-align: center;
+}
+
+th {
+    height: 5em;
+    border: 1px solid black;
+}
+
+td {
+    height: 2.5em;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
