@@ -1,7 +1,7 @@
 import BarraLateralCliente from '../../../Components/Cards/NavBarClient';
 import Footer from '../../../Components/Cards/Footer';
 import Header from '../../../Components/Cards/Header';
-import { FormHelp } from './Form';
+import { HelpForm } from '../../../Components/Help/Form';
 import styles from '../../Views.module.css';
 
 export const UserHelp = () => {
@@ -10,7 +10,7 @@ export const UserHelp = () => {
       <Header />
       <div className={styles.grid_flex}>
         <BarraLateralCliente />
-        <FormHelp />
+        <HelpForm />
       </div>
       <Footer />
     </div>

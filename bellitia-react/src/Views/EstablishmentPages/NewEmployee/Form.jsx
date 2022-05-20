@@ -1,4 +1,5 @@
 import React from "react"
+import { RiUserAddLine } from 'react-icons/ri'
 import { useState, useEffect } from "react"
 import styles from './styles.module.css'
 import axios from 'axios'
@@ -27,34 +28,42 @@ export const CadastroFuncionario = () =>{
   };
 
   return (
-    <div className={styles.container}> 
+    
       <form>
         <div className={styles.props}>
-          <h2>Registrar Novo Funcionário</h2>
+          <div className={styles.icon}> 
+            <RiUserAddLine/> 
+          </div>
+          <span>Registrar Novo Funcionário</span>
 
-          <label htmlFor="nome"> Nome Completo
-            <input id="nome" name="nome" type="text" value={nome} onChange={(e)=>setNome(e.target.value)}/>
-          </label>
+            <input type="text"
+              placeholder="Nome Completo" 
+              value={nome} 
+              onChange={(e)=>setNome(e.target.value)}/>
+            <div className={styles.underline}></div>
 
-          <label htmlFor="tel"> Telefone
-            <input id="tel" name="tel" type="text" value={telefone} onChange={(e)=>setTelefone(e.target.value)}/>
-          </label>
+            <input type="text" 
+              placeholder="Telefone do Colaborador"
+              value={telefone} 
+              onChange={(e)=>setTelefone(e.target.value)}/>
+            <div className={styles.underline}></div>
 
-          <label htmlFor="email"> Email
-            <input id="email" name="email" type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-          </label>
+            <input type="email"
+              placeholder="Email do Colaborador" 
+              value={email} 
+              onChange={(e)=>setEmail(e.target.value)}/>
+            <div className={styles.underline}></div>
 
-          <label htmlFor="service"> Especialidades
-            <select id="service" name="service" type="checkbox" onChange={(e)=>setEspecialidades(e.target.value)}>
+            {/* <select type="checkbox" 
+              onChange={(e)=>setEspecialidades(e.target.value)}>
               <option disabled>Selecione as suas Especialidades</option>
               {especialidades.map(service => <option value={service.id_service}>{service.especificacao}</option>)} 
             </select>
-          </label>
+            <div className={styles.underline}></div> */}
 
-          <button onClick={onSubmit}>Confirmar</button>
+          <button className={styles.btnCfg} onClick={onSubmit}>Confirmar</button>
         </div> 
-
       </form>
-    </div>
+  
   ); 
 };              

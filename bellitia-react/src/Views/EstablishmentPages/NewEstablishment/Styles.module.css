@@ -1,67 +1,94 @@
 .container {
-    min-height: 100vh;
     height: auto;
     position: relative;
-    align-items: center;
-    background-color:#fff;
+    
 }
 .container form {
-    height: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
+    justify-content: space-around;
+    border-radius: 5px;
+    margin: 1rem;
+    box-shadow: 2px 2px 6px #912424;
 }
 
 .props {
-    border-radius: 2rem;
-    width: 50%;
-    box-shadow: 2px 2px 2px 2px #252525;
-    margin-top: 2rem;
-    background-color: #efefefef;
+    position: relative;
+    padding-top: 2rem;
+    
 }
-
-.props button {
-    text-align: center;
-    margin: 0 auto;
+.props span {
+  font-family: 'Poppins', sans-serif;
+  color: #181818;
+  font-size: 25px;
+  text-shadow: 0.5px 0.5px 2px #9124249a;
+}
+.props input {
     display: block;
-    margin-bottom: 1rem;
-}
-
-.props h2 {
-    text-align: center;
-}
-.props label {
-    text-align: center;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 15px;
+    width: 250px;
+    margin-top: 1rem;
     line-height: 2rem;
 }
 
-.props input, .props select {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    width: 25rem;
-    height: 2rem;
-    margin-bottom: 1rem;
+.props select {
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100px;
+    color: #666;
 }
 
-input::placeholder {
+.props input::placeholder {
     font-style: italic;
-    color: #242525;
+    color: #666;
 }
 
 .btnCfg{
-  background-color: transparent;
-  border: 2.5px solid #912424;
-  box-shadow: 2px 2px 2px #666666;
-  transition: 0.30s;
-  color: #181818;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #666666;
+  box-shadow: 1px 2px 3px #666666;
+  border-radius: 5px;
   width: 200px;
-  height: 50px;
-  margin-bottom: 20px;
+  padding: 0.5rem;
+  font-size: 20px;
+  margin: 1rem 0;
+  color: #fff;
 }
 
 .btnCfg:hover , .btnCfg:focus{
   color: #ffffff;
   background-color: #912424;
+  transition: 0.5s;
+}
+
+.uf_city {
+  display: flex;
+}
+
+.underline::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #000;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #df0404;
+  transform: scaleX(0);
+}
+
+input:focus ~ .underline::after {
+  transform: scaleX(1);
 }

@@ -7,6 +7,7 @@ import LoginUsuario from './Views/LoginUsuario/LoginUsuario';
 import HomeEstablishment from "./Views/EstablishmentPages/EstablishmentHome/HomeEstablishment";
 import NewServiceCard from "./Views/EstablishmentPages/NewService/NewService";
 import NewEstCard from "./Views/EstablishmentPages/NewEstablishment/Index";
+import { DataChange } from "./Views/EstablishmentPages/DataChange";
 import { NewEmployee } from "./Views/EstablishmentPages/NewEmployee/Index";
 import { Help } from "./Views/EstablishmentPages/Help/Index";
 
@@ -31,6 +32,7 @@ const Router = () => {
                 <Route path='/usuario/help' exact element={<UserHelp /> } />
 
                 <Route path='/estabelecimento' exact element={<HomeEstablishment /> } />
+                <Route path='/estabelecimento/alteracao' exact element={<DataChange /> } />
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
                 <Route path='/novofuncionario' exact element={<NewEmployee /> } />

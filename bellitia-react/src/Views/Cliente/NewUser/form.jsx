@@ -18,43 +18,51 @@ export const NewUserForm = () => {
   return (
     <form className={styles.container}>
       <div className={styles.props}> 
-        <h2>Dados de Cadastro</h2>
-        <label htmlFor="Nome"> 
-          Nome Completo
-          <input type="text" name="Nome" id="Nome" placeholder="Digite Aqui" value={Nome} onChange={(e)=>setNome(e.target.value)} />    
-        </label>
-
-        <label htmlFor="CPF"> 
-          CPF
-          <input type="text" name="CPF" id="CPF" placeholder="Somente Números" value={CPF} onChange={(e)=>setCPF(e.target.value)}/>    
-        </label>
-
-        <label htmlFor="RG"> 
-          Registro Geral (RG)
-          <input type="text" name="RG" id="RG" placeholder="Somente Números" value={RG} onChange={(e)=>setRG(e.target.value)}/>    
-        </label>
-
-        <label htmlFor="Nascimento"> 
-          Data de Nascimento
-          <input type="date" name="Nascimento" id="Nascimento" value={Nascimento} onChange={(e)=>setNascimento(e.target.value)}/>    
-        </label>
-
-        <label htmlFor="Email"> 
-          Email
-          <input type="email" name="Email" id="Email" placeholder="exemplo@exemplo.com" value={Email} onChange={(e)=>setEmail(e.target.value)}/>    
-        </label>
-
-        <label htmlFor="Telefone"> 
-          Telefone
-          <input type="text" name="Telefone" id="Telefone" placeholder="Somente Números" value={Telefone} onChange={(e)=>setTelefone(e.target.value)}/>    
-        </label>
-
-        <label htmlFor="senha"> 
-          Defina uma Senha
-          <input type="password" name="senha" id="senha" placeholder="Digite Aqui" value={senha} onChange={(e)=>setSenha(e.target.value)}/>    
-        </label>
+        <span>Registre-se!</span>
+        <input type="text" 
+          placeholder="Nome Completo" 
+          value={Nome} 
+          onChange={(e)=>setNome(e.target.value)}/>
+        <div className={styles.underline}></div>    
+      
+        <input type="text" 
+          placeholder="Cadastro de Pessoa Fisica (CPF)" 
+          value={CPF} 
+          onChange={(e)=>setCPF(e.target.value)}/>    
+        <div className={styles.underline}></div>    
+      
+        <input type="text" 
+          placeholder="Registro Geral (RG)" 
+          value={RG} 
+          onChange={(e)=>setRG(e.target.value)}/>
+        <div className={styles.underline}></div>        
         
-        <button className={styles.btnConfig} onClick={onSubmit}>Confirmar Informações </button>
+        <div className={styles.row}>
+          <input placeholder="D.Nascimento:" />
+          <input type="date"
+            value={Nascimento} 
+            onChange={(e)=>setNascimento(e.target.value)}/>    
+        </div>
+        <div className={styles.underline}></div>
+        
+        <input type="email" 
+          placeholder="Email" 
+          value={Email} 
+          onChange={(e)=>setEmail(e.target.value)}/>    
+        <div className={styles.underline}></div>    
+
+        <input type="text" 
+          placeholder="Número com DDD" 
+          value={Telefone} 
+          onChange={(e)=>setTelefone(e.target.value)}/>    
+        <div className={styles.underline}></div>
+        
+        <input type="password" placeholder="Digite uma Senha Aqui" 
+          value={senha} 
+          onChange={(e)=>setSenha(e.target.value)}/>
+        <div className={styles.underline}> </div>    
+
+        <button className={styles.btnCfg} onClick={onSubmit}> Registrar </button>
       </div>
     </form>
   );

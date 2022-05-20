@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    background-color:#fff;
+    margin-left: 3rem;
+}
+
+.props {
+  border-radius: 5px;
+  margin: 1rem 1rem 1rem 6rem;
+  padding: 2rem;
+  min-height: 70vh;
+  box-shadow: 2px 2px 6px #912424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.props span, .contact span {
+  font-family: 'Poppins', sans-serif;
+  color: #181818;
+  font-size: 20px;
+  text-shadow: 0.5px 0.5px 2px #9124249a;
+}
+
+.props input {
+  display: block;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-size: 15px;
+  width: 250px;
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+
+.props textarea {
+    outline: none;
+    width: 400px;
+    height: 25vh;
+    border-radius: 5px;
+}
+.props label {
+  margin-top: 1rem;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0 0 5rem ;
+}
+
+.btnCfg{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #666666;
+  box-shadow: 1px 2px 3px #666666;
+  border-radius: 5px;
+  width: 200px;
+  padding: 0.5rem;
+  font-size: 20px;
+  margin: 1rem 0;
+  color: #fff;
+  }
+  
+.btnCfg:hover , .btnCfg:focus{
+  color: #ffffff;
+  background-color: #912424;
+  transition: 0.5s;
+  }
+
+.underline::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 250px;
+  background: #000;
+  }
+  
+  .underline::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 250px;
+  background: #df0404;
+  transform: scaleX(0);
+  }
+  
+  input:focus ~ .underline::after {
+  transform: scaleX(1);
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+    text-shadow: 1px 2px 3px #666666;
+  }

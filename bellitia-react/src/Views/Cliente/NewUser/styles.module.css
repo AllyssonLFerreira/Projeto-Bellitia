@@ -1,64 +1,83 @@
 .container {
-    display: flex;
-    justify-content: center;
-    background-color:#fff;
-    margin-left: 3rem;
-}
-
-.main {
-    display: flex;
-    padding-right: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .props {
-    padding: 0 2rem;
-    border-radius: 2rem;
-    min-width: 70%;
-    width: auto;
-    padding: 1rem 1rem;
-    box-shadow: 2px 2px 2px 2px #252525;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background-color: #efefefef;
+  border-radius: 5px;
+  margin: 1rem 0;
+  padding-left: 6rem;
+  min-height: 70vh;
+  min-width: 500px;
+  box-shadow: 2px 2px 6px #912424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
-.props h2 {
-    text-align: center;
+.props span {
+font-family: 'Poppins', sans-serif;
+color: #181818;
+font-size: 25px;
+text-shadow: 0.5px 0.5px 2px #9124249a;
 }
 
-.props label {
-    text-align: center;
-    line-height: 2rem;
+.props input {
+  display: block;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-size: 15px;
+  width: 300px;
+  margin-top: 1rem;
+  line-height: 2rem;
 }
 
-.props input, .props select {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    width: 25rem;
-    height: 2rem;
-    margin-bottom: 1rem;
+.btnCfg{
+font-family: 'Poppins', sans-serif;
+text-align: center;
+background-color: #666666;
+box-shadow: 1px 2px 3px #666666;
+border-radius: 5px;
+width: 200px;
+padding: 0.5rem;
+font-size: 20px;
+margin: 1rem 0;
+color: #fff;
 }
 
-.btnConfig{
-    display: block;
-    text-align: center;
-    background-color: transparent;
-    border: 2.5px solid #912424;
-    box-shadow: 2px 2px 2px #666666;
-    transition: 0.30s;
-    color: #181818;
-    width: 200px;
-    height: 50px;
-    margin: 0 auto;
+.btnCfg:hover , .btnCfg:focus{
+color: #ffffff;
+background-color: #912424;
+transition: 0.5s;
 }
 
-.btnConfig:hover , .btnConfig:focus{
-    color: #ffffff;
-    background-color: #912424;
+
+.underline::before {
+content: '';
+position: absolute;
+height: 1px;
+width: 300px;
+background: #000;
 }
 
-input::placeholder {
-    font-style: italic;
-    color: #242525;
-  }
+.underline::after {
+content: '';
+position: absolute;
+height: 1px;
+width: 300px;
+background: #df0404;
+transform: scaleX(0);
+}
+
+input:focus ~ .underline::after {
+transform: scaleX(1);
+}
+.row {
+  display: flex;
+}
+.row input {
+  width: 125px;
+}

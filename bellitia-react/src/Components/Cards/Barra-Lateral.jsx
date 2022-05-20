@@ -16,12 +16,12 @@ const BarraLateral = () =>{
     return (
         <div className={styles.NavBar}>
             
-            <Link to='#'>CONTROLE DE AGENDA</Link>
-            <Link to='/novofuncionario'>CADASTRO DE FUNCIONÁRIO</Link>
-            <Link to='/novoservico'>CADASTRO DE SERVIÇOS</Link>
-            <Link to='/novoestabelecimento'>ALTERAÇÃO DE DADOS</Link>
-            <Link to='/estabelecimento/help'>PRECISO DE AJUDA</Link>
-            <Link to='/' onClick={handleLogout}>SAIR</Link>
+            <Link to='/estabelecimento'> CONTROLE DE AGENDA </Link>
+            <Link to='/novofuncionario'> CADASTRO DE FUNCIONÁRIO </Link>
+            <Link to='/novoservico'> CADASTRO DE SERVIÇOS </Link>
+            <Link to='/estabelecimento/alteracao'> ALTERAÇÃO DE DADOS </Link>
+            <Link to='/estabelecimento/help'> PRECISO DE AJUDA </Link>
+            <Link to='/' onClick={handleLogout}> SAIR </Link>
            
             <SwitchButton />
             

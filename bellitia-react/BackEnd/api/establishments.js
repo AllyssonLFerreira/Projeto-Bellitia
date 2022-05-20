@@ -82,7 +82,5 @@ module.exports = (app) => {
 
     }
     
-
-
     return {getEstablishment, postEstablishment, putEstablishment, deleteEstablishment, establishmentLogin}
 };

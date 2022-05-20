@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
@@ -23,36 +23,8 @@ body {
   font-size: 20px;
 }
 
-select{
-  display: block;
-  background: transparent;
-  width: 100px;
-  padding: 0.2em;
-  border-radius: 5px;
-  border: 1px solid #CCC;
-  box-shadow: 2px 2px 2px 2px #252525c4;
-  
-}
-
-input{
-  padding: 0.2em;
-  border: 1px solid #CCC;
-  box-shadow: 2px 2px 2px 2px #252525c4;
-  display: block;
-  border-radius: 5px;    
-}
-  
-textarea {
-  padding: 0.2em;
-  border: 1px solid #CCC;
-  box-shadow: 2px 2px 2px 2px #252525c4;
-  display: block;
-}
-
-input:focus, input:hover 
-select:focus, select:hover
-textarea:focus, textarea:hover {
-  background: #fff;
+button {
+  cursor: pointer;
 }
 
 label {
@@ -61,6 +33,12 @@ label {
     display: block;
 }
 
-select option {
-  padding-right: 1em;
+input {
+  font-style: italic;
+  color: #666;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #666;
 }
