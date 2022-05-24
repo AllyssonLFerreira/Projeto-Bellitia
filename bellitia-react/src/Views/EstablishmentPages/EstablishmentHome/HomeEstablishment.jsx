@@ -2,6 +2,7 @@ import Calendar from 'react-calendar';
 import Footer from "../../../Components/Cards/Footer";
 import Header from "../../../Components/Cards/Header";
 import BarraLateral from "../../../Components/Cards/Barra-Lateral";
+import Agendamentos from "../../../Components/Cards/Agendamentos";
 import styles from "../../Views.module.css"
 
 
@@ -16,10 +17,11 @@ const HomeEstablishment = () => {
             <h2>Minha Agenda:</h2>
             <Calendar className={[styles.props]} />
           </div>
+          <Agendamentos />
         </div>
         <Footer />
     </div>
-    );
+    ); 
 }
 
 export default HomeEstablishment;
