@@ -70,3 +70,33 @@ td {
     margin: 0px;
     padding: 0px;
 }
+
+
+.establishmentCard{
+    display: flex;
+    border-radius: 5px;
+    width: 70vw;
+    height:20vw;
+    box-shadow: 2px 2px 6px #912424;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    flex-direction: row;
+    
+}
+
+.establishmentCard img {
+    
+    width: 200px;
+    height: 200px;
+}
+
+    .establishmentData{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        box-shadow: 2px 2px 6px #912424; 
+        flex-direction: column;
+      
+    }
+
