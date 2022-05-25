@@ -8,8 +8,7 @@ module.exports = (sequelize, DataType) => {
         Nome: DataType.STRING,
         Telefone: DataType.STRING,
         Email: DataType.STRING,
-        Especialidade: DataType.STRING,
-        fk_establishment: DataType.INTEGER
+        id_establishment: DataType.INTEGER
     },{
         timestamps: false,
         tableName: 'est_professionals'
@@ -18,7 +17,7 @@ module.exports = (sequelize, DataType) => {
     Professional.associate = (modelsList) => {
         
         Professional.belongsTo(modelsList.Establishment,{
-            foreignKey: 'fk_establishment'
+            foreignKey: 'id_establishment'
         })
         
         Professional.belongsToMany(modelsList.Service,{

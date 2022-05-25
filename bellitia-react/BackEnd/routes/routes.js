@@ -31,4 +31,9 @@ module.exports = (app) => {
     app.put( '/usuarios/:id', app.api.user.putUser );
     app.delete( '/usuarios/:id', app.api.user.deleteUser );
     app.post( '/usuarios/login', app.api.user.loginUser );
+
+    app.get( '/ajuda', app.api.help.getHelp );
+    app.post( '/ajuda', app.api.help.postHelp );
+
+  
 };

@@ -1,27 +1,29 @@
-
 .container {
-  margin: 1rem 2rem 0 2.5rem;
-  max-height: 70vh;
-  min-width: 400px;
-  box-shadow: 2px 2px 6px #912424;
-  border-radius: 5px;
-}
-.props {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: auto;
   position: relative;
+  
+}
+.container form {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  margin: 1rem;
+  box-shadow: 2px 2px 6px #912424;
 }
 
+.props {
+  position: relative;
+  padding-top: 2rem;
+  
+}
 .props span {
-  font-family: 'Poppins', sans-serif;
-  color: #181818;
-  font-size: 25px;
-  text-shadow: 0.5px 0.5px 2px #9124249a;
+font-family: 'Poppins', sans-serif;
+color: #181818;
+font-size: 25px;
+text-shadow: 0.5px 0.5px 2px #9124249a;
 }
-
 .props input {
+  display: block;
   outline: none;
   border: none;
   box-shadow: none;
@@ -42,22 +44,9 @@
   color: #666;
 }
 
-.props label, .props p, .props input::placeholder {
+.props input::placeholder {
   font-style: italic;
   color: #666;
-}
-
-.input_row {
-  display: flex;
-}
-.input_row input {
-  width: 125px;  
-}
-.prof_row {
-  display: flex;
-}
-.prof_row input {
-  width: 150px;
 }
 
 .btnCfg{
@@ -69,7 +58,7 @@ border-radius: 5px;
 width: 200px;
 padding: 0.5rem;
 font-size: 20px;
-margin: 1rem 0 1rem -1rem;
+margin: 1rem 0;
 color: #fff;
 }
 
@@ -79,12 +68,15 @@ background-color: #912424;
 transition: 0.5s;
 }
 
+.uf_city {
+display: flex;
+}
+
 .underline::before {
 content: '';
 position: absolute;
 height: 1px;
-width: 250px;
-right: 80px;
+width: 100%;
 background: #000;
 }
 
@@ -92,20 +84,11 @@ background: #000;
 content: '';
 position: absolute;
 height: 1px;
-width: 250px;
-right: 80px;
+width: 100%;
 background: #df0404;
 transform: scaleX(0);
 }
 
 input:focus ~ .underline::after {
 transform: scaleX(1);
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
-  text-shadow: 1px 2px 3px #666666;
 }

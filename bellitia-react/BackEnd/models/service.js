@@ -7,15 +7,15 @@ module.exports = (sequelize, DataType) => {
         },
         especificacao: DataType.STRING,
         duracao: DataType.STRING,
-        valor: DataType.DECIMAL,
-        fk_est_service: DataType.INTEGER
+        valor: DataType.STRING,
+        id_establishment: DataType.INTEGER
     },{
         timestamps: false,
         tableName: 'est_services'
     })
-    Service.associate = (modelsList) => {
+     Service.associate = (modelsList) => {
         Service.belongsTo(modelsList.Establishment, {
-            foreignKey: "fk_est_service"
+            foreignKey: "id_establishment"
         })
 
         Service.belongsToMany(modelsList.Professional, {
@@ -24,11 +24,11 @@ module.exports = (sequelize, DataType) => {
             timestamps: false
         })
 
-        Service.belongsToMany(modelsList.User, {
+        /* Service.belongsToMany(modelsList.User, {
             through: modelsList.Schedule,
             foreignKey: 'servico',
             timestamps: false
-        })
+        }) */
 
     }
     return Service

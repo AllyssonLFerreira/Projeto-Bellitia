@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {IoCreateOutline} from "react-icons/io5"
 import axios from 'axios';
 import styles from './Styles.module.css'
@@ -7,12 +7,18 @@ export const NovoServico = () => {
   const [descricao, setDescricao] = useState('');
   const [valor, setValor] = useState('');
   const [tempo, setTempo] = useState('');
-  const [profissional, setProfissional] = useState('');
 
-  const onSubmit = (e) => {
-      const Values = { especificacao:descricao, duracao:tempo, valor:valor, profissional:profissional }
-      e.preventDefault();
-      console.log(Values)
+  const onSubmit = async (event) => {
+      const values = { especificacao: descricao, duracao: tempo, valor: valor }
+      event.preventDefault();
+    try {
+      const send = await axios.post('http://localhost:5000/servico/', values)
+        .then(res => res.data)
+      alert('serviço cadastrado')
+    }
+    catch(err) {
+      alert(err.responde.data)
+    }
   }
 
   return (
@@ -20,13 +26,13 @@ export const NovoServico = () => {
         <div className={styles.props}>
           <div className={styles.icon}> <IoCreateOutline /> </div>
           <span>Novo Serviço</span>
-          <input type='text' 
-            placeholder='Serviço Ofertado' required 
+          <input type='text' required
+            placeholder='Serviço Ofertado'  
             value={descricao} 
             onChange={(e)=>setDescricao(e.target.value)}/>
           <div className={styles.underline}></div>
 
-          <input type='number' 
+          <input type='text' required
             placeholder='Valor (R$)'
             value={valor} 
             onChange={ (e)=>setValor(e.target.value) }/>
@@ -34,23 +40,10 @@ export const NovoServico = () => {
 
           <div className={styles.input_row}>
             <input placeholder='Tempo de Serviço:' disabled />
-            <input type='time'
+            <input type='time' required
             value={tempo} 
             onChange={ (e)=>setTempo(e.target.value) }/>
           </div>
-          <div className={styles.underline}></div>
-          
-          <div className={styles.prof_row}>
-            <input placeholder= 'Profissional:' disabled/>
-            <select id='profissional' name='profissional' value={profissional} onChange={ (e)=>setProfissional(e.target.value) }>
-                <option selected disabled>Selecione</option>
-                <option value="F1">João</option>
-                <option value="F2">Maria</option>
-                <option value="F3"></option>
-                <option value="F4"></option>
-            </select>
-          </div>
-          
           <div className={styles.underline}></div>
           
           <button 

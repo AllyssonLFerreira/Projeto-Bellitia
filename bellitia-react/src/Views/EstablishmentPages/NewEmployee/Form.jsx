@@ -8,27 +8,29 @@ export const CadastroFuncionario = () =>{
   const [nome, setNome] = useState('');
   const [telefone, setTelefone] = useState('');
   const [email, setEmail] = useState('');
-  const [especialidades, setEspecialidades] = useState([]);
+  /* const [establishment, setEst] = useState([]);
+  const [est, setEstablishment] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/servico')
-      .then(res => setEspecialidades(res.data))
+    axios.get('http://localhost:5000/estabelecimento')
+      .then(res => setEst(res.data))
       .catch(err => console.log(err))
-  }, [])
+  }, [])  */
 
-  const onSubmit = async () => {
-    const values = {Nome:nome, Telefone:telefone, Email:email, Especialidade:especialidades}
+  const onSubmit = async (event) => {
+    const values = { Nome: nome, Telefone: telefone, Email: email }
+    event.preventDefault();
     try {
-      const responseSubmit = await axios.post('http://localhost:5000/professional', values)
+      const send = await axios.post('http://localhost:5000/professional/', values)
         .then(res => res.data)
-        console.log(responseSubmit)
-    } catch(err) {
-        console.log('Will shall not pass!' , err)
+      alert('Profissional Cadastrado')
     }
-  };
+    catch(err) {
+      alert(err.response.data)
+    }
+  }
 
   return (
-    
       <form>
         <div className={styles.props}>
           <div className={styles.icon}> 
@@ -36,31 +38,28 @@ export const CadastroFuncionario = () =>{
           </div>
           <span>Registrar Novo Funcionário</span>
 
-            <input type="text"
+            <input type="text" required
               placeholder="Nome Completo" 
               value={nome} 
               onChange={(e)=>setNome(e.target.value)}/>
             <div className={styles.underline}></div>
 
-            <input type="text" 
+            <input type="text" required
               placeholder="Telefone do Colaborador"
               value={telefone} 
               onChange={(e)=>setTelefone(e.target.value)}/>
             <div className={styles.underline}></div>
 
-            <input type="email"
+            <input type="email" required
               placeholder="Email do Colaborador" 
               value={email} 
               onChange={(e)=>setEmail(e.target.value)}/>
             <div className={styles.underline}></div>
 
-            {/* <select type="checkbox" 
-              onChange={(e)=>setEspecialidades(e.target.value)}>
-              <option disabled>Selecione as suas Especialidades</option>
-              {especialidades.map(service => <option value={service.id_service}>{service.especificacao}</option>)} 
+            {/* <select onChange={(e)=>setEstablishment(e.target.value)}>
+              {establishment.map(est=> <option value={est.id_establishment}>{est.nome_fantasia}</option>)}
             </select>
             <div className={styles.underline}></div> */}
-
           <button className={styles.btnCfg} onClick={onSubmit}>Confirmar</button>
         </div> 
       </form>

@@ -5,24 +5,21 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true
         },
-        Nome: DataType.STRING,
-        CPF: DataType.STRING,
-        RG: DataType.STRING,
-        D_Nascimento: DataType.DATE,
-        Telefone: DataType.STRING,
-        Email: DataType.STRING,
+        nome: DataType.STRING,
+        cpf: DataType.STRING,
+        nascimento: DataType.DATE,
+        telefone: DataType.STRING,
+        email: DataType.STRING,
         senha: DataType.STRING
     },{
         timestamps: false,
         tableName: 'users'
     })
     
-    User.associate = (modelsList) => {
-        User.belongsToMany(modelsList.Service,{
-            through: modelsList.Schedule,
-            foreignKey: 'nome',
-            timestamps: false
+     User.associate = (modelsList) => {
+        User.hasMany(modelsList.Schedule, {
+          foreignKey: 'nome'
         })
-    }
+     } 
     return User
-};
+}

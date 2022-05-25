@@ -1,4 +1,4 @@
-const {Service, Professional} = require ('../models');
+const {Service, Establishment} = require ('../models');
 
 
 module.exports = (app) => {
@@ -6,7 +6,7 @@ module.exports = (app) => {
         try {
             const service = await Service.findAll({
                 include: {
-                    model: Professional
+                    model: Establishment
                 }
             })
             res.status(200).json(service)
@@ -16,10 +16,10 @@ module.exports = (app) => {
         }
     }
     const postService = async (req, res) => {
-        const { especificacao, duracao, valor, fk_est_service } = req.body
+        const { especificacao, duracao, valor, id_establishment } = req.body
         try {
             if(!especificacao || !duracao || !valor) throw new Error('Preencha todos os campos!!')
-            await Service.create({especificacao, duracao, valor,  fk_est_service})
+            await Service.create({especificacao, duracao, valor,  id_establishment})
             res.status(201).json({msg: 'Serviço Cadastrado com Sucesso!'})
         }
         catch(err) {

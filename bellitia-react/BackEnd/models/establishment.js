@@ -26,11 +26,11 @@ module.exports = (sequelize, DataType) => {
         });
 
         Establishment.hasMany(modelsList.Service, {
-            foreignKey: 'fk_est_service'
+            foreignKey: 'id_establishment'
         })
 
         Establishment.hasMany(modelsList.Professional, {
-            foreignKey: 'fk_establishment'
+            foreignKey: 'id_establishment'
         })
     }
     return Establishment
