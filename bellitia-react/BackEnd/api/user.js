@@ -1,4 +1,4 @@
-const {User, Schedule, Service} = require ('../models')
+const {User, Schedule} = require ('../models')
 const bcrypt = require ('bcrypt');
 const jwt = require ('jsonwebtoken')
 
@@ -7,7 +7,7 @@ module.exports = (app) => {
         try {
             const users = await User.findAll({
                 include: {
-                    model: Service
+                    model: Schedule
                 }
             })
             res.status(200).json(users)
@@ -17,31 +17,31 @@ module.exports = (app) => {
         }
     }
     const postUser = async (req, res) => {
-        const { Nome, CPF, RG, D_Nascimento, Telefone, Email, senha } = req.body
-        try {
+        const { nome, cpf, nascimento, telefone, email, senha } = req.body
+        const cpfValidate = await User.findOne({
+          where:{ cpf } });
 
-            if(!Nome || !CPF || !RG || !D_Nascimento || !Telefone || !Email || !senha) throw new Error('Preencha todos os campos!!')
+        if(!cpfValidate) {
+          try { 
             await User.create({
-                Nome, CPF, RG, D_Nascimento,
-                Telefone, Email, 
-                senha: bcrypt.hashSync (senha, 10)})
-            
-
-            if(!Nome || !CPF || !RG || !D_Nascimento || !Telefone || !Email || !senha ) throw new Error('Preencha todos os campos!!')
-            await User.create({Nome, CPF, RG, D_Nascimento, Telefone, Email, senha})
-
-            res.status(201).json({msg: 'Usuario Cadastrado com Sucesso!'})
-        }
-        catch(err) {
+              nome, cpf, nascimento, telefone, email, 
+              senha: bcrypt.hashSync (senha, 10)})
+              res.status(201).json({msg: 'Usuario Cadastrado com Sucesso!'})
+          }
+          catch(err) {
             res.status(400).json({error: true, ...err})
+          } } 
+          else {
+            res.status(400).json("OPA! Este cpf já está cadastrado!") 
         }
     }
+
     const putUser = async (req, res) => {
         const userId= req.params.id
-        const {  Nome, CPF, RG, D_Nascimento, Telefone, Email, senha } = req.body
+        const {  nome, cpf, nascimento, telefone, email, senha } = req.body
         try {
             await User.update(
-                { Nome, CPF, RG, D_Nascimento, Telefone, Email, senha },
+                { nome, cpf, nascimento, telefone, email, senha },
                 {where: {id_user: userId}}
             )
             res.status(200).json({msg: 'Usuario alterado com sucesso!'})

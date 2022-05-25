@@ -10,12 +10,16 @@ module.exports = (sequelize, DataType) => {
         profissional: DataType.INTEGER,
         estabelecimento: DataType.INTEGER,
         nome: DataType.INTEGER,
-        horario: DataType.TIME,
-        fk_user: DataType.INTEGER
+        horario: DataType.TIME
     },{
         timestamps: false,
         tableName: 'schedules'
     })
-
+    
+    Schedule.associate = (modelsList) => {
+      Schedule.belongsTo(modelsList.User, {
+          foreignKey: "nome"
+      })
+    }
     return Schedule
 };

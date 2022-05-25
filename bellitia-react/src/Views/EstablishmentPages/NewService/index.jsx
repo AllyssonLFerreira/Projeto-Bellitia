@@ -6,7 +6,7 @@ import styles from '../../Views.module.css'
 
 const NewServiceCard = () => {
     return (
-    <div className={styles.container}>
+    <div className={styles.container_column}>
       <Header />
       <div className={styles.grid_flex}>
         <BarraLateral />

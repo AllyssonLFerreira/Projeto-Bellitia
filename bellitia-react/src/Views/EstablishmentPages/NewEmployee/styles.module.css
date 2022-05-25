@@ -65,20 +65,20 @@ transition: 0.5s;
 
 
 .underline::before {
-content: '';
-position: absolute;
-height: 1px;
-width: 250px;
-background: #000;
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  box-shadow: 1px 1px 5px #191919;
+  background-color: #666;
+  width: 250px;
 }
-
 .underline::after {
-content: '';
-position: absolute;
-height: 1px;
-width: 250px;
-background: #df0404;
-transform: scaleX(0);
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 250px;
+  box-shadow: 1px 1px 5px #df0404;
+  transform: scaleX(0);
 }
 
 input:focus ~ .underline::after {

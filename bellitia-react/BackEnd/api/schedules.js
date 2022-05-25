@@ -1,4 +1,4 @@
-const {Schedule, User, Service} = require ('../models');
+const {Schedule} = require ('../models');
 
 module.exports = (app) => {
     const getSchedule = async (req, res) => {

@@ -5,8 +5,9 @@ import Login from './Views/Login';
 import LoginUsuario from './Views/LoginUsuario/LoginUsuario';
 
 import HomeEstablishment from "./Views/EstablishmentPages/EstablishmentHome/HomeEstablishment";
-import NewServiceCard from "./Views/EstablishmentPages/NewService/NewService";
+import NewServiceCard from "./Views/EstablishmentPages/NewService/index";
 import NewEstCard from "./Views/EstablishmentPages/NewEstablishment/Index";
+import { EstAddress } from "./Views/EstablishmentPages/EstAddress";
 import { DataChange } from "./Views/EstablishmentPages/DataChange";
 import { NewEmployee } from "./Views/EstablishmentPages/NewEmployee/Index";
 import { Help } from "./Views/EstablishmentPages/Help/Index";
@@ -31,9 +32,10 @@ const Router = () => {
                 <Route path='/agendamentos' exact element={<MeusAgendamentos /> } />
                 <Route path='/usuario/help' exact element={<UserHelp /> } />
 
+                <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
+                <Route path= '/novoestabelecimento/address' exact element={<EstAddress/>} />
                 <Route path='/estabelecimento' exact element={<HomeEstablishment /> } />
                 <Route path='/estabelecimento/alteracao' exact element={<DataChange /> } />
-                <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
                 <Route path='/novofuncionario' exact element={<NewEmployee /> } />
                 <Route path='estabelecimento/help' exact element={<Help /> } />
