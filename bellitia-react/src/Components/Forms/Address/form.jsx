@@ -13,6 +13,20 @@ export const FormAddress = () => {
   const [uf, setUf] = useState('');
   const navigate = useNavigate();
 
+  const onSubmit = async (e) => {
+    const addressValues = { logradouro: logradouro, numero: numero, complemento: complemento, bairro: bairro, cep: cep, cidade: cidade, uf: uf }
+    e.preventDefault();
+    try{
+      const send = await axios.post('http://localhost:5000/endereco/', addressValues)
+        .then(res => res.data)
+        alert('Endereço Cadastrado com Sucesso. Vamos para Home')
+        navigate('/estabelecimento')
+    } 
+    catch(err) {
+        alert(err.response.data)
+    }
+  }
+
   return (
     <div className={styles.container}>
       <form>
@@ -62,6 +76,7 @@ export const FormAddress = () => {
           </div>  
             <div className={styles.underline}></div>
         </div>
+        <button className={styles.btnCfg} onClick={onSubmit}>REGISTRAR</button>
       </form>
     </div>
   )

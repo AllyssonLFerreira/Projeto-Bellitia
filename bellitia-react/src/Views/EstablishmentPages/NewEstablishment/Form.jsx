@@ -27,13 +27,11 @@ export const CadastroEstabelecimento = () => {
   const onSubmit = async (e) => {
     
     const estValues = { razao_social: rSocial, nome_fantasia: nFantasia , cnpj: cnpj, email: email, telefone: telefone, nome_proprietario: hNome, cpf_proprietario: hCpf, email_proprietario: hEmail, telefone_proprietario: hTelefone, senha: senha } 
-    
-    const addressValues = { logradouro: logradouro, numero: numero, complemento: complemento, bairro: bairro, cep: cep, cidade: cidade, uf: uf }
     e.preventDefault();
     try{
       const send = await axios.post('http://localhost:5000/estabelecimento/', estValues)
         .then(res => res.data)
-        alert('Estabelecimento Cadastrado! Vamos Para Home!')
+        alert('Estabelecimento Cadastrado! Vamos Cadastrar seu Endereço!')
         navigate("/novoestabelecimento/address")
     }
     catch(err){

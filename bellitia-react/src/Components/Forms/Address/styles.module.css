@@ -1,26 +1,23 @@
 .container {
-  height: auto;
-  position: relative;
-  
-}
-.container form {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  width: 800px;
+  min-height: 60vh;
   border-radius: 5px;
-  margin: 1rem;
+  margin: 1rem 20rem;
   box-shadow: 2px 2px 6px #912424;
 }
 
 .props {
   position: relative;
-  padding-top: 2rem;
+  margin: 2rem auto;
   
 }
 .props span {
-font-family: 'Poppins', sans-serif;
-color: #181818;
-font-size: 25px;
-text-shadow: 0.5px 0.5px 2px #9124249a;
+  font-family: 'Poppins', sans-serif;
+  color: #181818;
+  font-size: 25px;
+  text-shadow: 0.5px 0.5px 2px #9124249a;
 }
 .props input {
   display: block;
@@ -28,7 +25,7 @@ text-shadow: 0.5px 0.5px 2px #9124249a;
   border: none;
   box-shadow: none;
   font-size: 15px;
-  width: 250px;
+  width: 300px;
   margin-top: 1rem;
   line-height: 2rem;
 }
@@ -44,51 +41,47 @@ text-shadow: 0.5px 0.5px 2px #9124249a;
   color: #666;
 }
 
-.props input::placeholder {
-  font-style: italic;
-  color: #666;
-}
 
 .btnCfg{
-font-family: 'Poppins', sans-serif;
-text-align: center;
-background-color: #666666;
-box-shadow: 1px 2px 3px #666666;
-border-radius: 5px;
-width: 200px;
-padding: 0.5rem;
-font-size: 20px;
-margin: 1rem 0;
-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #666666;
+  box-shadow: 1px 2px 3px #666666;
+  border-radius: 5px;
+  width: 200px;
+  padding: 0.5rem;
+  font-size: 20px;
+  margin: 1rem 0;
+  color: #fff;
 }
 
 .btnCfg:hover , .btnCfg:focus{
-color: #ffffff;
-background-color: #912424;
-transition: 0.5s;
+  color: #ffffff;
+  background-color: #912424;
+  transition: 0.5s;
 }
 
 .uf_city {
-display: flex;
+  display: flex;
 }
 
 .underline::before {
-content: '';
-position: absolute;
-height: 1px;
-width: 100%;
-background: #000;
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  box-shadow: 1px 1px 5px #191919;
+  background-color: #666;
+  width: 100%;
 }
-
 .underline::after {
-content: '';
-position: absolute;
-height: 1px;
-width: 100%;
-background: #df0404;
-transform: scaleX(0);
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  box-shadow: 1px 1px 5px #df0404;
+  transform: scaleX(0);
 }
 
 input:focus ~ .underline::after {
-transform: scaleX(1);
+  transform: scaleX(1);
 }
