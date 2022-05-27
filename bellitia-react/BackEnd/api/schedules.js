@@ -6,7 +6,7 @@ module.exports = (app) => {
             const schedule = await Schedule.findAll()
             res.status(200).json(schedule)
         }
-        catch {
+        catch(err) {
             res.status(500).json({error: true, ...err})
         }
     }

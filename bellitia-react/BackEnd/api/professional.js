@@ -10,7 +10,7 @@ module.exports = (app) => {
           })
             res.status(200).json(professional)
         }
-        catch {
+        catch(err) {
             res.status(500).json({error: true, ...err})
         }
     }
