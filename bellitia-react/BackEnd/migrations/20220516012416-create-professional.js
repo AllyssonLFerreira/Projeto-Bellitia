@@ -12,8 +12,7 @@ module.exports = {
       Nome: Sequelize.STRING,
       Telefone: Sequelize.STRING,
       Email: Sequelize.STRING,
-      Especialidade: Sequelize.STRING,
-      fk_establishment: Sequelize.INTEGER
+      id_establishment: Sequelize.INTEGER
     });
 
   },

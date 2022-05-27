@@ -11,8 +11,8 @@ module.exports = {
       },
       especificacao: Sequelize.STRING,
       duracao: Sequelize.STRING,
-      valor: Sequelize.DECIMAL,
-      fk_est_service: Sequelize.INTEGER
+      valor: Sequelize.STRING,
+      id_establishment: Sequelize.INTEGER
     });
 
   },

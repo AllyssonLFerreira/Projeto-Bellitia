@@ -9,12 +9,11 @@ module.exports = {
         primaryKey: true,
         autoIncrement: true
       },
-      Nome: Sequelize.STRING,
-      CPF: Sequelize.STRING,
-      RG: Sequelize.STRING,
-      D_Nascimento: Sequelize.DATE,
-      Telefone: Sequelize.STRING,
-      Email: Sequelize.STRING,
+      nome: Sequelize.STRING,
+      cpf: Sequelize.STRING,
+      nascimento: Sequelize.DATE,
+      telefone: Sequelize.STRING,
+      email: Sequelize.STRING,
       senha: Sequelize.STRING
     });
 
