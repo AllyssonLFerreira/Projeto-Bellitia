@@ -9,7 +9,8 @@ module.exports = {
         autoIncrement: true
       },
       descricao: Sequelize.STRING,
-      nome: Sequelize.STRING
+      nome: Sequelize.STRING,
+      email: Sequelize.STRING,
     });
   },
 

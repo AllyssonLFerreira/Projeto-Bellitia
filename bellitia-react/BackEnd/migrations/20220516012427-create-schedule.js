@@ -14,8 +14,7 @@ module.exports = {
       profissional: Sequelize.INTEGER,
       estabelecimento: Sequelize.INTEGER,
       nome: Sequelize.INTEGER,
-      horario: Sequelize.TIME,
-      fk_user: Sequelize.INTEGER
+      horario: Sequelize.TIME
     });
 
   },
