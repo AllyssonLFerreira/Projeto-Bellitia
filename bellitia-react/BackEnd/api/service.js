@@ -11,7 +11,7 @@ module.exports = (app) => {
             })
             res.status(200).json(service)
         }
-        catch {
+        catch(err) {
             res.status(500).json({error: true, ...err})
         }
     }
