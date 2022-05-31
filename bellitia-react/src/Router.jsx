@@ -15,8 +15,8 @@ import { Help } from "./Views/EstablishmentPages/Help/Index";
 import { NewUser } from "./Views/Cliente/NewUser/Index";
 import { ClientHome } from "./Views/Cliente/ClientHome/home";
 import { UserHelp } from "./Views/Cliente/Help/index";
-import MeusAgendamentos from "./Views/Cliente/Agendamentos/MeusAgendamentos";
-
+import { ProfissionalAgendamento } from "./Views/Cliente/Agendamentos/ProfissionalAgendamentos";
+import Horarios from "./Views/Cliente/Agendamentos/Horarios";
 
 const Router = () => {
     return (
@@ -29,7 +29,7 @@ const Router = () => {
 
                 <Route path='/novousuario' exatct element={ <NewUser /> } />
                 <Route path='/areacliente' exact element={<ClientHome />} />
-                <Route path='/agendamentos' exact element={<MeusAgendamentos /> } />
+                <Route path='/agendamentos' exact element={<ProfissionalAgendamento /> } />
                 <Route path='/usuario/help' exact element={<UserHelp /> } />
 
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
@@ -39,6 +39,8 @@ const Router = () => {
                 <Route path='/novoservico' exact element={<NewServiceCard /> } />
                 <Route path='/novofuncionario' exact element={<NewEmployee /> } />
                 <Route path='estabelecimento/help' exact element={<Help /> } />
+                <Route path='/horarios' element={<Horarios /> } />
+                
                 
             </Routes>
         </BrowserRouter>

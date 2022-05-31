@@ -17,9 +17,9 @@ export const FormAddress = () => {
     const addressValues = { logradouro: logradouro, numero: numero, complemento: complemento, bairro: bairro, cep: cep, cidade: cidade, uf: uf }
     e.preventDefault();
     try{
-      const send = await axios.post('http://localhost:5000/endereco/', addressValues)
-        .then(res => res.data)
-        alert('Endereço Cadastrado com Sucesso. Vamos para Home')
+      const send = await axios.post('http://localhost:5000/endereco', addressValues)
+      .then(res => res.data)
+        alert ('Endereço Cadastrado com Sucesso. Vamos para Home')
         navigate('/estabelecimento')
     } 
     catch(err) {
