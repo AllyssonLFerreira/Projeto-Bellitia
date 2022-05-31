@@ -35,7 +35,7 @@ export const NovoServico = () => {
           <input type='text' required
             placeholder='Valor (R$)'
             value={valor} 
-            onChange={ (e)=>setValor(e.target.value) }/>
+            onChange={(e)=>setValor(e.target.value) }/>
           <div className={styles.underline}></div>
 
           <div className={styles.input_row}>

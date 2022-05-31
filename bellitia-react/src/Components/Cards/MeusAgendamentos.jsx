@@ -19,16 +19,21 @@ const MeusAgendamentos = () => {
     
     return (
       <div>
+          <h1>Meus agendamentos</h1>
           <table>
               <thead>
                   <tr>
-                      <th></th>
+              
                   </tr>
               </thead>
               <tbody>
               {agendamentos.map((agendamento) => 
                   <tr key={agendamento.id_schedules}>
                       <td>{ agendamento.servico }</td>
+                      <td>{agendamento.profissional}</td>
+                      <td>{agendamento.estabelecimento}</td>
+                      <td>{agendamento.horario}</td>
+                      <td>{agendamento.data}</td>
                   </tr>
               )}
               </tbody>

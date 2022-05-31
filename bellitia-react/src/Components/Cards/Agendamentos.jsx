@@ -107,10 +107,12 @@ const Agendamentos = ({ data, column }) => {
                 <tbody>
                     {services.map((service) => 
                     <tr key={service.id_service}> 
-                    <td 
-                    value={service.id_service}
-                    onClick={ (e) => setServico(service.id_service) }>
-                        { service.especificacao }</td> 
+                        <td 
+                            value={service.id_service}
+                            onClick={ (e) => setServico(service.id_service) }>
+                                { service.especificacao }<br></br>
+                                {service.valor}
+                        </td> 
                     </tr>
                     )}
                 </tbody>
