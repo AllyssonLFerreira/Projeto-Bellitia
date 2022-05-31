@@ -17,12 +17,13 @@ module.exports = (app) => {
     const postAddress = async (req, res) => {
         const { cidade, uf, bairro, logradouro, numero, complemento, cep } = req.body
         try {
-            if(!cidade || !uf || !bairro || !logradouro || !numero || !complemento || !cep ) throw new Error('Preencha todos os campos!!')
+            if(!cidade || !uf || !bairro || !logradouro || !numero || !complemento || !cep) throw new Error('Preencha todos os campos!!')
             await Address.create({cidade, uf, bairro, logradouro, numero, complemento, cep})
             res.status(201).json({msg: 'Endereço Cadastrado com Sucesso!'})
         }
         catch(err) {
             res.status(400).json({error: true, err})
+            console.log(err)
         }
     }
     const putAddress = async (req, res) => {

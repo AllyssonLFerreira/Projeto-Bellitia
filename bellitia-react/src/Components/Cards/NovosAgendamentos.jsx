@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import styles from '../Cards/cardProps.module.css';
+
 import Estabelecimentos from './Estabelecimentos';
 
 const NovosAgendamentos = () => {
@@ -20,7 +20,7 @@ const NovosAgendamentos = () => {
     return (
       <div>
         {estabelecimentos.map((estabelecimento) => (
-          <Estabelecimentos estabelecimento={estabelecimento} />
+          <Estabelecimentos  key={estabelecimento.id_establishment} estabelecimento={estabelecimento} />
         ))}
 
       

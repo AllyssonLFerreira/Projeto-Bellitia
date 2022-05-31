@@ -76,27 +76,60 @@ td {
     display: flex;
     border-radius: 5px;
     width: 70vw;
-    height:20vw;
+    height:15vw;
     box-shadow: 2px 2px 6px #912424;
     padding: 10px;
     margin-left: 20px;
     margin-top: 10px;
     flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
     
 }
 
 .establishmentCard img {
     
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
 }
 
     .establishmentData{
         width: 100vw;
         display: flex;
         align-items: center;
-        box-shadow: 2px 2px 6px #912424; 
         flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
       
     }
 
+    .establishmentData button {
+        
+            background-color: #912424;
+            border-radius: 15px;
+            border-style: none;
+            margin-top: 20px;
+            width: 200px;
+            height: 55px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .establishmentData button:hover , .establishmentData button:focus{
+            color:#fff ;
+            border-color: #000000;
+            box-shadow: 2px 2px 6px #912424;
+            margin-bottom: 20px;
+            
+        }
+
+        .establishmentData a {
+            text-decoration: none;
+            position: relative;
+            display: block;
+            line-height: 2;
+            padding: 15px 10px;
+            color: #fff;
+
+        }

@@ -14,6 +14,7 @@ const BarraLateralCliente = () =>{
   return (
     <div className={styles.NavBar}>
       <Link to='/areacliente'>BUSCA</Link>
+      <Link to='/agendamentoscliente'>MEUS AGENDAMENTOS</Link>
       <Link to='/novousuario'>ALTERAÇÃO DE DADOS</Link>
       <Link to='/usuario/help'>PRECISO DE AJUDA</Link>
       <Link to='/' onClick={handleLogout} >SAIR</Link>
