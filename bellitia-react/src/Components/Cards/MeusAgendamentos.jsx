@@ -5,6 +5,7 @@ import axios from 'axios'
 
 const MeusAgendamentos = () => {
     const [agendamentos, setAgendamentos] = useState([])
+    
 
     useEffect(() =>{
         axios.get('http://localhost:5000/agendamentos')
@@ -29,7 +30,7 @@ const MeusAgendamentos = () => {
               <tbody>
               {agendamentos.map((agendamento) => 
                   <tr key={agendamento.id_schedules}>
-                      <td>{ agendamento.servico }</td>
+                      <td>{ agendamento.especificacao }</td>
                       <td>{agendamento.profissional}</td>
                       <td>{agendamento.estabelecimento}</td>
                       <td>{agendamento.horario}</td>

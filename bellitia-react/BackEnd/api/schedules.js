@@ -1,12 +1,19 @@
-const {Schedule} = require ('../models');
+const {Schedule, sequelize} = require ('../models');
+
 
 module.exports = (app) => {
     const getSchedule = async (req, res) => {
+        console.log(req.body)
         try {
-            const schedule = await Schedule.findAll()
-            res.status(200).json(schedule)
+            const schedule = await sequelize.query('SELECT id_schedules, schedules.data, est_services.especificacao, est_professionals.Nome, establishments.nome_fantasia, users.nome FROM schedules\
+                inner join est_professionals on schedules.profissional = est_professionals.id_professional\
+                inner join est_services on schedules.servico = est_services.id_service\
+                inner join establishments on schedules.estabelecimento = establishments.id_establishment\
+                inner join users on schedules.nome = users.id_user')
+            res.status(200).json(schedule[0])
         }
         catch(err) {
+            console.log(err)
             res.status(500).json({error: true, ...err})
         }
     }
