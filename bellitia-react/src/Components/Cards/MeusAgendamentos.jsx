@@ -31,9 +31,8 @@ const MeusAgendamentos = () => {
               {agendamentos.map((agendamento) => 
                   <tr key={agendamento.id_schedules}>
                       <td>{ agendamento.especificacao }</td>
-                      <td>{agendamento.profissional}</td>
-                      <td>{agendamento.estabelecimento}</td>
-                      <td>{agendamento.horario}</td>
+                      <td>{agendamento.Nome}</td>
+                      <td>{agendamento.nome_fantasia}</td>
                       <td>{agendamento.data}</td>
                   </tr>
               )}
