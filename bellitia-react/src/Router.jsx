@@ -17,6 +17,7 @@ import { ClientHome } from "./Views/Cliente/ClientHome/home";
 import { UserHelp } from "./Views/Cliente/Help/index";
 import { ProfissionalAgendamento } from "./Views/Cliente/Agendamentos/ProfissionalAgendamentos";
 import Horarios from "./Views/Cliente/Agendamentos/Horarios";
+import MeusAgendamentos from "./Views/Cliente/MeusAgendamentos/MeusAgendamentos";
 
 const Router = () => {
     return (
@@ -31,6 +32,7 @@ const Router = () => {
                 <Route path='/areacliente' exact element={<ClientHome />} />
                 <Route path='/agendamentos' exact element={<ProfissionalAgendamento /> } />
                 <Route path='/usuario/help' exact element={<UserHelp /> } />
+                <Route path='/agendamentoscliente' exact element={<MeusAgendamentos /> } />
 
                 <Route path='/novoestabelecimento' exact element={<NewEstCard /> } />
                 <Route path= '/novoestabelecimento/address' exact element={<EstAddress/>} />
